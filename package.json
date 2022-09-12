@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "banana-slider": "github:kruceo/bananaslider",
+        "vesic-js": "github:inforgdev/vesic-js"
+    }
+}
