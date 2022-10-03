@@ -10,41 +10,77 @@ body {
 }
 
 .bar {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 5;
     width: 100%;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    ul {
+    .logo {
+        width: 30px;
+        padding-left: 2px;
+    }
+
+    .menu {
         display: flex;
         padding: 0;
+        position: absolute;
 
         li {
             list-style: none;
             margin: 0 60px;
 
+            a {
+                text-decoration: none;
+            }
+
             p {
+
+                cursor: pointer;
                 color: white;
                 text-align: center;
                 font-family: 'karla';
                 text-transform: uppercase;
             }
-            p:hover
-            {
+
+            p:hover {
                 color: @red;
             }
+        }
+    }
+
+    .social {
+        width: 100%;
+        margin: 0 0;
+        justify-content: flex-end;
+        display: flex;
+
+        li {
+            img {
+                width: 30px;
+            }
+
+            margin: 0 10px;
         }
     }
 }
 
 
 .wallpaper-ground {
-    width: 100%;
     height: 95vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 30vh;
+
+    div {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     h2 {
         font-family: 'karla';
@@ -52,67 +88,91 @@ body {
         font-size: 100px;
         animation: forwards welcome 1s cubic-bezier(0, 1, 1, 1)
     }
+
+    .line {
+        animation: forwards welcome 1.5s;
+        width: 500px;
+        height: 12px;
+        background-color: @red;
+    }
+
+    slider {
+        h2 {
+            font-size: 40px;
+        }
+    }
 }
 
 .content {
     width: 80%;
 
     section {
-        text-align: center;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: 'karla';
+            color: white;
+        }
+
         slider {
             slider-frame {
                 slide {
-                    div
-                    {
+                    div {
                         display: flex;
                         width: 100%;
                         height: 100%;
                         background-color: aliceblue;
                         border-radius: 10px;
                         overflow: hidden;
+
                         img {
                             width: 350px;
                             transition: filter 500ms;
                         }
-                        img:hover
-                        {
+
+                        img:hover {
                             filter: grayscale();
                         }
-                        p
-                        {
-                            padding: 10px;
-                            font-family: 'karla';
-                            text-align: left;
+
+                        div {
+                            display: block;
+                            h2
+                            {
+                                padding: 10px;
+                                text-align: left;
+                                color: @red;
+                            }
+                            p {
+                                padding: 10px;
+                                font-family: 'karla';
+                                text-align: left;
+                            }
                         }
                     }
-                   
+
                 }
             }
         }
     }
 }
 
-footer
-{
+footer {
     width: 100%;
     height: 100px;
     background-color: aqua;
 }
 
-@keyframes welcome 
-{
-    0%
-    {
-        
-        opacity: 0;
-    }
-    25%
-    {
-        transform: translate(0,-100px);
-        opacity: 0;
-    }
-    100%
-    {
+@keyframes welcome {
+    0% {
 
+        opacity: 0;
     }
+
+    25% {
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+
+    100% {}
 }
