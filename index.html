@@ -7,24 +7,21 @@
     <title>Kruceo | Main</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.less'>
-    <script src='https://banana.kruceo.com/slide.js'></script>
+    <script src="srum.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla');
-
-        body {
-            background-color: black;
-        }
     </style>
 </head>
 
 <body>
+
     <header class="bar">
         <img class="logo" src="img/logo.png" alt="">
         <ul class="menu">
             <li>
                 <a href="/">
                     <p>Main</p>
-
+                </a>
             </li>
             <li>
                 <a href="/projects">
@@ -54,7 +51,7 @@
             <h2>&lt;Welcome/></h2>
         </div>
         <div class="line"></div>
-        <slider cooldown="4000" speed="2000" animation="up">
+        <slider cooldown="10000" speed="1000">
             <slide>
                 <h2>JS</h2>
             </slide>
@@ -64,56 +61,47 @@
             <slide>
                 <h2>CSS</h2>
             </slide>
-            <slide>
-                <h2>JAVA</h2>
-            </slide>
-            <slide>
-                <h2>UNITY</h2>
-            </slide>
         </slider>
     </header>
 
     <header class="content">
+
+        <section id="welcome-itens">
+            <h2>Just a look</h2>
+            <div id="boxes">
+                <div id="box">
+                    <h2>Open Source</h2>
+                    <p>You will reach open source library here</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/8091/8091819.png" alt="">
+                </div>
+                <div id="box">
+                    <h2>Multi Language</h2>
+                    <p>Projects in various languages and platforms</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/8091/8091807.png" alt="">
+                </div>
+                <div id="box">
+                    <h2>From dev for dev</h2>
+                    <p>Get libraries to make a little bit more easy your work</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/8091/8091822.png" alt="">
+                </div>
+                <div id="box">
+                    <h2>Different projects</h2>
+                    <p>See some projects with one screw less</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/8091/8091799.png" alt="">
+                </div>
+            </div>
+        </section>
         <section>
             <h2>Highlights</h2>
             <slider cooldown="5000">
                 <slide>
                     <div>
-                        <img src="/img/tatuclickericon.png" alt="">
-                        <div>
-                            <h2>&lt;TatuClicker/></h2>
-                            <p>TatuClicker is a Java OpenCV based software, that can recognize desktop figures from
-                                samples and do some commands like simulate a peripheral (ex: Mouse and keyboard.);
-                                Actual version can be used like a library to create other app's based in yours
-                                functions.</p>
-                        </div>
-                        
-                    </div>
-                </slide>
-                <slide>
-                    <div>
-                        <img src="./img/orkruxicon.png" alt="tatuclickericon">
-                        <div>
-                            <h2>&lt;Orkrux.js/></h2>
-                            <p>SPA project</p>
-                        </div>
-                    </div>
-                </slide>
-                <slide>
-                    <div>
-                        <img src="./img/kryptoicon.png" alt="tatuclickericon">
-                        <div>
-                            <h2>&lt;KryptoCoin/></h2>
-                            <p>Discord robot that get info from web and create alarms of cryptocoins</p>
-                        </div>
-                    </div>
-                </slide>
-                <slide>
-                    <div>
                         <img src="./img/72dddd7835.png" alt="tatuclickericon">
                         <div>
-                            <h2>&lt;TatuClicker/></h2>
-                            <p>BananaSlider is a library built in pure JavaScript</p>
+                            <h2>&lt;BananaSlider/></h2>
+                            <p>BananaSlider is a library built in pure JavaScript, is a very easy and customizable way
+                                to create slides (carrousel's) with total control over it. </p>
+                            <a target="_blank" href="https://github.com/kruceo/bananaslider">Take a look</a>
                         </div>
                     </div>
                 </slide>
@@ -121,8 +109,11 @@
                     <div>
                         <img src="./img/grape.png" alt="tatuclickericon">
                         <div>
-                            <h2>&lt;GrapeGraph.js/></h2>
-                            <p>GrapeGraphs is a library built in pure JavaScript, form graphics to easy with some commands or attributes </p>
+                            <h2>&lt;PipocaJS/></h2>
+                            <p>Version fixer and incrementer for JavaScript and Git repositories, just type "pipoca" and
+                                you can forget to increment your package version...
+                                This works watching commits and yours messages. </p>
+                            <a target="_blank" href="https://github.com/kruceo/PipocaJS">Take a look</a>
                         </div>
                     </div>
                 </slide>
@@ -130,14 +121,15 @@
         </section>
 
         <section>
-            <h2>Who is Kruceo?</h2>
-            <p>Hi! You can call me 'Kruceo', I'm a software developer from Brazil.</p>
+
         </section>
     </header>
 
     <footer>
         <div></div>
     </footer>
+
+    <script type='module' src="main.js"></script>
 </body>
 
 </html>
