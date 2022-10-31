@@ -1,9 +1,5 @@
 {
-    "type": "module",
-    "dependencies": {
-        "banana-slider": "github:kruceo/bananaslider",
-        "bananaslider": "github:kruceo/bananaslider",
-        "less": "^4.1.3",
-        "vesic-js": "github:inforgdev/vesic-js"
-    }
+  "dependencies": {
+    "orkrux": "github:kruceo/orkrux"
+  }
 }

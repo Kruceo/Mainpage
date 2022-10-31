@@ -1,0 +1,238 @@
+
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"public/img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"public/img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <parallax style=\"z-index: -2;\">\n        <header class=\"wallpaper-ground\">\n            <div>\n                <h2>&lt;Welcome/&gt;</h2>\n            </div>\n            <div class=\"line\"></div>\n            <slider cooldown=\"10000\" speed=\"1000\">\n                <slide>\n                    <h2>JS</h2>\n                </slide>\n                <slide>\n                    <h2>HTML</h2>\n                </slide>\n                <slide>\n                    <h2>CSS</h2>\n                </slide>\n                <slide>\n                    <h2>BURRO</h2>\n                </slide>\n            </slider>\n        </header>\n    </parallax>\n    <header class=\"content\">\n        <section id=\"welcome-itens\">\n            <h2>Just a look</h2>\n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>Open Source</h2>\n                    <p>You will reach open source library here</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091819.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Multi Language</h2>\n                    <p>Projects in multiple languages and platforms</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091807.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>From dev for dev</h2>\n                    <p>Get libraries to make your work a little bit more easy </p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091822.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Different projects</h2>\n                    <p>See some projects with one screw less</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091799.png\" alt=\"\">\n                </div>\n            </div>\n        </section>\n        <section>\n            <h2>Highlights</h2>\n            <slider cooldown=\"5000\">\n                <slide>\n                    <div>\n                        <img src=\"./public/img/72dddd7835.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;BananaSlider/&gt;</h2>\n                            <p>BananaSlider is a library built in pure JavaScript, is a very easy and customizable way\n                                to create slides (carrousel's) with total control over it. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/bananaslider\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n                <slide>\n                    <div>\n                        <img src=\"./public/img/code-sample.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;PipocaJS/&gt;</h2>\n                            <p>Version fixer and incrementer for JavaScript and Git repositories, just type \"pipoca\" and\n                                you can forget to increment your package version...\n                                This works watching commits and yours messages. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/PipocaJS\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n            </slider>\n        </section>\n\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n\n    \n    \n",
+    "head": "\n    <route></route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Main</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [
+    {
+      "type": "module",
+      "code": "import { initAllSliders  } from './node_modules/bananaslider'\nimport { initAllParallax } from './node_modules/pasteljs'\ninitAllSliders()\ninitAllParallax()\n",
+      "src": "main.js"
+    }
+  ],
+  "route": "",
+  "path": "./pages/main/",
+  "pkg": {
+    "type": "module",
+    "dependencies": {
+      "bananaslider": "github:kruceo/bananaslider",
+      "less": "^4.1.3",
+      "pasteljs": "github:kruceo/pasteljs",
+      "vesic-js": "github:inforgdev/vesic-js"
+    }
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <header class=\"content\">\n        <section id=\"projects\">\n         \n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>&lt;/BananaSlider&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Easy and fast, create sliders full customizable.</p>\n                    <a href=\"https://banana.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pastel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Create Parallax Linked to Mouse Scroll.</p>\n                    <a href=\"https://pastel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Orkrux&gt;</h2>\n                    <h3>Node.js</h3>\n                    <p>Framework to append multiple pages in just one. </p>\n                    <a href=\"https://orkrux.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pipoca&gt;</h2>\n                    <h3>Node.js | Git</h3>\n                    <p>Semantic version incrementer utility tool.</p>\n                    <a href=\"https://pipoca.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Notavel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>TextEditor with line counter and highlight code.</p>\n                    <a href=\"https://notavel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n            </div>\n        </section>\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n",
+    "head": "\n    <route>projects</route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Projects</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [],
+  "route": "projects",
+  "path": "./pages/projectsPage/",
+  "pkg": null
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"public/img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"public/img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <parallax style=\"z-index: -2;\">\n        <header class=\"wallpaper-ground\">\n            <div>\n                <h2>&lt;Welcome/&gt;</h2>\n            </div>\n            <div class=\"line\"></div>\n            <slider cooldown=\"10000\" speed=\"1000\">\n                <slide>\n                    <h2>JS</h2>\n                </slide>\n                <slide>\n                    <h2>HTML</h2>\n                </slide>\n                <slide>\n                    <h2>CSS</h2>\n                </slide>\n                <slide>\n                    <h2>BURRO</h2>\n                </slide>\n            </slider>\n        </header>\n    </parallax>\n    <header class=\"content\">\n        <section id=\"welcome-itens\">\n            <h2>Just a look</h2>\n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>Open Source</h2>\n                    <p>You will reach open source library here</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091819.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Multi Language</h2>\n                    <p>Projects in multiple languages and platforms</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091807.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>From dev for dev</h2>\n                    <p>Get libraries to make your work a little bit more easy </p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091822.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Different projects</h2>\n                    <p>See some projects with one screw less</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091799.png\" alt=\"\">\n                </div>\n            </div>\n        </section>\n        <section>\n            <h2>Highlights</h2>\n            <slider cooldown=\"5000\">\n                <slide>\n                    <div>\n                        <img src=\"./public/img/72dddd7835.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;BananaSlider/&gt;</h2>\n                            <p>BananaSlider is a library built in pure JavaScript, is a very easy and customizable way\n                                to create slides (carrousel's) with total control over it. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/bananaslider\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n                <slide>\n                    <div>\n                        <img src=\"./public/img/code-sample.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;PipocaJS/&gt;</h2>\n                            <p>Version fixer and incrementer for JavaScript and Git repositories, just type \"pipoca\" and\n                                you can forget to increment your package version...\n                                This works watching commits and yours messages. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/PipocaJS\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n            </slider>\n        </section>\n\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n\n    \n    \n",
+    "head": "\n    <route></route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Main</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [
+    {
+      "type": "module",
+      "code": "import { initAllSliders  } from './node_modules/bananaslider'\nimport { initAllParallax } from './node_modules/pasteljs'\ninitAllSliders()\ninitAllParallax()\n",
+      "src": "main.js"
+    }
+  ],
+  "route": "",
+  "path": "./pages/main/",
+  "pkg": {
+    "type": "module",
+    "dependencies": {
+      "bananaslider": "github:kruceo/bananaslider",
+      "less": "^4.1.3",
+      "pasteljs": "github:kruceo/pasteljs",
+      "vesic-js": "github:inforgdev/vesic-js"
+    }
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <header class=\"content\">\n        <section id=\"projects\">\n         \n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>&lt;/BananaSlider&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Easy and fast, create sliders full customizable.</p>\n                    <a href=\"https://banana.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pastel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Create Parallax Linked to Mouse Scroll.</p>\n                    <a href=\"https://pastel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Orkrux&gt;</h2>\n                    <h3>Node.js</h3>\n                    <p>Framework to append multiple pages in just one. </p>\n                    <a href=\"https://orkrux.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pipoca&gt;</h2>\n                    <h3>Node.js | Git</h3>\n                    <p>Semantic version incrementer utility tool.</p>\n                    <a href=\"https://pipoca.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Notavel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>TextEditor with line counter and highlight code.</p>\n                    <a href=\"https://notavel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n            </div>\n        </section>\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n",
+    "head": "\n    <route>projects</route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Projects</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [],
+  "route": "projects",
+  "path": "./pages/projectsPage/",
+  "pkg": {
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {}
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"public/img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"public/img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <parallax style=\"z-index: -2;\">\n        <header class=\"wallpaper-ground\">\n            <div>\n                <h2>&lt;Welcome/&gt;</h2>\n            </div>\n            <div class=\"line\"></div>\n            <slider cooldown=\"10000\" speed=\"1000\">\n                <slide>\n                    <h2>JS</h2>\n                </slide>\n                <slide>\n                    <h2>HTML</h2>\n                </slide>\n                <slide>\n                    <h2>CSS</h2>\n                </slide>\n                <slide>\n                    <h2>BURRO</h2>\n                </slide>\n            </slider>\n        </header>\n    </parallax>\n    <header class=\"content\">\n        <section id=\"welcome-itens\">\n            <h2>Just a look</h2>\n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>Open Source</h2>\n                    <p>You will reach open source library here</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091819.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Multi Language</h2>\n                    <p>Projects in multiple languages and platforms</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091807.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>From dev for dev</h2>\n                    <p>Get libraries to make your work a little bit more easy </p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091822.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Different projects</h2>\n                    <p>See some projects with one screw less</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091799.png\" alt=\"\">\n                </div>\n            </div>\n        </section>\n        <section>\n            <h2>Highlights</h2>\n            <slider cooldown=\"5000\">\n                <slide>\n                    <div>\n                        <img src=\"./public/img/72dddd7835.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;BananaSlider/&gt;</h2>\n                            <p>BananaSlider is a library built in pure JavaScript, is a very easy and customizable way\n                                to create slides (carrousel's) with total control over it. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/bananaslider\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n                <slide>\n                    <div>\n                        <img src=\"./public/img/code-sample.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;PipocaJS/&gt;</h2>\n                            <p>Version fixer and incrementer for JavaScript and Git repositories, just type \"pipoca\" and\n                                you can forget to increment your package version...\n                                This works watching commits and yours messages. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/PipocaJS\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n            </slider>\n        </section>\n\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n\n    \n    \n",
+    "head": "\n    <route></route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Main</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [
+    {
+      "type": "module",
+      "code": "import { initAllSliders  } from './node_modules/bananaslider'\nimport { initAllParallax } from './node_modules/pasteljs'\ninitAllSliders()\ninitAllParallax()\n",
+      "src": "main.js"
+    }
+  ],
+  "route": "",
+  "path": "./pages/main/",
+  "pkg": {
+    "type": "module",
+    "dependencies": {
+      "bananaslider": "github:kruceo/bananaslider",
+      "less": "^4.1.3",
+      "pasteljs": "github:kruceo/pasteljs",
+      "vesic-js": "github:inforgdev/vesic-js"
+    }
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <header class=\"content\">\n        <section id=\"projects\">\n         \n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>&lt;/BananaSlider&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Easy and fast, create sliders full customizable.</p>\n                    <a href=\"https://banana.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pastel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Create Parallax Linked to Mouse Scroll.</p>\n                    <a href=\"https://pastel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Orkrux&gt;</h2>\n                    <h3>Node.js</h3>\n                    <p>Framework to append multiple pages in just one. </p>\n                    <a href=\"https://orkrux.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pipoca&gt;</h2>\n                    <h3>Node.js | Git</h3>\n                    <p>Semantic version incrementer utility tool.</p>\n                    <a href=\"https://pipoca.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Notavel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>TextEditor with line counter and highlight code.</p>\n                    <a href=\"https://notavel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n            </div>\n        </section>\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n",
+    "head": "\n    <route>projects</route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Projects</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [],
+  "route": "projects",
+  "path": "./pages/projectsPage/",
+  "pkg": {
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {}
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <header class=\"content\">\n        <section id=\"projects\">\n         \n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>&lt;/Rafael V.&gt;</h2>\n                    <h3>Software Developer</h3>\n                    <h3>Web Developer</h3>\n                    <h3>Audio Producer</h3>\n                    <h3>Digital Artist</h3>\n                    <a href=\"http://gmail.com\"><p>contact@kruceo.com</p></a>\n                </div>\n            </div>\n        </section>\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n",
+    "head": "\n    <route>info</route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Projects</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [],
+  "route": "info",
+  "path": "./pages/info/",
+  "pkg": {
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {}
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"public/img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"public/img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"public/img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <parallax style=\"z-index: -2;\">\n        <header class=\"wallpaper-ground\">\n            <div>\n                <h2>&lt;Welcome/&gt;</h2>\n            </div>\n            <div class=\"line\"></div>\n            <slider cooldown=\"10000\" speed=\"1000\">\n                <slide>\n                    <h2>JS</h2>\n                </slide>\n                <slide>\n                    <h2>HTML</h2>\n                </slide>\n                <slide>\n                    <h2>CSS</h2>\n                </slide>\n                <slide>\n                    <h2>BURRO</h2>\n                </slide>\n            </slider>\n        </header>\n    </parallax>\n    <header class=\"content\">\n        <section id=\"welcome-itens\">\n            <h2>Just a look</h2>\n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>Open Source</h2>\n                    <p>You will reach open source library here</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091819.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Multi Language</h2>\n                    <p>Projects in multiple languages and platforms</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091807.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>From dev for dev</h2>\n                    <p>Get libraries to make your work a little bit more easy </p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091822.png\" alt=\"\">\n                </div>\n                <div id=\"box\">\n                    <h2>Different projects</h2>\n                    <p>See some projects with one screw less</p>\n                    <img src=\"https://cdn-icons-png.flaticon.com/512/8091/8091799.png\" alt=\"\">\n                </div>\n            </div>\n        </section>\n        <section>\n            <h2>Highlights</h2>\n            <slider cooldown=\"5000\">\n                <slide>\n                    <div>\n                        <img src=\"./public/img/72dddd7835.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;BananaSlider/&gt;</h2>\n                            <p>BananaSlider is a library built in pure JavaScript, is a very easy and customizable way\n                                to create slides (carrousel's) with total control over it. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/bananaslider\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n                <slide>\n                    <div>\n                        <img src=\"./public/img/code-sample.png\" alt=\"tatuclickericon\">\n                        <div>\n                            <h2>&lt;PipocaJS/&gt;</h2>\n                            <p>Version fixer and incrementer for JavaScript and Git repositories, just type \"pipoca\" and\n                                you can forget to increment your package version...\n                                This works watching commits and yours messages. </p>\n                            <a target=\"_blank\" href=\"https://github.com/kruceo/PipocaJS\">Take a look</a>\n                        </div>\n                    </div>\n                </slide>\n            </slider>\n        </section>\n\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n\n    \n    \n",
+    "head": "\n    <route></route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Main</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [
+    {
+      "type": "module",
+      "code": "import { initAllSliders  } from './node_modules/bananaslider'\nimport { initAllParallax } from './node_modules/pasteljs'\ninitAllSliders()\ninitAllParallax()\n",
+      "src": "main.js"
+    }
+  ],
+  "route": "",
+  "path": "./pages/main/",
+  "pkg": {
+    "type": "module",
+    "dependencies": {
+      "bananaslider": "github:kruceo/bananaslider",
+      "less": "^4.1.3",
+      "pasteljs": "github:kruceo/pasteljs",
+      "vesic-js": "github:inforgdev/vesic-js"
+    }
+  }
+}
+
+
+
+
+
+
+{
+  "html": {
+    "body": "<header class=\"bar\">\n        <img class=\"logo\" src=\"img/logo.png\" alt=\"\">\n        <ul class=\"menu\">\n            <li>\n                <a href=\"/\">\n                    <p>Main</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/projects\">\n                    <p>Projects</p>\n                </a>\n            </li>\n            <li>\n                <a href=\"/info\">\n                    <p>Info</p>\n                </a>\n            </li>\n        </ul>\n        <ul class=\"social\">\n            <li>\n                <img src=\"img/git.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/instagram.png\" alt=\"\">\n            </li>\n            <li>\n                <img src=\"img/face.png\" alt=\"\">\n            </li>\n        </ul>\n    </header>\n    <header class=\"content\">\n        <section id=\"projects\">\n         \n            <div id=\"boxes\">\n                <div id=\"box\">\n                    <h2>&lt;/BananaSlider&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Easy and fast, create sliders full customizable.</p>\n                    <a href=\"https://banana.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pastel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>Create Parallax Linked to Mouse Scroll.</p>\n                    <a href=\"https://pastel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Orkrux&gt;</h2>\n                    <h3>Node.js</h3>\n                    <p>Framework to append multiple pages in just one. </p>\n                    <a href=\"https://orkrux.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Pipoca&gt;</h2>\n                    <h3>Node.js | Git</h3>\n                    <p>Semantic version incrementer utility tool.</p>\n                    <a href=\"https://pipoca.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n                <div id=\"box\">\n                    <h2>&lt;/Notavel&gt;</h2>\n                    <h3>JS | CSS | HTML</h3>\n                    <p>TextEditor with line counter and highlight code.</p>\n                    <a href=\"https://notavel.kruceo.com\"><p>Visit website ↝</p></a>\n                </div>\n            </div>\n        </section>\n        <section>\n\n        </section>\n    </header>\n    <footer>\n        <h2>\n            By Kruceo\n        </h2>\n    </footer>\n",
+    "head": "\n    <route>projects</route>\n    <meta charset='utf-8'>\n    <meta http-equiv='X-UA-Compatible' content='IE=edge'>\n    <title>Kruceo | Projects</title>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>\n    <script src=\"srum.js\"></script>\n    <style>\n        @import url('https://fonts.googleapis.com/css?family=Karla');\n    </style>\n"
+  },
+  "cssPaths": [],
+  "jsPaths": [],
+  "route": "projects",
+  "path": "./pages/projects/",
+  "pkg": {
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {}
+  }
+}
