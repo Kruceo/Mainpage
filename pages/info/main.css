@@ -1,11 +1,3 @@
-* {
-  margin: 0 auto;
-}
-body {
-  background: linear-gradient(black 0%, #11001a 100%);
-  background-repeat: no-repeat;
-  height: 100vh;
-}
 .bar {
   position: fixed;
   top: 0;
@@ -21,10 +13,58 @@ body {
   width: 30px;
   padding-left: 2px;
 }
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .logo {
+    src: url('https://cdn-icons-png.flaticon.com/512/2976/2976215.png');
+  }
+  .bar .logo:focus ~ .dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.bar .dropdown {
+  transition: opacity 0.2s;
+  visibility: collapse;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 220px;
+  gap: 10px;
+  border-radius: 0 0 10px 0;
+  margin-bottom: 10px;
+}
+.bar .dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.bar .dropdown p,
+.bar .dropdown a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  font-family: 'karla';
+  margin-left: 1px;
+  text-align: start;
+  cursor: pointer;
+}
+.bar .dropdown p:hover,
+.bar .dropdown a:hover {
+  color: #d61c59;
+}
 .bar .menu {
   display: flex;
   padding: 0;
   position: absolute;
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .menu {
+    visibility: collapse;
+  }
 }
 .bar .menu li {
   list-style: none;
@@ -49,32 +89,89 @@ body {
   justify-content: flex-end;
   display: flex;
 }
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .bar .social {
+    visibility: collapse;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .social {
+    visibility: collapse;
+  }
+}
 .bar .social li {
   margin: 0 10px;
 }
 .bar .social li img {
   width: 30px;
 }
+body {
+  background: linear-gradient(black 0%, #11001a 100%);
+  background-repeat: repeat-x;
+  background-size: cover;
+  min-height: 100vh;
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .content {
+    width: 380px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .content {
+    width: 620px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .content {
+    width: 860px;
+  }
+}
+@media only screen and (min-width: 1199px) and (max-width: 1920px) {
+  .content {
+    width: 1180px;
+  }
+}
+* {
+  margin: 0 auto;
+}
 .content {
-  width: 1000px;
-  height: 50vh;
   margin-top: 120px;
   margin-bottom: 60px;
 }
-.content h2 {
+.content #member h2 {
   text-align: center;
+  width: 100%;
   text-transform: uppercase;
   font-size: 30px;
   font-family: 'karla';
   color: white;
   margin-bottom: 10px;
 }
-.content #projects #boxes {
+.content #member #boxes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
 }
-.content #projects #boxes #box {
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1199px) and (max-width: 1920px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.content #member #boxes #box {
   width: 100%;
   height: 250px;
   background-color: #202020;
@@ -85,21 +182,22 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.content #projects #boxes #box h2 {
-  font-size: 30px;
+.content #member #boxes #box h2 {
+  font-size: 40px;
   color: #d61c59;
 }
-.content #projects #boxes #box p {
+.content #member #boxes #box h3 {
   text-align: center;
-  height: 80px;
+  margin-bottom: 1px;
 }
-.content #projects #boxes #box a {
+.content #member #boxes #box a {
   text-decoration: none;
 }
-.content #projects #boxes #box a p {
+.content #member #boxes #box a p {
   height: fit-content;
   text-align: end;
   margin: 10px;
+  color: rgba(0, 0, 0, 0.75);
 }
 footer {
   width: 100%;
