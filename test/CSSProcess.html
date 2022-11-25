@@ -3682,3 +3682,479 @@ footer {
 
 </style>
 
+
+
+<route>info</route>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kruceo | Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla');
+    </style>
+
+<style>
+
+@import "../../styles/less/palette.less";
+@import "../../styles/less/bar.less";
+@import "../../styles/less/wallpaper.less";
+@import "../../styles/less/content-config.less";
+
+* {
+    margin: 0 auto;
+}
+
+.content {
+    // width: 1000px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+
+   
+
+    #member {
+
+        h2 {
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: 'karla';
+            color: white;
+            margin-bottom: 10px;
+        }
+        #boxes {
+            // grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+            @media @mobile {
+                grid-template-columns: 1fr;
+            }
+            @media @tablet {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media @desktop {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media @tv {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+           
+            gap: 50px;
+
+            #box {
+
+                width: 100%;
+                height: 100%;
+                background-color: rgb(32, 32, 32);
+                border-radius: 20px;
+                color: white;
+                font-family: 'karla';
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2 {
+                    font-size: 40px;
+                    color: @red;
+                }
+
+                h3 {
+                    
+                    text-align: center;
+                    margin-bottom: 1px;
+                }
+
+                a {
+                    text-decoration: none;
+                    p {
+                        height: fit-content;
+                        text-align: end;
+                        margin: 10px;
+                        color: rgba(0, 0, 0, 0.75);
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'karla';
+    color:rgba(255, 255, 255, 0.09)
+}
+
+</style>
+
+
+
+<route></route>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kruceo | Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla');
+    </style>
+
+<style>
+
+@import "../../styles/less/palette.less";
+@import "../../styles/less/bar.less";
+@import "../../styles/less/wallpaper.less";
+@import "../../styles/less/content-config.less";
+* {
+    margin: 0 auto;
+}
+
+
+.wallpaper-ground {
+
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    transform: scaleY(1);
+
+    div {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-family: 'karla';
+        color: @red;
+        font-size: 100px;
+        @media @mobile {
+            font-size: 50px;
+        }
+        @media @tablet {
+            font-size: 75px;
+        }
+
+        animation: forwards welcome 1s cubic-bezier(0, 1, 1, 1)
+    }
+
+    .line {
+        animation: forwards welcome 1.5s;
+        width: 500px;
+
+        height: 12px;
+
+        @media @mobile {
+            height: 6px;
+            width: 250px;
+        }
+        @media @tablet {
+            height: 9px;
+            width: 375px;
+        }
+
+        background-color: @red;
+    }
+
+    slider {
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+.content {
+
+    section {
+        margin-top: 120px;
+        margin-bottom: 60px;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: 'karla';
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        slider {
+            
+            slider-frame {
+                slide {
+                    div {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(36, 36, 36);
+                        color: white;
+                        border-radius: 20px;
+                        overflow: hidden;
+
+                        img {
+                            width: 350px;
+
+                            @media @mobile {
+                                visibility: collapse;
+                                width: 0px;
+                            }
+                            @media @tablet {
+                                visibility: collapse;
+                                width: 0px;
+                            }
+
+                            transition: filter 500ms;
+                        }
+
+                        img:hover {
+                            filter: grayscale();
+                        }
+
+                        div {
+                            display: block;
+
+                            h2 {
+                                padding: 10px;
+                                text-align: left;
+                                color: @red;
+                            }
+
+                            p {
+                                padding: 10px;
+                                font-family: 'karla';
+                                text-align: left;
+
+                                height: 230px;
+                            }
+
+                            a {
+                                width: 100%;
+                                padding: 10px;
+                                text-decoration: none;
+                                text-align: end;
+                                font-family: 'karla';
+                                color: rgb(163, 163, 163);
+                                transition: color 200ms;
+                            }
+
+                            a:hover {
+                                color: @red;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    #welcome-itens {
+
+
+        #boxes {
+            display: grid;
+
+            @media @mobile {
+                grid-template-columns: 1fr;
+            }
+
+            @media @tablet {
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            @media @desktop {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            @media @tv {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            gap: 20px;
+
+            #box {
+
+                width: 85%;
+                height: 85%;
+                background-color: rgb(36, 36, 36);
+                border-radius: 20px;
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2 {
+                    font-size: 20px;
+                    color: @red;
+                }
+
+                p {
+                    color: white;
+                    font-family: 'karla';
+                    text-align: center;
+                    height: 80px;
+                }
+
+                img {
+                    width: 80px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'karla';
+    color: rgba(255, 255, 255, 0.09)
+}
+
+@keyframes welcome {
+    0% {
+
+        opacity: 0;
+    }
+
+    25% {
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+
+    100% {}
+}
+
+</style>
+
+
+
+<route>projects</route>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kruceo | Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="srum.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla');
+    </style>
+
+<style>
+
+@import "../../styles/less/palette.less";
+@import "../../styles/less/bar.less";
+@import "../../styles/less/wallpaper.less";
+@import "../../styles/less/content-config.less";
+
+* {
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 120px;
+    margin-bottom: 60px;
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: 'karla';
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+    }
+
+    #projects {
+
+
+        #boxes {
+            display: grid;
+             @media @mobile {
+                grid-template-columns: 1fr;
+            }
+            @media @tablet {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media @desktop {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media @tv {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            gap: 50px;
+
+            #box {
+
+                width: 100%;
+                height: 250px;
+                background-color: rgb(32, 32, 32);
+                border-radius: 20px;
+                color: white;
+                font-family: 'karla';
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2 {
+                    font-size: 30px;
+                    color: @red;
+                }
+
+                p {
+
+                    text-align: center;
+                    height: 80px;
+                }
+
+                a {
+                    
+                    
+                    text-decoration: none;
+                    p {
+                        height: fit-content;
+                        text-align: end;
+                        margin: 10px;
+                        color: rgba(0, 0, 0, 0.75);
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'karla';
+    color:rgba(255, 255, 255, 0.09)
+}
+
+</style>
+
