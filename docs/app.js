@@ -35,7 +35,7 @@ const pages = [
     "jsPaths": [
       {
         "type": "module",
-        "code": "import { initAllSliders  } from './node_modules/bananaslider'\nimport { initAllParallax } from './node_modules/pasteljs'\ninitAllSliders()\ninitAllParallax()\n",
+        "code": "import { initAllSliders  } from './node_modules/bananaslider/dist/bundle.es.js'\nimport { initAllParallax } from './node_modules/pasteljs/index.js'\ninitAllSliders()\ninitAllParallax()\n",
         "src": "main.js"
       }
     ],
