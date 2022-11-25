@@ -1,141 +1,9 @@
-@import "palette.less";
-@tv: ~"only screen and (min-width: 1199px) and (max-width: 1920px)";
-@desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
-@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
-@mobile: ~"only screen and (min-width: 0px) and (max-width: 719px)";
-
-@tvW: 1180px;
-@desktopW: 860px;
-@tabletW: 620px;
-@mobileW: 380px;
-
+@import "../../styles/less/palette.less";
+@import "../../styles/less/bar.less";
+@import "../../styles/less/wallpaper.less";
+@import "../../styles/less/content-config.less";
 * {
     margin: 0 auto;
-}
-
-body {
-     background: linear-gradient(black 0%, @darkBlue 100%);
-    // background: url('public/img/Simple_nature_landscape_HD_wallpaper_14_medium.jpg');
-    // backdrop-filter: blur(30px);
-    background-repeat: repeat-x;
-    background-size: cover;
-    
-}
-
-.bar {
-    position: fixed;
-    top: 0;
-    background-color: black;
-    z-index: 5;
-    width: 100%;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .logo {
-
-        width: 30px;
-        padding-left: 2px;
-        @media @mobile
-        {
-            src: url('https://cdn-icons-png.flaticon.com/512/2976/2976215.png');
-            &:focus ~ .dropdown
-            {
-                visibility: visible;
-                opacity: 1;
-            }    
-        }
-       
-    }
-    .dropdown
-    {
-        &:hover 
-        {
-            visibility: visible;
-            opacity: 1;
-        }
-        transition: opacity 0.2s;
-        visibility: collapse;
-        position: absolute;
-        display: grid;
-        grid-template-columns: 1fr;
-        background-color: rgba(0, 0, 0,.5);
-        backdrop-filter: blur(10px);
-        opacity: 0;
-        top: 0;
-        left: 0;
-        width: 220px;
-        gap: 10px;
-        border-radius: 0 0 10px 0;
-        margin-bottom: 10px;
-        p,a
-        {
-            text-decoration: none;
-            font-size: 30px;
-            color: white;
-            font-family: 'karla';
-            margin-left: 1px;
-            text-align: start;
-            cursor: pointer;
-            &:hover
-            {
-                color: @red;
-            }
-        }
-    }
-    .menu {
-        @media @mobile {
-            visibility: collapse;
-        }
-
-        display: flex;
-        padding: 0;
-        position: absolute;
-
-        li {
-            list-style: none;
-            margin: 0 60px;
-
-            a {
-                text-decoration: none;
-            }
-
-            p {
-
-                cursor: pointer;
-                color: white;
-                text-align: center;
-                font-family: 'karla';
-                text-transform: uppercase;
-            }
-
-            p:hover {
-                color: @red;
-            }
-        }
-    }
-
-    .social {
-        @media @tablet {
-            visibility: collapse;
-        }
-        @media @mobile {
-            visibility: collapse;
-        }
-        width: 100%;
-        margin: 0 0;
-        justify-content: flex-end;
-        display: flex;
-
-        li {
-            img {
-                width: 30px;
-            }
-
-            margin: 0 10px;
-        }
-    }
 }
 
 
@@ -197,23 +65,6 @@ body {
 }
 
 .content {
-    @media @mobile {
-        width: @mobileW;
-    }
-
-    @media @tablet {
-        width: @tabletW;
-    }
-
-    @media @desktop {
-        width: @desktopW;
-    }
-
-    @media @tv {
-        width: @tvW;
-    }
-
-
 
     section {
         margin-top: 120px;
