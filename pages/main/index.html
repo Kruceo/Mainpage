@@ -6,9 +6,8 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Kruceo | Main</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="srum.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.less'>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla');
     </style>
@@ -17,7 +16,18 @@
 <body>
 
     <header class="bar">
-        <img class="logo" src="public/img/logo.png" alt="">
+        <img tabindex="1" class="logo" src="public/img/logo.png" alt="">
+        <div class="dropdown">
+            <a href="">
+                <p>&gt;Main</p>
+            </a>
+            <a href="/projects">
+                <p>&gt;Projects</p>
+            </a>
+            <a href="/info">
+                <p>&gt;Info</p>
+            </a>
+        </div>
         <ul class="menu">
             <li>
                 <a href="/">
@@ -53,7 +63,7 @@
                 <h2>&lt;Welcome/></h2>
             </div>
             <div class="line"></div>
-            <slider cooldown="10000" speed="1000">
+            <slider cooldown="3000" movement="vertical" speed="1000">
                 <slide>
                     <h2>JS</h2>
                 </slide>
@@ -62,9 +72,6 @@
                 </slide>
                 <slide>
                     <h2>CSS</h2>
-                </slide>
-                <slide>
-                    <h2>BURRO</h2>
                 </slide>
             </slider>
         </header>
