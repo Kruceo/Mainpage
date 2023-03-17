@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import { ascii, icon } from "../../colors.mjs";
+import { ascii, icon, secondary } from "../../colors.mjs";
 import { Window } from "../essentials/Window";
 import { banana, initAllSliders, startSlider } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
@@ -44,7 +44,7 @@ export function Homepage(props) {
 
         initAllSliders()
     })
-    const sectionStyle = { height: 'calc(100vh - 45px)', display: "flex", justifyContent: "center", alignItems: "center", borderBottom: '#0003 1px solid' }
+    const sectionStyle = { height: 'calc(100vh - 45px)', display: "flex", justifyContent: "center", alignItems: "center" }
     return <>
 
         <Bar></Bar>
@@ -64,6 +64,20 @@ export function Homepage(props) {
                             height: '100%',
                             whiteSpace: 'pre-wrap'
                         }} id="cmd">{'starting...'}</p>
+                    </Window>
+                </div>
+            </section>
+            <section style={sectionStyle}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px' }}>
+                    <Window title="Open source" width="475px" height="500px">
+                        <Message
+                            message="You will reach open source library here"
+                            img="https://home.kruceo.com/public/img/cadeado.png" />
+                    </Window>
+                    <Window title="Easy library" width="475px" height="500px">
+                        <Message
+                            message="Get libraries to make your work a little bit more easy"
+                            img="https://home.kruceo.com/public/img/mesa.png" />
                     </Window>
                 </div>
             </section>
@@ -96,13 +110,7 @@ export function Homepage(props) {
                 </div>
             </section>
 
-            <section style={sectionStyle}>
-                <div>
-                    <Window title="Highlights" width="1000px" height="500px">
-                        <header style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr'}}></header>
-                    </Window>
-                </div>
-            </section>
+
             <div style={{ height: "100vh" }}></div>
         </Content>
     </>
@@ -153,7 +161,7 @@ function Card(props) {
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPositionX: 'center',
-                boxShadow:'0px 0px 30px #0008'
+                boxShadow: '0px 0px 30px #0008'
             }} />
             <div style={{ color: 'white', width: "100%" }} >
                 <h2>
@@ -168,3 +176,16 @@ function Card(props) {
 }
 
 
+function Message(props) {
+
+    return <header style={{ display: "flex", flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+        <div style={{
+            display: 'flex', flexDirection: 'column', background: 'transparent', padding: '20px', borderRadius: '10px',
+            // boxShadow: '0px 0px 20px #0008',
+            color: 'white',
+        }}>
+            <img style={{ width: 250, marginBottom: '20px' }} src={props.img} alt="" />
+            <p style={{ width: 290, height: 40 }}>{props.message}</p>
+        </div>
+    </header>
+}

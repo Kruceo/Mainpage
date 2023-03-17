@@ -1,7 +1,7 @@
 export const red = '#f99'
 export const yellow = '#ff9'
 export const green = '#9f9'
-export const secondary = '#303030'
+export const secondary = '#323232'
 export const primary = '#101010'
 export const ascii = 
 `
@@ -14,4 +14,4 @@ export const ascii =
 `
 
 export const icon = 'https://raw.githubusercontent.com/Kruceo/KruceoMain/main/docs/public/img/logo.png'
-export const wallpaperURL = 'https://i.pinimg.com/originals/1b/59/97/1b5997e9ab4abc8d933e243116e15457.png'
+export const wallpaperURL = 'https://i.pinimg.com/originals/8f/c5/3f/8fc53fc5d0336c5eec2921c0033e33fc.png'

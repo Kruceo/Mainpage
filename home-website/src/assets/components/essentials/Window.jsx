@@ -38,7 +38,7 @@ export function Window(props) {
                 height: h,
                 // background: secondary,
                 border: primary + ' 1px solid',
-                boxShadow: '0px 0px 20px black',
+                boxShadow: '0px 0px 30px #0008',
                 borderRadius: '10px',
                 transition: 'scale 250ms, opacity 250ms',
                 overflow: 'hidden'
@@ -103,8 +103,8 @@ export function Window(props) {
             <div style={
                 {
                     width: '100%', height: (h.replace('px', '') - 25) + 'px',
-                    backdropFilter: 'blur(10px)',
-                    background: secondary + 'cc'
+                    backdropFilter: 'blur(100px)',
+                    background: '#313131'
                 }}>
                 {props.children}
             </div>
