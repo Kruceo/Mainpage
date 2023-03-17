@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bananaslider": "github:kruceo/bananaslider",
+    "milhas": "github:kruceo/milhas",
     "preact": "^10.11.3"
   },
   "devDependencies": {

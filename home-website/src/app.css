@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 *{
   margin: 0 auto;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Ubuntu'
 }
 
 :root{
-  background-image: url('https://i0.wp.com/abglt.org.br/wp-content/uploads/2020/10/wallpaper-pc1-scaled-1.jpg?fit=2560%2C1440&ssl=1');
-  background-size: cover;
+  /* background-image: url('https://img.freepik.com/fotos-gratis/vista-incrivel-de-uma-falesia-verde-perto-do-mar-no-arquipelago-dos-acores-portugal_181624-48407.jpg?w=740&t=st=1678985589~exp=1678986189~hmac=004943e4d36b870054dc36d769871d10455f85b3ff9d19be42a40bc1513c543a'); */
+  
+  background-color: #333;
+  background-size: contain;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+
 }
