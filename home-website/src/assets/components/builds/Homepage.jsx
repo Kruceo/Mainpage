@@ -6,6 +6,7 @@ import Bar from "../essentials/Bar.jsx";
 import Content from "../essentials/Content.jsx";
 import Wallpaper from "../essentials/Wallpaper.jsx";
 import { highlights } from "../../../config/content.mjs";
+import Section from "../essentials/Section.jsx";
 export function Homepage(props) {
 
 
@@ -44,19 +45,19 @@ export function Homepage(props) {
 
         initAllSliders()
     })
-    const sectionStyle = { height: 'calc(100vh - 45px)', display: "flex", justifyContent: "center", alignItems: "center" }
+    
     return <>
 
         <Bar></Bar>
-        <Wallpaper></Wallpaper>
+        
         <Content>
-            <section style={sectionStyle}>
+            <Section>
                 <div>
                     <Window width="1000px" height="500px" title="Welcome">
                         <p style={{
                             boxSizing: 'border-box',
-                            fontSize: '25px',
-                            fontFamily: 'space mono',
+                            fontSize: '10px',
+                            fontFamily: 'monospace',
                             display: "flex",
                             padding: '5px',
                             color: "white",
@@ -66,8 +67,9 @@ export function Homepage(props) {
                         }} id="cmd">{'starting...'}</p>
                     </Window>
                 </div>
-            </section>
-            <section style={sectionStyle}>
+            </Section>
+           
+            <Section>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px' }}>
                     <Window title="Open source" width="475px" height="500px">
                         <Message
@@ -80,12 +82,12 @@ export function Homepage(props) {
                             img="https://home.kruceo.com/public/img/mesa.png" />
                     </Window>
                 </div>
-            </section>
-            <section style={sectionStyle}>
+            </Section>
+            <Section>
                 <div>
                     <Window title="Highlights" width="1000px" height="500px">
 
-                        <slider style={{ height: '1000px' }}>
+                        <slider cooldown={5000} style={{ height: '1000px' }}>
                             {
                                 highlights.map(each => {
                                     return <slide
@@ -108,10 +110,7 @@ export function Homepage(props) {
                         </slider>
                     </Window>
                 </div>
-            </section>
-
-
-            <div style={{ height: "100vh" }}></div>
+            </Section>
         </Content>
     </>
 }
@@ -155,13 +154,13 @@ function Card(props) {
         <div style={{ height: "100%", padding: "10px", display: "grid", gridTemplateColumns: '1fr 1fr', boxSizing: 'border-box' }}>
             <div style={{
                 borderRadius: '10px',
-                height: '425px',
-                width: '425px',
+                height: '400px',
+                width: '400px',
                 backgroundImage: 'url(' + (props.img ?? icon) + ')',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPositionX: 'center',
-                boxShadow: '0px 0px 30px #0008'
+                border:'1px black solid'
             }} />
             <div style={{ color: 'white', width: "100%" }} >
                 <h2>

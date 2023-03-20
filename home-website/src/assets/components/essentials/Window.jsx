@@ -40,7 +40,7 @@ export function Window(props) {
                 border: primary + ' 1px solid',
                 boxShadow: '0px 0px 30px #0008',
                 borderRadius: '10px',
-                transition: 'scale 250ms, opacity 250ms',
+                transition: 'scale 250ms, opacity 150ms',
                 overflow: 'hidden'
             }
         }>

@@ -7,7 +7,6 @@ import { Window } from "../essentials/Window";
 export default function ERR404() {
     return <>
         <Bar></Bar>
-        <Wallpaper></Wallpaper>
         <Content>
             <section style={{height:'calc(100vh - 45px)',display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <Window title="Warning" width='400px' height="400px">

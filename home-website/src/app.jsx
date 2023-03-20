@@ -12,6 +12,7 @@ export function App() {
 
   return (
     <>
+      <Wallpaper></Wallpaper>
       <Router>
         <Path as="/" absolute>
           <Homepage></Homepage>

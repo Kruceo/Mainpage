@@ -5,8 +5,8 @@ export const highlights = [
         img:'https://raw.githubusercontent.com/Kruceo/Juca/main/icon.png'
     },
     {
-        title:'Yotum',
-        content:'Color library',
-        img:'https://raw.githubusercontent.com/Kruceo/Yotum/main/icon.png'
+        title:'BananaSlider',
+        content:'BananaSlider was created to make creating carousels simpler, faster and more intuitive, while still being very customizable.',
+        img:'https://raw.githubusercontent.com/Kruceo/BananaSlider/main/icon.png'
     }
 ]
