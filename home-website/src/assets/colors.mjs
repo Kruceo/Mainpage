@@ -1,9 +1,17 @@
+let lightMode = false
+
+if(window && window.light && window.light == true){
+  lightMode = true
+}
+
 export const red = '#f99'
 export const yellow = '#ff9'
 export const green = '#9f9'
-export const secondary = '#323232'
+export const secondary = lightMode?'#e9e9e9':'#323232'
 export const primary = '#101010'
 export const background = '#ddddee'
+export const text = lightMode?'#000':'#fff'
+export const links = '#77f'
 export const ascii = 
 `
 

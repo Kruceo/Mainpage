@@ -1,0 +1,274 @@
+.bar {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 5;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar .logo {
+  width: 30px;
+  padding-left: 2px;
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .logo {
+    src: url('https://cdn-icons-png.flaticon.com/512/2976/2976215.png');
+  }
+  .bar .logo:focus ~ .dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.bar .dropdown {
+  transition: opacity 0.2s;
+  visibility: collapse;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 220px;
+  gap: 10px;
+  border-radius: 0 0 10px 0;
+  margin-bottom: 10px;
+}
+.bar .dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.bar .dropdown p,
+.bar .dropdown a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  font-family: 'karla';
+  margin-left: 1px;
+  text-align: start;
+  cursor: pointer;
+}
+.bar .dropdown p:hover,
+.bar .dropdown a:hover {
+  color: #d61c59;
+}
+.bar .menu {
+  display: flex;
+  padding: 0;
+  position: absolute;
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .menu {
+    visibility: collapse;
+  }
+}
+.bar .menu li {
+  list-style: none;
+  margin: 0 60px;
+}
+.bar .menu li a {
+  text-decoration: none;
+}
+.bar .menu li p {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  font-family: 'karla';
+  text-transform: uppercase;
+}
+.bar .menu li p:hover {
+  color: #d61c59;
+}
+.bar.light {
+  background-color: white;
+}
+.bar.light .menu li p {
+  color: black;
+}
+.bar.light .menu li p:hover {
+  color: #d61c59;
+}
+.bar.light .logo {
+  filter: invert();
+}
+.bar.light .social {
+  filter: invert();
+  z-index: -1;
+}
+.bar .social {
+  width: 100%;
+  margin: 0 0;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .bar .social .light-button {
+    display: flex;
+  }
+  .bar .social .light-button img {
+    width: 20px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .social .light-button {
+    display: flex;
+  }
+  .bar .social .light-button img {
+    width: 20px;
+  }
+}
+.bar .social .light-button img {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transition: filter 300ms;
+}
+.bar .social .light-button img:hover {
+  filter: invert();
+}
+.bar .social li,
+.bar .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .bar .social li,
+  .bar .social a {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .bar .social li,
+  .bar .social a {
+    display: none;
+  }
+}
+.bar .social li img,
+.bar .social a img {
+  width: 24px;
+}
+body {
+  background: linear-gradient(black 0%, #11001a 100%);
+  min-height: 100vh;
+}
+body.light {
+  background: linear-gradient(white 0%, white 100%);
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .content {
+    width: 380px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .content {
+    width: 620px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1198px) {
+  .content {
+    width: 860px;
+  }
+}
+@media only screen and (min-width: 1199px) and (max-width: 1920px) {
+  .content {
+    width: 1180px;
+  }
+}
+* {
+  margin: 0 auto;
+}
+.content {
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+.content #member h2 {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: 'karla';
+  color: white;
+  margin-bottom: 10px;
+}
+.content #member h2.light {
+  color: black;
+}
+.content #member #boxes {
+  display: grid;
+  gap: 50px;
+}
+@media only screen and (min-width: 0px) and (max-width: 719px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1198px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1199px) and (max-width: 1920px) {
+  .content #member #boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.content #member #boxes #box {
+  width: 100%;
+  height: 250px;
+  background-color: #202020;
+  border-radius: 20px;
+  color: white;
+  font-family: 'karla';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content #member #boxes #box h2 {
+  font-size: 40px;
+  color: #d61c59;
+}
+.content #member #boxes #box h3 {
+  text-align: center;
+  margin-bottom: 1px;
+}
+.content #member #boxes #box a {
+  text-decoration: none;
+}
+.content #member #boxes #box a p {
+  height: fit-content;
+  text-align: end;
+  margin: 10px;
+}
+.content #member #boxes #box.light {
+  background-color: #ccc;
+}
+.content #member #boxes #box.light h3 {
+  color: black;
+}
+.content #member #boxes #box.light p {
+  color: rgba(0, 0, 0, 0.75);
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'karla';
+  color: rgba(255, 255, 255, 0.09);
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bananaslider": "github:kruceo/bananaslider",
+    "orkrux": "github:kruceo/orkrux"
+  }
+}
