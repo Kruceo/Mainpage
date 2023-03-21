@@ -1,4 +1,4 @@
-import { icon, primary, secondary } from "../../colors.mjs";
+import { icon, primary, secondary } from "../../../config/colors.mjs";
 import Router from "milhas/src/components/Router.jsx";
 import {Path} from 'milhas/src/components/Path.jsx'
 import Anchor from 'milhas/src/components/Anchor.jsx'

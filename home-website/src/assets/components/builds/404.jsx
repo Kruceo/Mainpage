@@ -1,5 +1,5 @@
 import Anchor from "milhas";
-import { links } from "../../colors.mjs";
+import { links } from "../../../config/colors.mjs";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";
 import Wallpaper from "../essentials/Wallpaper";

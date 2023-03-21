@@ -19,7 +19,44 @@ a{
   transition-timing-function: 1;
 
 }
-
+.cmd{
+  font-family: monospace;
+  margin: 0 0;
+}
+.cmd_line{
+  display:flex;
+  margin: 0 0;
+}
+.cmd_root{
+  color:red
+}
+.cmd_color0{
+  color:#f99
+}
+.cmd_color1{
+  color:#fc9
+}
+.cmd_color2{
+  color:#ff9
+}
+.cmd_color3{
+  color:#cf9
+}
+.cmd_color4{
+  color:#9f9
+}
+.cmd_color5{
+  color:#9fc
+}
+.cmd_color6{
+  color:#9ff
+}
+.cmd_color7{
+  color:#9cf
+}
+.cmd_color8{
+  color:#99f
+}
 @keyframes cloudMove {
   0%{
     transform: translateY(0px)

@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks"
-import { green, primary, red, secondary, yellow } from "../../colors.mjs"
+import { green, primary, red, secondary, yellow } from "../../../config/colors.mjs"
 
 export function Window(props) {
     const w = props.width ?? '100%'

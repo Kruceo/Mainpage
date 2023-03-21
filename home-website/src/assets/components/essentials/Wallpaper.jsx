@@ -1,4 +1,4 @@
-import { background } from "../../colors.mjs";
+import { background } from "../../../config/colors.mjs";
 
 export default function Wallpaper() {
     return <header style={{ position: 'fixed', zIndex: '-100' }}>

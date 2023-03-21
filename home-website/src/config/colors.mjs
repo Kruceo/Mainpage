@@ -13,9 +13,7 @@ export const background = '#ddddee'
 export const text = lightMode?'#000':'#fff'
 export const links = '#77f'
 export const ascii = 
-`
-
-   ▄█   ▄█▄    ▄████████ ███    █▄   ▄████████    ▄████████  ▄██████▄  
+`   ▄█   ▄█▄    ▄████████ ███    █▄   ▄████████    ▄████████  ▄██████▄  
   ███ ▄███▀   ███    ███ ███    ███ ███    ███   ███    ███ ███    ███ 
   ███▐██▀     ███    ███ ███    ███ ███    █▀    ███    █▀  ███    ███ 
  ▄█████▀     ▄███▄▄▄▄██▀ ███    ███ ███         ▄███▄▄▄     ███    ███ 
@@ -24,7 +22,6 @@ export const ascii =
   ███ ▀███▄   ███    ███ ███    ███ ███    ███   ███    ███ ███    ███ 
   ███   ▀█▀   ███    ███ ████████▀  ████████▀    ██████████  ▀██████▀  
   ▀           ███    ███                                               
-
 `
 
 export const icon = 'https://raw.githubusercontent.com/Kruceo/KruceoMain/main/docs/public/img/logo.png'

@@ -1,4 +1,4 @@
-import { links, text } from "../../colors.mjs";
+import { links, text } from "../../../config/colors.mjs";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";
 import Section from "../essentials/Section";
@@ -25,18 +25,19 @@ export default function Info(){
                 </div>
             </Window>
 
-            <Window width="100%" title='Social' style={{gridColumn:' 5 / span 8',gridRow:'1 / span 2'}}>
+            <Window width="100%" title='Donate' style={{gridColumn:' 5 / span 8',gridRow:'1 / span 2'}}>
                 <p>
                     Email: contact@kruceo.com<br></br>
                     Github: Kruceo <br></br> 
                     Telegram: 123
                 </p>
             </Window>
-            <Window width="100%" title='Social' style={{gridColumn:' 1 / span 4'}}>
+            <Window width="100%" title='Donate' style={{gridColumn:' 1 / span 4'}}>
                 <p>
-                    Email: contact@kruceo.com<br></br>
-                    Github: Kruceo <br></br> 
-                    Telegram: 123
+                    BNB: [comming soon] <br></br>
+                    ETH: [comming soon]<br></br>
+                    Pix: [comming soon]<br></br>
+                    
                 </p>
             </Window>
         </Section>

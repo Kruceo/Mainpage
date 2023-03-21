@@ -1,47 +1,64 @@
 import { useEffect } from "preact/hooks";
-import { ascii, icon, secondary, text } from "../../colors.mjs";
+import { ascii, icon, secondary, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
-import { banana, initAllSliders, startSlider } from "bananaslider";
+import {  initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
 import Content from "../essentials/Content.jsx";
-import Wallpaper from "../essentials/Wallpaper.jsx";
 import { highlights } from "../../../config/content.mjs";
 import Section from "../essentials/Section.jsx";
 export function Homepage(props) {
 
 
     useEffect(() => {
-        const user = 'root@web:/# '
+        const user = '<span class="cmd cmd_root">root@web:/# </span>'
         const cmd = document.querySelector('#cmd')
         cmd.innerHTML = ''
         const userWrite = (text) => { cmd.innerHTML = text }
         const userAppend = (text) => { cmd.innerHTML += text }
         let oldtext = cmd.innerHTML
         userWrite(user)
-        const init = digitation('cat ./user/welcome.burr', 40, 200,
-            (text) => {
-                userWrite(user + text)
+        const init = digitation('run ./user/welcome.burr --out=screen', 40, 200,
+            (txt) => {
+                userWrite("<div class='cmd_line'>"+user + "<p class='cmd'>"+txt+"</p></div>")
             },
-            () => {
+            ()=>{
+                const time = 100
+               
+                // userWrite(oldtext +"<div class='cmd_line'></div>")
+                // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
-                // userWrite(oldtext + '\nLoading archive [64kb]')
-                setTimeout(() => {
-                    userAppend(ascii + '\nVersion: 0.0.1\nGithub: https://github.com/Kruceo')
-                    userAppend('\n' + user)
-                    setTimeout(() => {
-                        oldtext = cmd.innerText
-                        digitation('Welcome from Kruceo!', 100, 500, (text2) => {
+                ascii.split('\n').forEach((each,index)=>{
+                    setTimeout(()=>{
+                        userWrite(oldtext +"<div class='cmd_line'><p class='cmd cmd_color"+index+"'>" + each + "</p></div>")
+                        oldtext = cmd.innerHTML
+                    },1000+time*index)
+                })
+                setTimeout(()=>{
+                    setTimeout(()=>{
+                        userWrite(oldtext + 
+                        "<div class='cmd_line'><p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>"+
+                        "<div class='cmd_line'><p class='cmd cmd_color8'>CPU:</p> Burning...</div>"+
+                        "<div class='cmd_line'><p class='cmd cmd_color8'>GPU:</p> Broken...</div>"+
+                        "<div class='cmd_line'><p class='cmd cmd_color8'>Memory:</p> 4/16 kb</div>"+
+                        "<div class='cmd_line'><p class='cmd cmd_color8'>Resolution:</p> "+window.visualViewport.width + 'x' + window.visualViewport.height+"</div>")
+                        oldtext = cmd.innerHTML
+                        userWrite(oldtext+ "<div class='cmd_line'>"+user+"</div>" )
+                        setTimeout(()=>{
+                            digitation('Welcome from Kruceo!',0,100,(txt)=>{
+                                userWrite(oldtext+ "<div class='cmd_line'>"+user+txt+"</div>" )
+                            })
+                        },1000)
+                    },500)
+                    // userWrite(oldtext + "<div class='cmd_line'>[System] Warning, your CPU not support Burro and the same is burning at " + parseInt((Math.random()*300 + 100)) + "° Celsius, just run </div>")
+                    return
+                    userWrite(oldtext+"<div class='cmd_line'>"+user + "<p class='cmd'></p></div>")
+                    digitation('Welcome from Kruceo!', 40, 200,
+                    (txt) => {
+                        userWrite(oldtext+"<div class='cmd_line'>"+user + "<p class='cmd'>"+txt+"</p></div>")
+                    })
+                },1000+10 * time )
 
-                            userWrite(oldtext + text2)
-
-                        }, () => setTimeout(() => {
-                            userAppend('\n' + user)
-                        }, 1000))
-                    }, 2000)
-
-                }, 1000)
             })
-
 
         initAllSliders()
     })
@@ -53,18 +70,18 @@ export function Homepage(props) {
         <Content>
             <Section>
                 <Window width="100%" height="100%" title="Welcome" style={{ gridColumn: '1 / span 12', }}>
-                    <p style={{
+                    <div style={{
 
                         boxSizing: 'border-box',
                         fontSize: '15px',
                         fontFamily: 'monospace',
-                        display: "flex",
+                        display: "flex",margin:"0 0",flexDirection:'column',
                         padding: '5px',
                         color: text,
                         width: '100%',
                         height: '100%',
                         whiteSpace: 'pre-wrap'
-                    }} id="cmd">{'starting...'}</p>
+                    }} id="cmd">{'starting...'}</div>
                 </Window>
             </Section>
 

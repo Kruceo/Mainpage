@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { links, primary } from "../../colors.mjs";
+import { links, primary } from "../../../config/colors.mjs";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";
 import Section from "../essentials/Section";
