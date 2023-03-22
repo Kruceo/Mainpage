@@ -116,7 +116,8 @@ export function Window(props) {
                 <div style={
                     {
                         display:'block',
-                        width: '100%', height: '100%',
+                        width: '100%', height: 'calc(100% - 45px)',
+                        boxSizing:'border-box',
                         // backdropFilter: 'blur(0px)',
                         background: secondary
                     }}>

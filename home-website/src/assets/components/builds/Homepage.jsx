@@ -89,17 +89,17 @@ export function Homepage(props) {
                 <Window title="Open source" width="100%" height="100%" style={{gridColumn:'span 4 / span 6'}} buttons={false}>
                     <Message
                         message="You will reach open source library here"
-                        img="https://home.kruceo.com/public/img/cadeado.png" />
+                        img="/img/cadeado.png" />
                 </Window>
                 <Window title="Easy library" width="100%" height="100%" style={{gridColumn:'span 4 / span 6'}} buttons={false}>
                     <Message
                         message="Get libraries to make your work a little bit more easy"
-                        img="https://home.kruceo.com/public/img/mesa.png" />
+                        img="/img/mesa.png" />
                 </Window>
                 <Window title="Modularity" width="100%" height="100%" style={{gridColumn:'span 4 / span 6'}} buttons={false}>
                     <Message
                         message="Value modular projects to a easy implement in diversity occasions "
-                        img="https://home.kruceo.com/public/img/chave.png" />
+                        img="/img/chave.png" />
                 </Window>
             </Section>
             <Section>

@@ -47,7 +47,7 @@ export default function Projects() {
                                     display:"grid",gridTemplateColumns:'1fr 1fr 1fr',gap:'5px',width:'100%',marginTop:'5px'
                                 }}>
                                     {each.topics.map(topic => { return <p style={{
-                                        background:primary,
+                                        border:primary + '88 1px solid',
                                         borderRadius:'5px',
                                         padding:'4px',fontSize:'10px',
                                         boxSizing:'border-box',
@@ -58,13 +58,13 @@ export default function Projects() {
                                 </div>
                                 <p style={{
                                     position:'absolute',
-                                    top:'calc(100% - 71px)',
-                                    marginBottom:"45px",
+                                    top:'calc(100% - 28px)',
+                                    marginBottom:"0px",
                                     opacity:.2
                                 }} href={each.clone_url}>{each.stargazers_count} ✴</p>
                                 <a style={{
                                     marginTop:'auto',
-                                    marginBottom:"45px",
+                                    marginBottom:"0px",
                                     textDecoration:'underline',
                                     color:links
                                 }} href={each.homepage == ''?each.clone_url:each.homepage}>{each.full_name} </a>
