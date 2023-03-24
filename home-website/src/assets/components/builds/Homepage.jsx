@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import { ascii, icon, links, secondary, text } from "../../../config/colors.mjs";
+import { ascii, asciimobile, icon, links, secondary, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
 import { initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
@@ -18,7 +18,7 @@ export function Homepage(props) {
         const userAppend = (text) => { cmd.innerHTML += text }
         let oldtext = cmd.innerHTML
         userWrite(user)
-        const init = digitation('run ./user/welcome.burr --out=screen', 40, 200,
+        const init = digitation('run ./user/welcome.burr --out=screen', 40, 100,
             (txt) => {
                 userWrite("<div class='cmd_line'>" + user + "<p class='cmd'>" + txt + "</p></div>")
             },
@@ -28,25 +28,27 @@ export function Homepage(props) {
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
-                ascii.split('\n').forEach((each, index) => {
+                const splited =  asciimobile.split('\n')
+                splited.forEach((each, index) => {
                     setTimeout(() => {
-                        userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + index + "'>" + each + "</p></div>")
+                        let l = splited.length/8
+                        userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index/l) + "'>" + each + "</p></div>")
                         oldtext = cmd.innerHTML
                     }, 1000 + time * index)
                 })
                 setTimeout(() => {
                     setTimeout(() => {
                         userWrite(oldtext +
-                            "<div class='cmd_line'><p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
-                            "<div class='cmd_line'><p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
-                            "<div class='cmd_line'><p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
-                            "<div class='cmd_line'><p class='cmd cmd_color8'>Memory:</p> 134kb free</div>" +
-                            "<div class='cmd_line'><p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>")
+                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
+                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
+                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
+                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>Memory:</p> 134kb free</div>" +
+                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>")
                         oldtext = cmd.innerHTML
                         userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
                         setTimeout(() => {
                             digitation('Welcome from Kruceo!', 0, 100, (txt) => {
-                                userWrite(oldtext + "<div class='cmd_line'>" + user + txt + "</div>")
+                                userWrite(oldtext + "<div class='cmd cmd_line'>" + user + txt + "</div>")
                             })
                         }, 1000)
                     }, 500)
@@ -55,7 +57,7 @@ export function Homepage(props) {
             })
 
         initAllSliders()
-    })
+    },[])
 
     return <>
 
@@ -84,20 +86,25 @@ export function Homepage(props) {
                     display:'none'
                 },
                 tablet:{
-                    background:'blue'
+                    gridTemplateColumns:'1fr',
+                    gridTemplateRows:'1fr 1fr 1fr'
+                },
+                laptop:{
+                    gridTemplateColumns:'1fr 1fr 1fr',
+                    gridTemplateRows:'1fr'
                 }
             })}>
-                <Window title="Open source" width="100%" height="100%" style={{ gridColumn: 'span 4 / span 6' }} buttons={false}>
+                <Window title="Open source" width="100%" height="100%" buttons={false}>
                     <Message
                         message="You will reach open source library here"
                         img="/img/cadeado.png" />
                 </Window>
-                <Window title="Easy library" width="100%" height="100%" style={{ gridColumn: 'span 4 / span 6' }} buttons={false}>
+                <Window title="Easy library" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Get libraries to make your work a little bit more easy"
                         img="/img/mesa.png" />
                 </Window>
-                <Window title="Modularity" width="100%" height="100%" style={{ gridColumn: 'span 4 / span 6' }} buttons={false}>
+                <Window title="Modularity" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Value modular projects to a easy implement in diversity occasions "
                         img="/img/chave.png" />

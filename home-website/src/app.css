@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 *{
   margin: 0 auto;
   font-family: 'Ubuntu'
@@ -20,7 +20,7 @@ a{
 
 }
 .cmd{
-  font-family: monospace;
+  font-family: vt323, monospace;
   margin: 0 0;
 }
 .cmd_line{
@@ -108,13 +108,10 @@ a{
 
 @keyframes archive {
   0%{
-    transform: rotate3d(.2,1,1,0deg)
+    transform: rotate3d(.5,1,1,0deg)
   }
   
   100%{
-    transform: rotate3d(.2,1,.1,360deg)
+    transform: rotate3d(.5,1,.1,360deg)
   }
- 
-  
 }
-

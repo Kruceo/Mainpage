@@ -9,6 +9,7 @@ import Wallpaper from './assets/components/essentials/Wallpaper'
 import Projects from './assets/components/builds/Projects'
 import Info from './assets/components/builds/Info'
 import MediaQuery from './assets/components/essentials/MediaQuery'
+import Loading from './assets/components/essentials/Loading'
 export function App() {
   const [count, setCount] = useState(0)
 
@@ -36,6 +37,9 @@ export function App() {
 
           <Path as="/wallpaper" absolute>
             <Wallpaper></Wallpaper>
+          </Path>
+          <Path as="/loading" absolute>
+            <Loading></Loading>
           </Path>
         </Router>
       </MediaQuery>

@@ -3,7 +3,9 @@ import { blue, links, orange, primary, red } from "../../../config/colors.mjs";
 import Archive from "../essentials/Archive.jsx";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";
+import Loading from "../essentials/Loading.jsx";
 import { mediaStyle } from "../essentials/MediaQuery.jsx";
+import Section from "../essentials/Section.jsx";
 import { Window } from "../essentials/Window";
 
 export default function Projects() {
@@ -21,7 +23,9 @@ export default function Projects() {
         })
     console.log(content)
 
-
+    if (loading) return <Section style={{ display: 'flex', marginTop: 'auto' }}>
+        <Loading></Loading>
+    </Section>
 
     return <>
         <Bar />
@@ -37,7 +41,7 @@ export default function Projects() {
                         paddingTop: '50px',
                         paddingBottom: '30px'
                     },
-                    mobile:{
+                    mobile: {
                         gridTemplateColumns: '1fr',
                     }
                 })}>

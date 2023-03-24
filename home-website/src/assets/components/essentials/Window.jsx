@@ -53,7 +53,7 @@ export function Window(props) {
             }
 
         }
-    })
+    },[])
     return <>
         <div id={randomId} style={CSSstyle} >
             <div style={{ width: '100%', height: '100%' }}>

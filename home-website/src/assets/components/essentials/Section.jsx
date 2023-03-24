@@ -13,7 +13,7 @@ export default function Section(props) {
                 gap: '20px 0px',
             },
             tablet: {
-                gap: '10px'
+                gap: '20px'
             }
         })
 
