@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks"
-import { green, primary, red, secondary, yellow } from "../../../config/colors.mjs"
+import { blur, green, primary, red, secondary, yellow } from "../../../config/colors.mjs"
 
 export function Window(props) {
     const w = props.width ?? '100%'
@@ -7,53 +7,56 @@ export function Window(props) {
     const randomId = 'window_' + parseInt(Math.random() * 10000)
     const buttons = props.buttons ?? true
 
-    let CSSstyle ={
+    let CSSstyle = {
         width: w,
         height: h,
         // background: secondary,
         border: primary + ' 1px solid',
         boxShadow: '0px 0px 30px #0008',
         borderRadius: '10px',
-        transition: 'scale 250ms, opacity 150ms',
+        scale: 0.2,
+        opacity: 0,
+        transition: 'scale 250ms, opacity 350ms',
+
         overflow: 'hidden'
     }
-    
-    CSSstyle = {...CSSstyle,...(props.style??{})}
+
+    CSSstyle = { ...CSSstyle, ...(props.style ?? {}) }
     useEffect(() => {
         const wdw = document.querySelector('#' + randomId)
+        wdw.style.scale = 1
+        wdw.style.opacity = 1
 
         // ('scroll',)
-        window.removeEventListener('scroll',scrollHandler)
-        if(props.scrollEffect != false)
-        window.addEventListener('scroll', scrollHandler)
+        window.removeEventListener('scroll', scrollHandler)
+        if (props.scrollEffect != false)
+            window.addEventListener('scroll', scrollHandler)
 
-        function scrollHandler(){
-            
-                const scroll = parseInt(window.scrollY)
-                const top = wdw.offsetTop
-                const bottom = top + wdw.clientHeight
-    
-                console.log(scroll, bottom, wdw.id)
-                if (scroll >= bottom - 200) {
-                    console.log(1)
-                    wdw.style.scale = 0.5
-                    wdw.style.opacity = 0
-    
-                }
-                if (scroll + 200 < bottom) {
-                    wdw.style.scale = 1
-                    wdw.style.opacity = 1
-                }
-                if (scroll < top - 400) {
-                    wdw.style.scale = 0.5
-                    wdw.style.opacity = 0
-                }
-            
+        function scrollHandler() {
+
+            const scroll = parseInt(window.scrollY)
+            const top = wdw.offsetTop
+            const bottom = top + wdw.clientHeight
+
+            if (scroll >= bottom - 150) {
+                wdw.style.scale = 0.5
+                wdw.style.opacity = 0
+
+            }
+            if (scroll + 450 < bottom) {
+                wdw.style.scale = 1
+                wdw.style.opacity = 1
+            }
+            if (scroll < top - 450) {
+                wdw.style.scale = 0.5
+                wdw.style.opacity = 0
+            }
+
         }
     })
     return <>
         <div id={randomId} style={CSSstyle} >
-            <div style={{width:'100%',height:'100%'}}>
+            <div style={{ width: '100%', height: '100%' }}>
                 <div style={
                     {
                         position: 'relative',
@@ -115,10 +118,10 @@ export function Window(props) {
 
                 <div style={
                     {
-                        display:'block',
+                        display: 'block',
                         width: '100%', height: 'calc(100% - 45px)',
-                        boxSizing:'border-box',
-                        // backdropFilter: 'blur(0px)',
+                        boxSizing: 'border-box',
+                        backdropFilter: 'blur('+blur+')',
                         background: secondary
                     }}>
                     {props.children}

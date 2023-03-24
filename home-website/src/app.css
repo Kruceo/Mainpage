@@ -8,8 +8,8 @@
 
 :root{
   /* background-image: url('https://img.freepik.com/fotos-gratis/vista-incrivel-de-uma-falesia-verde-perto-do-mar-no-arquipelago-dos-acores-portugal_181624-48407.jpg?w=740&t=st=1678985589~exp=1678986189~hmac=004943e4d36b870054dc36d769871d10455f85b3ff9d19be42a40bc1513c543a'); */
-  
-  background-color: #99f;
+  perspective: "800px";
+  background-color: rgb(19, 19, 19);
   /* filter: hue-rotate(100deg) */
 }
 
@@ -28,7 +28,7 @@ a{
   margin: 0 0;
 }
 .cmd_root{
-  color:red
+  color:#0f9
 }
 .cmd_color0{
   color:#f99
@@ -105,3 +105,16 @@ a{
   }
   
 }
+
+@keyframes archive {
+  0%{
+    transform: rotate3d(.2,1,1,0deg)
+  }
+  
+  100%{
+    transform: rotate3d(.2,1,.1,360deg)
+  }
+ 
+  
+}
+

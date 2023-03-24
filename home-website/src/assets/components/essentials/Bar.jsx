@@ -1,6 +1,4 @@
-import { icon, primary, secondary } from "../../../config/colors.mjs";
-import Router from "milhas/src/components/Router.jsx";
-import {Path} from 'milhas/src/components/Path.jsx'
+import { blur, icon, primary, secondary, text } from "../../../config/colors.mjs";
 import Anchor from 'milhas/src/components/Anchor.jsx'
 export default function Bar(props){
     return <header style={
@@ -13,7 +11,7 @@ export default function Bar(props){
             left:'0px',
             top:'0px',
             zIndex:'100',
-            backdropFilter:'blur(10px)',
+            backdropFilter:'blur('+blur+')',
             display:"flex",
             borderBottom:primary + ' 1px solid',
             alignItems:'center'
@@ -22,17 +20,17 @@ export default function Bar(props){
         <img src={icon} alt="" style={{height:'35px',margin:'0 0 0 5px'}}></img>
         {/* <Anchor href='http://ola'></Anchor> */}
         <Anchor
-        style={{margin:'0px 10px 0px 10px',color:'white'}}
+        style={{margin:'0px 10px 0px 10px',color:text}}
         href="/">Home</Anchor>
         <Anchor
-        style={{margin:'0px 10px 0px 0px',color:'white'}}
+        style={{margin:'0px 10px 0px 0px',color:text}}
         href="/projects">Projects</Anchor>
         <Anchor
-        style={{margin:'0px 10px 0px 0px',color:'white'}}
+        style={{margin:'0px 10px 0px 0px',color:text}}
         href="/info">Info</Anchor>
         <div style={{margin:'0px 10px 0px auto'}}>
             <a href="http://github.com/kruceo" target="_blank" rel="noopener noreferrer">
-                <img src="../../../../public/img/git.png" alt="" style={{opacity:.1}} />
+                <img src="/img/git.png" alt="" style={{opacity:.1}} />
             </a>
         </div>
     </header>
