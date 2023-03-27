@@ -13,7 +13,7 @@ export default function Archive(props) {
             // transform: 'rotate3d(1,.3,0,30deg,200deg,100deg)',
             // animation: 'archive 10s infinite'
         }}>
-            <img src="/archive.svg" alt="" style={{
+            <img src="/img/archive.svg" alt="" style={{
                 height: '100%',
                 width:'100%'
 
