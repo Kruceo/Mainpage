@@ -43,6 +43,15 @@ export default function Projects() {
                     },
                     mobile: {
                         gridTemplateColumns: '1fr',
+                    },
+                    tablet:{
+                        gridTemplateColumns:'1fr 1fr'
+                    },
+                    laptop:{
+                        gridTemplateColumns:'1fr 1fr 1fr'
+                    },
+                    desktop:{ 
+                        gridTemplateColumns:'1fr 1fr 1fr 1fr'
                     }
                 })}>
                 {

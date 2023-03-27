@@ -4,14 +4,14 @@ export default function MediaQuery(props) {
     window.queries = {
         any: 0,
         mobile: 300,
-        tablet: 600,
-        laptop: 800,
-        desktop: 1000,
-        tv: 1200,
+        tablet: 700,
+        laptop: 900,
+        desktop: 1200,
+        tv: 1500,
         giant: 2000
     }
 
-   
+
 
 
 
@@ -24,7 +24,7 @@ export default function MediaQuery(props) {
             setRefresh(!refresh)
         }
     }
-   
+
     window.onresize = () => {
         const size = window.visualViewport.width
         setTimeout(() => {
@@ -40,18 +40,29 @@ export default function MediaQuery(props) {
     const [refresh, setRefresh] = useState(true)
     let device = getCurrentDevice()
     if (refresh) return props.children
-    else return (()=>{ return <>{props.children}</>})()
+    else return (() => { return <>{props.children}</> })()
 }
 
 export function mediaStyle(style) {
 
-    const [state,setState] = useState(true)
+    const [state, setState] = useState(true)
 
-    let toReturn = ''
+    let toReturn = {}
 
-    const current = getCurrentDevice()
+    Object.entries(window.queries).forEach(each => {
+        if (window.visualViewport.width > each[1]) {
+            const select = style[each[0]] ?? toReturn
+            console.log(select)
+            if (typeof (select) == 'object') toReturn = Object.assign(toReturn, style[each[0]])
 
-    toReturn = style[current]??{}
+            else {
+                toReturn = select
+
+            }
+        }
+    })
+
+
     let build = ''
     if (typeof (toReturn) == 'object') {
         build = Object.assign((style.any ?? {}), toReturn)
@@ -59,10 +70,11 @@ export function mediaStyle(style) {
     if (typeof (toReturn) == 'string') {
         build = style.any ?? '' + ' ' + toReturn
     }
-    window.addEventListener('resized',()=>{
+    window.addEventListener('resized', () => {
         setState(!state)
     })
-    console.log(current)
+    console.log(toReturn, build)
+
     return build
 }
 

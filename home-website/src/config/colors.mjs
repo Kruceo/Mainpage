@@ -44,7 +44,7 @@ export const asciimobile =
     @@@'                  @@@
         ,,,,,,,,,,,,,,,,,,@@@
         @@@@@@@@@@@@@@@@@@@@@
-`
+`.replaceAll('@','•')
 
 export const asciiDesktop = 
 `

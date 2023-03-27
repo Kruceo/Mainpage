@@ -1,7 +1,7 @@
 import { useEffect } from "preact/hooks";
-import { ascii, asciimobile, icon, links, secondary, text } from "../../../config/colors.mjs";
+import { ascii, asciiDesktop, asciimobile, icon, links, secondary, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
-import { initAllSliders } from "bananaslider";
+import { initAllSliders, restartAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
 import Content from "../essentials/Content.jsx";
 import { highlights } from "../../../config/content.mjs";
@@ -28,11 +28,13 @@ export function Homepage(props) {
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
-                const splited =  asciimobile.split('\n')
+                const ascii = window.visualViewport.width > window.queries.laptop?asciiDesktop:asciimobile
+                console.log(ascii)
+                const splited = ascii.split('\n')
                 splited.forEach((each, index) => {
                     setTimeout(() => {
-                        let l = splited.length/8
-                        userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index/l) + "'>" + each + "</p></div>")
+                        let l = splited.length / 8
+                        userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index / l) + "'>" + each + "</p></div>")
                         oldtext = cmd.innerHTML
                     }, 1000 + time * index)
                 })
@@ -57,7 +59,7 @@ export function Homepage(props) {
             })
 
         initAllSliders()
-    },[])
+    }, [])
 
     return <>
 
@@ -66,32 +68,40 @@ export function Homepage(props) {
         <Content>
             <Section mobile={{ display: 'block' }}>
                 <Window width="100%" height="100%" title="Welcome" style={{ gridColumn: '1 / span 12', }}>
-                    <div style={{
-
-                        boxSizing: 'border-box',
-                        fontSize: '15px',
-                        fontFamily: 'monospace',
-                        display: "flex", margin: "0 0", flexDirection: 'column',
-                        padding: '5px',
-                        color: text,
-                        width: '100%',
-                        height: '100%',
-                        whiteSpace: 'pre-wrap'
-                    }} id="cmd">{'starting...'}</div>
+                    <div style={mediaStyle({
+                        any: {
+                            boxSizing: 'border-box',
+                            fontSize: '3vh',
+                            fontFamily: 'monospace',
+                            display: "flex", margin: "0 0", flexDirection: 'column',
+                            padding: '5px',
+                            color: text,
+                            width: '100%',
+                            height: '100%',
+                            whiteSpace: 'pre-wrap',
+                            overflow: 'auto'
+                        },
+                        mobile: {
+                            fontSize: "14px"
+                        },
+                        tablet: {
+                            fontSize: "20px"
+                        }
+                    })} id="cmd"></div>
                 </Window>
             </Section>
 
             <Section style={mediaStyle({
-                mobile:{
-                    display:'none'
+                mobile: {
+                    display: 'none'
                 },
-                tablet:{
-                    gridTemplateColumns:'1fr',
-                    gridTemplateRows:'1fr 1fr 1fr'
+                tablet: {
+                    gridTemplateColumns: '1fr',
+                    gridTemplateRows: '1fr 1fr 1fr'
                 },
-                laptop:{
-                    gridTemplateColumns:'1fr 1fr 1fr',
-                    gridTemplateRows:'1fr'
+                laptop: {
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    gridTemplateRows: '1fr'
                 }
             })}>
                 <Window title="Open source" width="100%" height="100%" buttons={false}>
@@ -114,7 +124,7 @@ export function Homepage(props) {
 
                 <Window title="Highlights" width="100%" height="100%" style={{ gridColumn: '1 / span 12' }}>
 
-                    <slider cooldown={0} style={{ height: "100%" }}>
+                    <slider cooldown={3000} style={{ height: "100%" }}>
                         {
                             highlights.map(each => {
                                 return <slide
@@ -191,8 +201,8 @@ function Card(props) {
 
         <div style={{ width: '100%', display: 'flex', marginTop: 'auto', marginBottom: '20px', justifyContent: 'center' }}>
 
-            <a style={{ marginTop: 'auto', margin: '0px 0px 0px 20px', color: links }} href={props.link}>Go to example</a>
-            <a style={{ marginTop: 'auto', margin: 'auto 20px 0px auto', color: links }} href={props.link}>Take a look</a>
+            <a target={"_blank"} style={{ marginTop: 'auto', margin: '0px 0px 0px 20px', color: links }} href={props.link}>Go to example</a>
+            <a target={"_blank"} style={{ marginTop: 'auto', margin: 'auto 20px 0px auto', color: links }} href={props.link}>Take a look</a>
         </div>
 
     </div>

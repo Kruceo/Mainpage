@@ -20,7 +20,8 @@ a{
 
 }
 .cmd{
-  font-family: vt323, monospace;
+  font-family: monospace;
+  line-break: anywhere;
   margin: 0 0;
 }
 .cmd_line{

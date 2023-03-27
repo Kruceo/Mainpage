@@ -14,7 +14,7 @@ export default function Info() {
                 mobile: {
                     height: 'auto'
                 },
-                tablet: {
+                desktop: {
                     height: '100%'
                 }
             })}>
@@ -26,7 +26,7 @@ export default function Info() {
                         mobile: {
                             gridColumn: ' 1 / span 12'
                         },
-                        tablet: {
+                        desktop: {
                             gridColumn: ' 1 / span 4'
                         }
                     })}>
@@ -53,7 +53,7 @@ export default function Info() {
                     mobile: {
                         gridColumn: ' 1 / span 12'
                     },
-                    tablet: {
+                    desktop: {
                         gridColumn: ' 5 / span 8',
                         gridRow: '1 / span 2'
                     }
@@ -63,7 +63,8 @@ export default function Info() {
                         <h2 style={{ textAlign: 'left', margin: '5px 0' }}>Technologies</h2>
                         <Tech cols={mediaStyle({
                             mobile:'4',
-                            tablet:'8'
+                            tablet:'6',
+                            laptop:'8'
                         })}>
                             <Block img="https://br.vuejs.org/images/logo.svg" name="Vue.JS"></Block>
                             <Block img="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" name="React"></Block>
@@ -80,7 +81,8 @@ export default function Info() {
                         <h2 style={{ textAlign: 'left', margin: '5px 0' }}>Languages</h2>
                         <Tech cols={mediaStyle({
                             mobile: '4',
-                            tablet: '8'
+                            tablet:'6',
+                            laptop: '8'
                         })}>
                             <Block color={yellow} name="JS"></Block>
                             <Block color={blue} name="TS"></Block>
@@ -101,7 +103,7 @@ export default function Info() {
                     mobile: {
                         gridColumn: ' 1 / span 12'
                     },
-                    tablet: {
+                    desktop: {
                         gridColumn: ' 1 / span 4'
                     }
                 })}>
