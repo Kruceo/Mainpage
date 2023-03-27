@@ -1,7 +1,7 @@
 import { useEffect } from "preact/hooks";
-import { ascii, asciiDesktop, asciimobile, icon, links, secondary, text } from "../../../config/colors.mjs";
+import {  asciiDesktop, asciimobile, links, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
-import { initAllSliders, restartAllSliders } from "bananaslider";
+import { initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
 import Content from "../essentials/Content.jsx";
 import { highlights } from "../../../config/content.mjs";
@@ -29,7 +29,6 @@ export function Homepage(props) {
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
                 const ascii = window.visualViewport.width > window.queries.laptop?asciiDesktop:asciimobile
-                console.log(ascii)
                 const splited = ascii.split('\n')
                 splited.forEach((each, index) => {
                     setTimeout(() => {
@@ -92,14 +91,19 @@ export function Homepage(props) {
             </Section>
 
             <Section style={mediaStyle({
-                mobile: {
+                any: {
                     display: 'none'
                 },
                 tablet: {
+                    display:'grid',height:'100%',
                     gridTemplateColumns: '1fr',
-                    gridTemplateRows: '1fr 1fr 1fr'
+                    gridTemplateRows: '1fr 1fr'
                 },
                 laptop: {
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '1fr'
+                },
+                desktop: {
                     gridTemplateColumns: '1fr 1fr 1fr',
                     gridTemplateRows: '1fr'
                 }
@@ -177,7 +181,7 @@ function digitation(content, min, max, callback, onclose) {
                 clbk(text)
                 write(random())
             }
-            else { onclose() }
+            else { onclose?onclose():null }
         }, time);
     }
 

@@ -38,20 +38,36 @@ export function Window(props) {
             const top = wdw.offsetTop
             const bottom = top + wdw.clientHeight
 
-            if (scroll >= bottom - 150) {
-                wdw.style.scale = 0.5
-                wdw.style.opacity = 0
+            // if (scroll >= bottom - 150) {
+            //     wdw.style.scale = 0.5
+            //     wdw.style.opacity = 0
 
-            }
-            if (scroll + 450 < bottom) {
-                wdw.style.scale = 1
-                wdw.style.opacity = 1
-            }
-            if (scroll < top - 450) {
-                wdw.style.scale = 0.5
-                wdw.style.opacity = 0
-            }
-
+            // }
+            // if (scroll + 450 < bottom) {
+            //     wdw.style.scale = 1
+            //     wdw.style.opacity = 1
+            // }
+            // if (scroll < top - 450) {
+            //     wdw.style.scale = 0.5
+            //     wdw.style.opacity = 0
+            // }
+           
+           
+                if(scroll < bottom - 150){
+                    wdw.style.scale = 1
+                    wdw.style.opacity = 1
+                }
+                else{
+                    wdw.style.scale = 0
+                    wdw.style.opacity = 0
+                }
+            
+            // if(scroll < top){
+            //     if(scroll > top){
+            //         wdw.style.scale = 0
+            //         wdw.style.opacity = 0
+            //     }
+            // }
         }
     },[])
     return <>

@@ -1,8 +1,7 @@
-import { Path } from 'milhas/src/components/Path'
-import Router from 'milhas/src/components/Router'
+import { Path, Anchor, E404 } from 'milhas'
+import Router from 'milhas/src/components/Router/Router'
 import { useState } from 'preact/hooks'
 import './app.css'
-import E404 from 'milhas/src/components/E404.jsx'
 import { Homepage } from './assets/components/builds/Homepage'
 import ERR404 from './assets/components/builds/404'
 import Wallpaper from './assets/components/essentials/Wallpaper'
@@ -15,7 +14,9 @@ export function App() {
 
   return (
     <>
+
       <Wallpaper></Wallpaper>
+      <Anchor href="rafola">oioioi</Anchor>
       <MediaQuery>
         <Router >
 
@@ -42,6 +43,8 @@ export function App() {
             <Loading></Loading>
           </Path>
         </Router>
+
+
       </MediaQuery>
     </>
   )

@@ -1,4 +1,4 @@
-import Anchor from "milhas";
+import {Anchor} from "milhas";
 import { links } from "../../../config/colors.mjs";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";

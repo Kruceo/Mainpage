@@ -1,5 +1,5 @@
 import { blur, icon, primary, secondary, text } from "../../../config/colors.mjs";
-import Anchor from 'milhas/src/components/Anchor.jsx'
+import { Anchor } from "milhas";
 export default function Bar(props){
     return <header style={
         {

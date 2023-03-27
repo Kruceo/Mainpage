@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks"
+import { useState } from "preact/hooks"
 
 export default function MediaQuery(props) {
     window.queries = {
@@ -19,7 +19,6 @@ export default function MediaQuery(props) {
 
         const nd = getCurrentDevice()
         if (nd != device) {
-            console.log('different')
             device = (nd)
             setRefresh(!refresh)
         }
@@ -52,7 +51,6 @@ export function mediaStyle(style) {
     Object.entries(window.queries).forEach(each => {
         if (window.visualViewport.width > each[1]) {
             const select = style[each[0]] ?? toReturn
-            console.log(select)
             if (typeof (select) == 'object') toReturn = Object.assign(toReturn, style[each[0]])
 
             else {
@@ -73,7 +71,6 @@ export function mediaStyle(style) {
     window.addEventListener('resized', () => {
         setState(!state)
     })
-    console.log(toReturn, build)
 
     return build
 }
