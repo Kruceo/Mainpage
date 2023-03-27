@@ -12,7 +12,7 @@ export default function Projects() {
     const [content, setContent] = useState([])
     let loading = content.length > 0 ? false : true
     if (content.length == 0)
-        fetch('http://api.github.com/users/Kruceo/repos?sort=created', { mode: 'cors' }).then(res => {
+        fetch('https://api.github.com/users/Kruceo/repos?sort=created', { mode: 'cors' }).then(res => {
             res.json().then(text => {
                 const filtered = text.filter(each => {
                     return (each.homepage != ('' || undefined || null) && each.description != ('' || undefined || null))

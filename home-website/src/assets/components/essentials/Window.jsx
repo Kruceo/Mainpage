@@ -51,17 +51,24 @@ export function Window(props) {
             //     wdw.style.scale = 0.5
             //     wdw.style.opacity = 0
             // }
-           
-           
-                if(scroll < bottom - 150){
-                    wdw.style.scale = 1
-                    wdw.style.opacity = 1
-                }
-                else{
-                    wdw.style.scale = 0
-                    wdw.style.opacity = 0
-                }
-            
+
+            let closed = true
+
+            if (scroll < bottom - 100) {
+                closed = false
+            }
+
+            if (scroll + visualViewport.height < top) {
+                closed = true
+            }
+            if (closed) {
+                wdw.style.scale = 0.8
+                wdw.style.opacity = 0
+            }
+            else {
+                wdw.style.scale = 1
+                wdw.style.opacity = 1
+            }
             // if(scroll < top){
             //     if(scroll > top){
             //         wdw.style.scale = 0
@@ -69,7 +76,7 @@ export function Window(props) {
             //     }
             // }
         }
-    },[])
+    }, [])
     return <>
         <div id={randomId} style={CSSstyle} >
             <div style={{ width: '100%', height: '100%' }}>
@@ -137,7 +144,7 @@ export function Window(props) {
                         display: 'block',
                         width: '100%', height: 'calc(100% - 45px)',
                         boxSizing: 'border-box',
-                        backdropFilter: 'blur('+blur+')',
+                        backdropFilter: 'blur(' + blur + ')',
                         background: secondary
                     }}>
                     {props.children}

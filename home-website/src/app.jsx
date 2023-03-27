@@ -16,7 +16,6 @@ export function App() {
     <>
 
       <Wallpaper></Wallpaper>
-      <Anchor href="rafola">oioioi</Anchor>
       <MediaQuery>
         <Router >
 

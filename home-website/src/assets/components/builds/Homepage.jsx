@@ -84,7 +84,7 @@ export function Homepage(props) {
                             fontSize: "14px"
                         },
                         tablet: {
-                            fontSize: "20px"
+                            fontSize: "17px"
                         }
                     })} id="cmd"></div>
                 </Window>
