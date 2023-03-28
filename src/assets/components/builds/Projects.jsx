@@ -44,14 +44,14 @@ export default function Projects() {
                     mobile: {
                         gridTemplateColumns: '1fr',
                     },
-                    tablet:{
-                        gridTemplateColumns:'1fr 1fr'
+                    tablet: {
+                        gridTemplateColumns: '1fr 1fr'
                     },
-                    laptop:{
-                        gridTemplateColumns:'1fr 1fr 1fr'
+                    laptop: {
+                        gridTemplateColumns: '1fr 1fr 1fr'
                     },
-                    desktop:{ 
-                        gridTemplateColumns:'1fr 1fr 1fr 1fr'
+                    desktop: {
+                        gridTemplateColumns: '1fr 1fr 1fr 1fr'
                     }
                 })}>
                 {
@@ -81,7 +81,10 @@ export default function Projects() {
                                 </div>
                                 <div style={{ marginTop: 'auto', marginBottom: '20px' }}>
                                     {each.language == 'JavaScript' ?
-                                        <Archive name={each.language == "JavaScript" ? 'JS' : each.language} color={orange}></Archive> : ''
+                                        <Archive name="JS" color={orange}></Archive> : ''
+                                    }
+                                    {each.language == 'TypeScript' ?
+                                        <Archive name="TS" color={blue}></Archive> : ''
                                     }
                                     {each.language == 'Vue' ?
                                         <Archive name={each.language == "JavaScript" ? 'JS' : each.language} color={blue}></Archive> : ''

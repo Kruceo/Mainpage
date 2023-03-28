@@ -1,5 +1,4 @@
 export default function Archive(props) {
-    console.log(props)
     return <div style={{
         width: props.width ?? '80px',
         height: props.height ?? '80px',

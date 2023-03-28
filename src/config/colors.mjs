@@ -11,10 +11,10 @@ export const green = '#9f9'
 export const blue = '#99f'
 export const orange = '#fc9'
 export const lightBlue = '#9cf'
-export const secondary = lightMode?'#ffff':'#323246ff'
+export const secondary = lightMode?'#323246ff':'#323246ff'
 export const primary = '#101010'
-export const background = lightMode?'#245':'#ddddee'
-export const text = lightMode?'#000':'#fff'
+export const background = lightMode?'#121226':'#121226'  //#ddddee
+export const text = lightMode?'#fff':'#fff'
 export const links = '#0f9'
 export const ascii_other = `
                          
@@ -64,7 +64,7 @@ export const asciimobile =
     @@@'                  @@@
         ,,,,,,,,,,,,,,,,,,@@@
         @@@@@@@@@@@@@@@@@@@@@
-`.replaceAll('@','•')
+`.replaceAll('@','%')
 
 export const asciiDesktop = 
 `

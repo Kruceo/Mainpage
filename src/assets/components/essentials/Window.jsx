@@ -27,7 +27,6 @@ export function Window(props) {
         wdw.style.scale = 1
         wdw.style.opacity = 1
 
-        // ('scroll',)
         window.removeEventListener('scroll', scrollHandler)
         if (props.scrollEffect != false)
             window.addEventListener('scroll', scrollHandler)
@@ -37,20 +36,6 @@ export function Window(props) {
             const scroll = parseInt(window.scrollY)
             const top = wdw.offsetTop
             const bottom = top + wdw.clientHeight
-
-            // if (scroll >= bottom - 150) {
-            //     wdw.style.scale = 0.5
-            //     wdw.style.opacity = 0
-
-            // }
-            // if (scroll + 450 < bottom) {
-            //     wdw.style.scale = 1
-            //     wdw.style.opacity = 1
-            // }
-            // if (scroll < top - 450) {
-            //     wdw.style.scale = 0.5
-            //     wdw.style.opacity = 0
-            // }
 
             let closed = true
 
@@ -69,12 +54,6 @@ export function Window(props) {
                 wdw.style.scale = 1
                 wdw.style.opacity = 1
             }
-            // if(scroll < top){
-            //     if(scroll > top){
-            //         wdw.style.scale = 0
-            //         wdw.style.opacity = 0
-            //     }
-            // }
         }
     }, [])
     return <>
@@ -119,9 +98,6 @@ export function Window(props) {
                             width: "100%",
                             display: "flex"
                         }}>
-                        {
-                            console.log(props.buttons == undefined)
-                        }
                         <div style={{
 
                             display: buttons ? 'grid' : 'none',
