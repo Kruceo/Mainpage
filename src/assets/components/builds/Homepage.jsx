@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import {  asciiDesktop, asciimobile, links, text } from "../../../config/colors.mjs";
+import {   asciiDesktop, asciimobile, ascii_other, links, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
 import { initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
@@ -28,7 +28,7 @@ export function Homepage(props) {
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
-                const ascii = window.visualViewport.width > window.queries.laptop?asciiDesktop:asciimobile
+                const ascii = window.visualViewport.width > window.queries.laptop?ascii_other:asciimobile
                 const splited = ascii.split('\n')
                 splited.forEach((each, index) => {
                     setTimeout(() => {
@@ -40,12 +40,14 @@ export function Homepage(props) {
                 setTimeout(() => {
                     setTimeout(() => {
                         userWrite(oldtext +
-                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
-                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
-                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
-                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>Memory:</p> 134kb free</div>" +
-                            "<div class='cmd cmd_line'><p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>")
-                        oldtext = cmd.innerHTML
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Memory:</p> 134kb free</div>" +
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>"+
+                            "<div class='cmd cmd_line'></div>" )
+                        
+                            oldtext = cmd.innerHTML
                         userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
                         setTimeout(() => {
                             digitation('Welcome from Kruceo!', 0, 100, (txt) => {
@@ -53,7 +55,7 @@ export function Homepage(props) {
                             })
                         }, 1000)
                     }, 500)
-                }, 1000 + 10 * time)
+                }, 1000 + splited.length * time)
 
             })
 
@@ -84,7 +86,7 @@ export function Homepage(props) {
                             fontSize: "14px"
                         },
                         tablet: {
-                            fontSize: "17px"
+                            fontSize: "10px"
                         }
                     })} id="cmd"></div>
                 </Window>
@@ -111,17 +113,17 @@ export function Homepage(props) {
                 <Window title="Open source" width="100%" height="100%" buttons={false}>
                     <Message
                         message="You will reach open source library here"
-                        img="/img/cadeado.png" />
+                        img="/testing/padlock.png" />
                 </Window>
                 <Window title="Easy library" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Get libraries to make your work a little bit more easy"
-                        img="/img/mesa.png" />
+                        img="/testing/dj.png" />
                 </Window>
                 <Window title="Modularity" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Value modular projects to a easy implement in diversity occasions "
-                        img="/img/chave.png" />
+                        img="/testing/keyboard.png" />
                 </Window>
             </Section>
             <Section>
@@ -221,7 +223,7 @@ function Message(props) {
             // boxShadow: '0px 0px 20px #0008',
             color: 'white',
         }}>
-            <img style={{ width: 150, marginBottom: '20px' }} src={props.img} alt="" />
+            <img style={{ width: 150, marginBottom: '20px',borderRadius:'100%' }} src={props.img} alt="" />
             <p style={{ width: 290, height: 40 }}>{props.message}</p>
         </div>
     </header>

@@ -73,7 +73,7 @@ export default function Info() {
                             <Block img="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" name="Express"></Block>
                             <Block img="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" name="Git"></Block>
                             <Block img="https://vitejs.dev/logo.svg" name="Vite"></Block>
-                            <Block img="../../../../public/img/remix.svg" name="Remix"></Block>
+                            <Block img="/img/remix.svg" name="Remix"></Block>
                             <Block img="https://www.electronjs.org/assets/img/logo.svg" name="Electron"></Block>
                             {/* <Block img="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" name="Remix"></Block> */}
                             <Block img="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" name="Remix"></Block>

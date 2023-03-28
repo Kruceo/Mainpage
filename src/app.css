@@ -22,6 +22,7 @@ a{
 .cmd{
   font-family: monospace;
   line-break: anywhere;
+  white-space: unset;
   margin: 0 0;
 }
 .cmd_line{
@@ -58,6 +59,7 @@ a{
 .cmd_color8{
   color:#99f
 }
+
 @keyframes cloudMove {
   0%{
     transform: translateY(0px)
