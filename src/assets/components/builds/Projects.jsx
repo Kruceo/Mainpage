@@ -15,7 +15,7 @@ export default function Projects() {
         fetch('https://api.github.com/users/Kruceo/repos?sort=created', { mode: 'cors' }).then(res => {
             res.json().then(text => {
                 const filtered = text.filter(each => {
-                    return (each.homepage != ('' || undefined || null) && each.description != ('' || undefined || null))
+                    return (each.homepage != ('' || undefined || null) && each.description != ('' || undefined || null) && !each.description.includes('[notshow]'))
                 })
                 setContent(filtered)
 
