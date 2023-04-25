@@ -121,7 +121,7 @@ export function Window(props) {
                         width: '100%', height: 'calc(100% - 45px)',
                         boxSizing: 'border-box',
                         backdropFilter: 'blur(' + blur + ')',
-                        background: secondary
+                        background: secondary,
                     }}>
                     {props.children}
                 </div>

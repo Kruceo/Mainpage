@@ -28,7 +28,17 @@ export default function Bar(props){
         <Anchor
         style={{margin:'0px 10px 0px 0px',color:text}}
         href="/info">Info</Anchor>
-        <div style={{margin:'0px 10px 0px auto'}}>
+        <Anchor href="/chatrgb"
+        style={{
+            color:'white',
+            opacity:.25,
+            marginLeft: "auto",
+            marginRight:"0px",
+            cursor:'pointer'
+        }}>
+            ChatRGB
+        </Anchor>
+        <div style={{margin:'0px 10px 0px 10px'}}>
             <a href="http://github.com/kruceo" target="_blank" rel="noopener noreferrer">
                 <img src="/img/git.png" alt="" style={{opacity:.1}} />
             </a>

@@ -15,7 +15,7 @@ export default function Info() {
                     height: 'auto'
                 },
                 desktop: {
-                    height: '100%'
+                    height: '90%'
                 }
             })}>
                 <Window width="100%" scrollEffect={false} title='Social' style={

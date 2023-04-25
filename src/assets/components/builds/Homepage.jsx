@@ -113,17 +113,17 @@ export function Homepage(props) {
                 <Window title="Open source" width="100%" height="100%" buttons={false}>
                     <Message
                         message="You will reach open source library here"
-                        img="/testing/padlock.png" />
+                        img="/img/padlock.png" />
                 </Window>
                 <Window title="Easy library" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Get libraries to make your work a little bit more easy"
-                        img="/testing/dj.png" />
+                        img="/img/dj.png" />
                 </Window>
                 <Window title="Modularity" width="100%" height="100%" buttons={false}>
                     <Message
                         message="Value modular projects to a easy implement in diversity occasions "
-                        img="/testing/keyboard.png" />
+                        img="/img/keyboard.png" />
                 </Window>
             </Section>
             <Section>
