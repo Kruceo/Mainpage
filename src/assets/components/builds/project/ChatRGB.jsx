@@ -121,7 +121,7 @@ export default function ChatRGB() {
                     alignItems:'center',
                     gridTemplateRows:'1fr 1fr 1fr 1fr 1fr 1fr'
                    }}>
-                    <p style={{color:'white',zIndex:1}}>Get a invite to join the bot on your discord server.</p>
+                    <p style={{color:'white',zIndex:1}}>Obtain an invitation and invite the bot to join your server.</p>
                     <a style={{
                         background:links,
                         borderRadius:10,
