@@ -34,6 +34,7 @@ export function Homepage(props) {
                     setTimeout(() => {
                         let l = splited.length / 8
                         userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index / l) + "'>" + each + "</p></div>")
+                        cmd.scrollTo({top:10000})
                         oldtext = cmd.innerHTML
                     }, 1000 + time * index)
                 })
@@ -43,15 +44,17 @@ export function Homepage(props) {
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Memory:</p> 134kb free</div>" +
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>RAM:</p> 134kb free</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>"+
                             "<div class='cmd cmd_line'></div>" )
-                        
+                            cmd.scrollTo({top:10000})
                             oldtext = cmd.innerHTML
                         userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
+                        cmd.scrollTo({top:10000})
                         setTimeout(() => {
                             digitation('Welcome from Kruceo!', 0, 100, (txt) => {
                                 userWrite(oldtext + "<div class='cmd cmd_line'>" + user + txt + "</div>")
+                                cmd.scrollTo({top:10000})
                             })
                         }, 1000)
                     }, 500)
@@ -80,13 +83,13 @@ export function Homepage(props) {
                             width: '100%',
                             height: '100%',
                             whiteSpace: 'pre-wrap',
-                            overflow: 'auto'
+                            overflow: 'hidden'
                         },
                         mobile: {
                             fontSize: "14px"
                         },
                         tablet: {
-                            fontSize: "10px"
+                            fontSize: "14px"
                         }
                     })} id="cmd"></div>
                 </Window>
