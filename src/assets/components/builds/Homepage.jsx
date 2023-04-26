@@ -18,66 +18,75 @@ export function Homepage(props) {
         const userAppend = (text) => { cmd.innerHTML += text }
         let oldtext = cmd.innerHTML
         userWrite(user)
-        const init = digitation('run ./user/welcome.burr --out=screen', 40, 100,
-            (txt) => {
-                userWrite("<div class='cmd_line'>" + user + "<p class='cmd'>" + txt + "</p></div>")
-            },
-            () => {
-                const time = 100
+        const init = () => {
+            if(oldtext.length > 8000){
+                oldtext = "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2048 / 1024 bytes</div>"
+                oldtext += "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2056 / 1024 bytes</div>"
+                oldtext += "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2064 / 1024 bytes</div>"
+                oldtext += "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[  SYS  ]</p> Clearing cache</div>"
+            }
+            digitation('run ./user/welcome.burr --out=screen', 40, 100,
+                (txt) => {
+                    userWrite(oldtext + "<div class='cmd_line'>" + user + "<p class='cmd'>" + txt + "</p></div>")
+                },
+                () => {
+                    const time = 200
 
-                // userWrite(oldtext +"<div class='cmd_line'></div>")
-                // userWrite(oldtext +"<div class='cmd_line'></div>")
-                oldtext = cmd.innerHTML
-                const ascii = window.visualViewport.width > window.queries.laptop ? ascii_other : asciimobile
-                const splited = ascii.split('\n')
-                splited.forEach((each, index) => {
-                    setTimeout(() => {
-                        let l = splited.length / 8
-                        userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index / l) + "'>" + each + "</p></div>")
-                        
-                        cmd.scrollTo({ top: 10000 })
-                        oldtext = cmd.innerHTML
-                    }, 1000 + time * index)
-                })
-                setTimeout(() => {
-                    userWrite(oldtext + 'starting kruceo.tool.cpp' )
+                    // userWrite(oldtext +"<div class='cmd_line'></div>")
+                    // userWrite(oldtext +"<div class='cmd_line'></div>")
                     oldtext = cmd.innerHTML
-                }, 1000 + time * splited.length);
-                for (let l = 0; l <= 100; l++) {
-                    
-                    setTimeout(() => {
-                       userWrite(oldtext.replace('starting kruceo.tool.cpp',"<div class='cmd_line'><p class='cmd cmd_color5'>"+"".padEnd(100,'-')+"</p></div>  <div class='cmd_line'><p class='cmd cmd_color1'># veryfing system hardware ==> "+l +"%</p></div>  <div class='cmd_line'><p class='cmd cmd_color5'>"+"".padEnd(100,'-')+"</p></div>") )
-                        cmd.scrollTo({ top: 20000 })
-                        // oldtext = cmd.innerHTML
-                    }, 2000 + time * splited.length + l * 10)
-                }
-
-
-                setTimeout(() => {
-                    oldtext = cmd.innerHTML
-                    setTimeout(() => {
-                        userWrite(oldtext +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>RAM:</p> 134kb free</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>" +
-                            "<div class='cmd cmd_line'></div>")
-                        cmd.scrollTo({ top: 10000 })
-                        oldtext = cmd.innerHTML
-                        userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
-                        cmd.scrollTo({ top: 10000 })
+                    const ascii = window.visualViewport.width > window.queries.laptop ? ascii_other : asciimobile
+                    const splited = ascii.split('\n')
+                    splited.forEach((each, index) => {
                         setTimeout(() => {
-                            digitation('Welcome from Kruceo!', 0, 100, (txt) => {
-                                userWrite(oldtext + "<div class='cmd cmd_line'>" + user + txt + "</div>")
-                                cmd.scrollTo({ top: 10000 })
-                            })
-                        }, 1000)
-                    }, 500)
-                }, 3000 + splited.length * time)
+                            let l = splited.length / 8
+                            userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index / l) + "'>" + each + "</p></div>")
 
-            })
+                            cmd.scrollTo({ top: 10000 })
+                            oldtext = cmd.innerHTML
+                        }, 1000 + time * index)
+                    })
+                    setTimeout(() => {
+                        userWrite(oldtext + '<div class="cmd_line"> _ </div>')
+                        oldtext = cmd.innerHTML
+                    }, 1000 + time * splited.length);
+                    for (let l = 0; l <= 100; l++) {
 
+                        setTimeout(() => {
+                            userWrite(oldtext.replace('<div class="cmd_line"> _ </div>', "<div class='cmd_line'><p class='cmd cmd_color5'>" + "".padEnd(0, '-') + "</p></div>  <div class='cmd_line'><p class='cmd cmd_color8'># veryfing system hardware ==> " + l + "%</p></div>  <div class='cmd_line'><p class='cmd cmd_color5'>" + "".padEnd(100, '-') + "</p></div>"))
+                            cmd.scrollTo({ top: 20000 })
+                            // oldtext = cmd.innerHTML
+                        }, 2000 + time * splited.length + l * 10)
+                    }
+
+
+                    setTimeout(() => {
+                        oldtext = cmd.innerHTML
+                        setTimeout(() => {
+                            userWrite(oldtext +
+                                "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
+                                "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
+                                "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
+                                "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>RAM:</p> 134kb free</div>" +
+                                "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>" +
+                                "<div class='cmd cmd_line'></div>")
+                            cmd.scrollTo({ top: 10000 })
+                            oldtext = cmd.innerHTML
+                            userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
+                            cmd.scrollTo({ top: 10000 })
+                            setTimeout(() => {
+                                digitation('Welcome from Kruceo!', 0, 100, (txt) => {
+                                    userWrite(oldtext + "<div class='cmd cmd_line'>" + user + txt + "</div>")
+                                    cmd.scrollTo({ top: 10000 })
+                                }, () => setTimeout(init, 1000))
+
+                            }, 1000)
+                        }, 500)
+                    }, 3000 + splited.length * time)
+
+                })
+        }
+        init()
         initAllSliders()
     }, [])
 
@@ -100,6 +109,7 @@ export function Homepage(props) {
                             height: '100%',
                             whiteSpace: 'pre-wrap',
                             overflow: 'hidden',
+                            // background: '#00f'
                         },
                         mobile: {
                             fontSize: "14px"
