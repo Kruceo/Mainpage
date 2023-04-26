@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import {   asciiDesktop, asciimobile, ascii_other, links, text } from "../../../config/colors.mjs";
+import { asciiDesktop, asciimobile, ascii_other, links, text } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
 import { initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
@@ -28,37 +28,53 @@ export function Homepage(props) {
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 // userWrite(oldtext +"<div class='cmd_line'></div>")
                 oldtext = cmd.innerHTML
-                const ascii = window.visualViewport.width > window.queries.laptop?ascii_other:asciimobile
+                const ascii = window.visualViewport.width > window.queries.laptop ? ascii_other : asciimobile
                 const splited = ascii.split('\n')
                 splited.forEach((each, index) => {
                     setTimeout(() => {
                         let l = splited.length / 8
                         userWrite(oldtext + "<div class='cmd_line'><p class='cmd cmd_color" + parseInt(index / l) + "'>" + each + "</p></div>")
-                        cmd.scrollTo({top:10000})
+                        
+                        cmd.scrollTo({ top: 10000 })
                         oldtext = cmd.innerHTML
                     }, 1000 + time * index)
                 })
                 setTimeout(() => {
+                    userWrite(oldtext + 'starting kruceo.tool.cpp' )
+                    oldtext = cmd.innerHTML
+                }, 1000 + time * splited.length);
+                for (let l = 0; l <= 100; l++) {
+                    
+                    setTimeout(() => {
+                       userWrite(oldtext.replace('starting kruceo.tool.cpp',"<div class='cmd_line'><p class='cmd cmd_color5'>"+"".padEnd(100,'-')+"</p></div>  <div class='cmd_line'><p class='cmd cmd_color1'># veryfing system hardware ==> "+l +"%</p></div>  <div class='cmd_line'><p class='cmd cmd_color5'>"+"".padEnd(100,'-')+"</p></div>") )
+                        cmd.scrollTo({ top: 20000 })
+                        // oldtext = cmd.innerHTML
+                    }, 2000 + time * splited.length + l * 10)
+                }
+
+
+                setTimeout(() => {
+                    oldtext = cmd.innerHTML
                     setTimeout(() => {
                         userWrite(oldtext +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>OS:</p> FailOS 0.20.23</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>CPU:</p> Burning...</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>GPU:</p> Broken...</div>" +
                             "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>RAM:</p> 134kb free</div>" +
-                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>"+
-                            "<div class='cmd cmd_line'></div>" )
-                            cmd.scrollTo({top:10000})
-                            oldtext = cmd.innerHTML
+                            "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color8'>Resolution:</p> " + window.visualViewport.width + 'x' + window.visualViewport.height + "</div>" +
+                            "<div class='cmd cmd_line'></div>")
+                        cmd.scrollTo({ top: 10000 })
+                        oldtext = cmd.innerHTML
                         userWrite(oldtext + "<div class='cmd_line'>" + user + "</div>")
-                        cmd.scrollTo({top:10000})
+                        cmd.scrollTo({ top: 10000 })
                         setTimeout(() => {
                             digitation('Welcome from Kruceo!', 0, 100, (txt) => {
                                 userWrite(oldtext + "<div class='cmd cmd_line'>" + user + txt + "</div>")
-                                cmd.scrollTo({top:10000})
+                                cmd.scrollTo({ top: 10000 })
                             })
                         }, 1000)
                     }, 500)
-                }, 1000 + splited.length * time)
+                }, 3000 + splited.length * time)
 
             })
 
@@ -83,7 +99,7 @@ export function Homepage(props) {
                             width: '100%',
                             height: '100%',
                             whiteSpace: 'pre-wrap',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
                         },
                         mobile: {
                             fontSize: "14px"
@@ -100,7 +116,7 @@ export function Homepage(props) {
                     display: 'none'
                 },
                 tablet: {
-                    display:'grid',height:'100%',
+                    display: 'grid', height: '100%',
                     gridTemplateColumns: '1fr',
                     gridTemplateRows: '1fr 1fr'
                 },
@@ -186,7 +202,7 @@ function digitation(content, min, max, callback, onclose) {
                 clbk(text)
                 write(random())
             }
-            else { onclose?onclose():null }
+            else { onclose ? onclose() : null }
         }, time);
     }
 
@@ -200,7 +216,6 @@ function Card(props) {
         <div style={{ width: '100%', color: text, padding: "10px", boxSizing: 'border-box' }}>
             <h2>{props.title}</h2>
             <p>
-
                 {props.content}
             </p>
         </div>
@@ -224,9 +239,9 @@ function Message(props) {
         <div style={{
             display: 'flex', flexDirection: 'column', textAlign: "center", background: 'transparent', padding: '20px', borderRadius: '10px',
             // boxShadow: '0px 0px 20px #0008',
-            color: 'white',
+            color: text,
         }}>
-            <img style={{ width: 150, marginBottom: '20px',borderRadius:'100%' }} src={props.img} alt="" />
+            <img style={{ width: 150, marginBottom: '20px', borderRadius: '100%' }} src={props.img} alt="" />
             <p style={{ width: 290, height: 40 }}>{props.message}</p>
         </div>
     </header>

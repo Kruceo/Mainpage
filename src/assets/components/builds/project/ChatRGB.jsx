@@ -6,7 +6,7 @@ import Content from "../../essentials/Content";
 import { mediaStyle } from "../../essentials/MediaQuery.jsx";
 import Section from "../../essentials/Section";
 import { Window } from "../../essentials/Window";
-import { useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 export default function ChatRGB() {
     return <>
@@ -41,7 +41,7 @@ export default function ChatRGB() {
                     >
                         <div style={{ gridColumn: '4 span', width: "100%" }}>
                             <Message time="10:22:45" delay={500} left user="kruceo" >/setkey sr-xyzxyz</Message>
-                            <Message time="10:22:54" delay={750} user="ChatRGB">key applied, try a test using "chat hello" 😁 </Message>
+                            <Message time="10:22:54" delay={750} user="ChatRGB">Key applied, try a test using "chat hello" 😁 </Message>
                             <Message time="10:23:12" delay={1000} left user="kruceo" >/setroleplay respond like a Japan samurai</Message>
                             <Message time="10:23:20" delay={1250} user="ChatRGB">Ok 😁</Message>
                         </div>
@@ -119,9 +119,9 @@ export default function ChatRGB() {
                     height:'100%',
                     justifyContent:'center',
                     alignItems:'center',
-                    gridTemplateRows:'1fr 1fr 1fr 1fr 1fr 1fr'
+                    gridTemplateRows:'1fr 1fr 1fr'
                    }}>
-                    <p style={{color:'white',zIndex:1}}>Obtain an invitation and invite the bot to join your server.</p>
+                    {/* <p style={{color:text,zIndex:1}}>Obtain an invitation and invite the bot to join your server.</p> */}
                     <a style={{
                         background:links,
                         borderRadius:10,
@@ -131,21 +131,21 @@ export default function ChatRGB() {
                     }} target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=1095357835476488252&permissions=395137251392&scope=bot">Get on Discord</a>
                     <a style={{
                         background:links,
-                        opacity:'.7',
+                        opacity:'.85',
                         borderRadius:10,
                         padding:10,
                         zIndex:1
                     }} href="https://github.com/kruceo/chatrgb">View on Github</a>
                     <Anchor style={{
                         background:links,
-                        opacity:'.7',
+                        opacity:'.85',
                         borderRadius:10,
                         padding:10,
                         zIndex:1
                     }} href="/info">About Kruceo</Anchor>
                     <img src="/cat_logo.svg" alt="" style={{
                         position:'absolute',
-                        top:'50px',
+                        top:'40%',
                         zIndex:0
                     }} />
                    </div>
@@ -158,6 +158,7 @@ export default function ChatRGB() {
 
 function Message(props) {
     const id = "message" + (new Date()).getTime() + parseInt(Math.random() * 1000)
+    const [width,setWidth] = useState(Math.random()*30)
     useEffect(() => {
         setTimeout(() => {
             document.querySelector('#' + id).style.opacity = 1
@@ -166,9 +167,9 @@ function Message(props) {
     }, [])
     return <div id={id} style={{
         border: primary + ' 2px solid',
-        color: 'white',
+        color: text,
         minWidth: '40%',
-        maxWidth: parseInt(60 + Math.random()*30) + "%",
+        maxWidth: (60 + width) + "%",
         width: 'fit-content',
         padding: '10px',
         borderRadius: '10px',
@@ -180,10 +181,9 @@ function Message(props) {
         transition: 'transform 200ms , opacity 500ms'
     }}>
         <div style={{ display: 'flex' }}>
-            <p style={{ color: "#fff8", fontSize: 14, marginLeft: "0px" }}>{props.user ?? 'user'}</p>
-            <p style={{ color: "#fff8", fontSize: 14, marginRight: "0px" }}>{props.time ?? '15:55'}</p>
+            <p style={{ color: text + 88, fontSize: 14, marginLeft: "0px" }}>{props.user ?? 'user'}</p>
+            <p style={{ color: text + 88, fontSize: 14, marginRight: "0px" }}>{props.time ?? '15:55'}</p>
         </div>
-
         {props.children}
     </div>
 }

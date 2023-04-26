@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks"
-import { blur, green, primary, red, secondary, yellow } from "../../../config/colors.mjs"
+import { blur, green, primary, red, secondary, text, yellow } from "../../../config/colors.mjs"
 
 export function Window(props) {
     const w = props.width ?? '100%'
@@ -85,7 +85,7 @@ export function Window(props) {
                         textAlign: 'center',
                         marginRight: '0',
                         marginLeft: 'auto',
-                        color: '#fff8',
+                        color: text+88,
                         padding: "5px"
                     }}
                     >

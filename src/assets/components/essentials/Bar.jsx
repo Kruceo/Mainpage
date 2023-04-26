@@ -14,7 +14,9 @@ export default function Bar(props){
             backdropFilter:'blur('+blur+')',
             display:"flex",
             borderBottom:primary + ' 1px solid',
-            alignItems:'center'
+            alignItems:'center',
+            
+            
     
     }}>
         <img src={icon} alt="" style={{height:'35px',margin:'0 0 0 5px'}}></img>
@@ -30,18 +32,17 @@ export default function Bar(props){
         href="/info">Info</Anchor>
         <Anchor href="/chatrgb"
         style={{
-            color:'white',
-            opacity:.25,
+            opacity:1,
             marginLeft: "auto",
-            marginRight:"0px",
-            cursor:'pointer'
+            marginRight:"20px",
+            cursor:'pointer',color:text
         }}>
             ChatRGB
         </Anchor>
-        <div style={{margin:'0px 10px 0px 10px'}}>
+        {/* <div style={{margin:'0px 10px 0px 10px'}}>
             <a href="http://github.com/kruceo" target="_blank" rel="noopener noreferrer">
                 <img src="/img/git.png" alt="" style={{opacity:.1}} />
             </a>
-        </div>
+        </div> */}
     </header>
 }

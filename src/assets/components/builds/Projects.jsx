@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { blue, links, orange, primary, red } from "../../../config/colors.mjs";
+import { blue, links, orange, primary, red, text } from "../../../config/colors.mjs";
 import Archive from "../essentials/Archive.jsx";
 import Bar from "../essentials/Bar";
 import Content from "../essentials/Content";
@@ -57,7 +57,7 @@ export default function Projects() {
                 {
                     content.map(each => {
                         return <Window width="100%" height="300px" buttons={false} title={each.name} scrollEffect={false}>
-                            <div style={{ display: 'flex', padding: '10px', boxSizing: "border-box", flexDirection: 'column', color: 'white', width: '100%', height: '100%', position: 'relative' }}>
+                            <div style={{ display: 'flex', padding: '10px', boxSizing: "border-box", flexDirection: 'column', color: text, width: '100%', height: '100%', position: 'relative' }}>
                                 <p style={{ textAlign: 'center' }}>
                                     {each.description}
                                 </p>
