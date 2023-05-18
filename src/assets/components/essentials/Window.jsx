@@ -71,7 +71,7 @@ export function Window(props) {
                     <div style={{ position: 'absolute', display: "flex", color: '#fff8', padding: '5px' }}>
                         {/* <img src="https://raw.githubusercontent.com/Kruceo/KruceoMain/main/docs/public/img/logo.png" alt="" style={{
                             width: '35px',
-
+ꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯꝯ9ꝰ
                         }} /> */}
                         <div style={{
                         }}>

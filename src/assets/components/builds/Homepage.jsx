@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import { asciiDesktop, asciimobile, ascii_other, links, text } from "../../../config/colors.mjs";
+import { asciiDesktop, asciimobile, ascii_other, links, text, primary, secondary } from "../../../config/colors.mjs";
 import { Window } from "../essentials/Window";
 import { initAllSliders } from "bananaslider";
 import Bar from "../essentials/Bar.jsx";
@@ -19,7 +19,7 @@ export function Homepage(props) {
         let oldtext = cmd.innerHTML
         userWrite(user)
         const init = () => {
-            if(oldtext.length > 8000){
+            if (oldtext.length > 8000) {
                 oldtext = "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2048 / 1024 bytes</div>"
                 oldtext += "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2056 / 1024 bytes</div>"
                 oldtext += "<div class='cmd cmd_line'>&gt; <p class='cmd cmd_color1'>[ ERROR ]</p> Buffer Overflow: 2064 / 1024 bytes</div>"
@@ -30,10 +30,8 @@ export function Homepage(props) {
                     userWrite(oldtext + "<div class='cmd_line'>" + user + "<p class='cmd'>" + txt + "</p></div>")
                 },
                 () => {
-                    const time = 200
+                    const time = 100
 
-                    // userWrite(oldtext +"<div class='cmd_line'></div>")
-                    // userWrite(oldtext +"<div class='cmd_line'></div>")
                     oldtext = cmd.innerHTML
                     const ascii = window.visualViewport.width > window.queries.laptop ? ascii_other : asciimobile
                     const splited = ascii.split('\n')
@@ -53,10 +51,10 @@ export function Homepage(props) {
                     for (let l = 0; l <= 100; l++) {
 
                         setTimeout(() => {
-                            userWrite(oldtext.replace('<div class="cmd_line"> _ </div>', "<div class='cmd_line'><p class='cmd cmd_color5'>" + "".padEnd(0, '-') + "</p></div>  <div class='cmd_line'><p class='cmd cmd_color8'># veryfing system hardware ==> " + l + "%</p></div>  <div class='cmd_line'><p class='cmd cmd_color5'>" + "".padEnd(100, '-') + "</p></div>"))
+                            userWrite(oldtext.replace('<div class="cmd_line"> _ </div>', "<div class='cmd_line'><p class='cmd cmd_color5'>" + "".padEnd(0, '-') + "</p></div>  <div class='cmd_line'><p class='cmd cmd_color8'># veryfing system hardware ==> " + l + "%</p></div>  <div class='cmd_line'><p class='cmd cmd_color5'>" + "" + "</p></div>"))
                             cmd.scrollTo({ top: 20000 })
                             // oldtext = cmd.innerHTML
-                        }, 2000 + time * splited.length + l * 10)
+                        }, 2000 + time * splited.length + l * 50)
                     }
 
 
@@ -82,7 +80,7 @@ export function Homepage(props) {
 
                             }, 1000)
                         }, 500)
-                    }, 3000 + splited.length * time)
+                    }, 8000 + splited.length * time)
 
                 })
         }
@@ -139,20 +137,23 @@ export function Homepage(props) {
                     gridTemplateRows: '1fr'
                 }
             })}>
-                <Window title="Open source" width="100%" height="100%" buttons={false}>
+                <Window title="Free software" width="100%" height="100%" buttons={false}>
                     <Message
-                        message="You will reach open source library here"
-                        img="/img/padlock.png" />
+                        color="#6682c4"
+                        message="Streamline your processes with Kruceo Software's efficient tools."
+                        img="/img/GPU2.png" />
                 </Window>
                 <Window title="Easy library" width="100%" height="100%" buttons={false}>
                     <Message
-                        message="Get libraries to make your work a little bit more easy"
-                        img="/img/dj.png" />
+                        color="#8682c4"
+                        message="Simplify complex tasks and save time with intuitive tools."
+                        img="/img/GPU3.png" />
                 </Window>
                 <Window title="Modularity" width="100%" height="100%" buttons={false}>
                     <Message
+                        color="#6662c4"
                         message="Value modular projects to a easy implement in diversity occasions "
-                        img="/img/keyboard.png" />
+                        img="/img/GPU.png" />
                 </Window>
             </Section>
             <Section>
@@ -235,7 +236,7 @@ function Card(props) {
 
         <div style={{ width: '100%', display: 'flex', marginTop: 'auto', marginBottom: '20px', justifyContent: 'center' }}>
 
-            <a target={"_blank"} style={{ marginTop: 'auto', margin: '0px 0px 0px 20px', color: links }} href={props.link}>Go to example</a>
+            {/* <a target={"_blank"} style={{ marginTop: 'auto', margin: '0px 0px 0px 20px', color: links }} href={props.link}>Go to example</a> */}
             <a target={"_blank"} style={{ marginTop: 'auto', margin: 'auto 20px 0px auto', color: links }} href={props.link}>Take a look</a>
         </div>
 
@@ -251,7 +252,30 @@ function Message(props) {
             // boxShadow: '0px 0px 20px #0008',
             color: text,
         }}>
-            <img style={{ width: 150, marginBottom: '20px', borderRadius: '100%' }} src={props.img} alt="" />
+            <div style={{
+                display: "flex",
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: 150,
+                height: 150,
+                background: props.color ?? secondary,
+                // border: primary + ' 1px solid',
+                marginBottom: '20px',
+                borderRadius: 100,
+                position: "relative",
+                overflow: "hidden"
+            }}>
+                <div style={{
+                    position: "absolute",
+                    background: '#ffffff15',
+                    rotate:"45deg",
+                    width: '100%',
+                    height: "100%",
+                    left: "-35%",
+                    top:"-35%"
+                }}></div>
+                <img style={{ width: "80%", height: "80%" }} src={props.img} alt="" />
+            </div>
             <p style={{ width: 290, height: 40 }}>{props.message}</p>
         </div>
     </header>

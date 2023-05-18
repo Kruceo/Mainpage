@@ -36,7 +36,7 @@ export default function Projects() {
                     any: {
                         cursor: loading ? 'progress' : 'auto',
                         display: 'grid',
-                        gridTemplateColumns: '1fr  1fr 1fr',
+                        gridTemplateColumns: '1fr',
                         gap: '30px',
                         paddingTop: '50px',
                         paddingBottom: '30px'
