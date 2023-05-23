@@ -11,10 +11,6 @@ export default function MediaQuery(props) {
         giant: 2000
     }
 
-
-
-
-
     const resizeHandler = (e) => {
 
         const nd = getCurrentDevice()

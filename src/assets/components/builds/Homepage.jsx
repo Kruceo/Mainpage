@@ -137,7 +137,7 @@ export function Homepage(props) {
                     gridTemplateRows: '1fr'
                 }
             })}>
-                <Window title="Free software" width="100%" height="100%" buttons={false}>
+                <Window title="Efficiency" width="100%" height="100%" buttons={false}>
                     <Message
                         color="#6682c4"
                         message="Streamline your processes with Kruceo Software's efficient tools."
@@ -252,19 +252,26 @@ function Message(props) {
             // boxShadow: '0px 0px 20px #0008',
             color: text,
         }}>
-            <div style={{
-                display: "flex",
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: 150,
-                height: 150,
-                background: props.color ?? secondary,
-                // border: primary + ' 1px solid',
-                marginBottom: '20px',
-                borderRadius: 100,
-                position: "relative",
-                overflow: "hidden"
-            }}>
+            <div style={mediaStyle({
+                any:{
+                    display: "flex",
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: 180,
+                    height: 180,
+                    background: props.color ?? secondary,
+                    // border: primary + ' 1px solid',
+                    marginBottom: '20px',
+                    borderRadius: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                },
+                tv:{
+                    width: 220,
+                    height: 220,
+                }
+                
+            })}>
                 <div style={{
                     position: "absolute",
                     background: '#ffffff15',
@@ -272,7 +279,8 @@ function Message(props) {
                     width: '100%',
                     height: "100%",
                     left: "-35%",
-                    top:"-35%"
+                    top:"-35%",
+                    animation:"reflection 10s infinite "
                 }}></div>
                 <img style={{ width: "80%", height: "80%" }} src={props.img} alt="" />
             </div>

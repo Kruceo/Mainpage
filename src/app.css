@@ -118,3 +118,32 @@ a{
     transform: rotate3d(.5,1,.1,360deg)
   }
 }
+
+@keyframes reflection {
+  0%{
+    left: -35%;
+    top: -35%;
+  }
+  30%{
+    left: -35%;
+    top: -35%;
+  }
+  50%{
+    left: 70%;
+    top: 70%;
+  }
+  50.0001%{
+    display: none;
+    left: -70%;
+    top:  -70%;
+  }
+  50.0002%{
+    display: flex;
+    left: -70%;
+    top:  -70%;
+  }
+  70%{
+    left: -35%;
+    top: -35%;
+  }
+}
