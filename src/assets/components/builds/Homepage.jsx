@@ -231,7 +231,7 @@ function Card(props) {
             </p>
         </div>
         <div style={{ width: '100%', display: 'flex', marginTop: 'auto', marginBottom: '20px', justifyContent: 'center' }}>
-            <img src={props.img} style={{ height: '148px', borderRadius: '10px', margin: '0' }} alt="" />
+            <img src={props.img} style={{ height: '256px', borderRadius: '10px', margin: '0',opacity:.5 }} alt="" />
         </div>
 
         <div style={{ width: '100%', display: 'flex', marginTop: 'auto', marginBottom: '20px', justifyContent: 'center' }}>

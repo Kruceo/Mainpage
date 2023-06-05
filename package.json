@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bananaslider": "github:kruceo/bananaslider",
-    "milhas": "github:kruceo/milhas",
+    "milhas": "^0.7.2",
     "preact": "^10.11.3"
   },
   "devDependencies": {

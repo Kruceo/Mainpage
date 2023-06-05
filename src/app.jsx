@@ -1,5 +1,4 @@
-import { Path, Anchor, E404 } from 'milhas'
-import Router from 'milhas/src/components/Router/Router'
+import {Router,Path,E404} from 'milhas'
 import { useState } from 'preact/hooks'
 import './app.css'
 import { Homepage } from './assets/components/builds/Homepage'
@@ -25,6 +24,9 @@ export function App() {
           </Path>
 
           <Path as="/projects" absolute>
+            <Projects />
+          </Path>
+          <Path as="/projects/:project" absolute>
             <Projects />
           </Path>
 

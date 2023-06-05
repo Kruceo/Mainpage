@@ -4,7 +4,7 @@ export default function Bar(props){
     return <header style={
         {
             width:"100%",
-            height:'45px',
+            height:'65px',
             backgroundColor:secondary,
             position:'fixed',
             boxShadow:'0px 0px 30px #0008',
@@ -15,7 +15,7 @@ export default function Bar(props){
             display:"flex",
             borderBottom:primary + ' 1px solid',
             alignItems:'center',
-            
+            fontSize:20
             
     
     }}>
