@@ -16,6 +16,12 @@ body {
             display: grid;
             height: fit-content;
             grid-template-columns: 1fr 1fr 1fr;
+            @media @min968{
+                grid-template-columns: 1fr 1fr;
+            }
+            @media @min768{
+                grid-template-columns: 1fr;
+            }
             gap: 20px;
             align-items: center;
             margin-bottom: 50px;

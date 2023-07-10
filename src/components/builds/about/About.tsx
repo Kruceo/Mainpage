@@ -8,7 +8,7 @@ import "./About.less"
 export default function About() {
     return <>
         <Bar></Bar>
-        <Content className="first">
+        <Content className="first about-content">
             <InnerContent>
                 <div>
                 <Title>About</Title>

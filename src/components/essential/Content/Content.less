@@ -28,6 +28,18 @@
 
 #inner {
     width: @contentWidth;
+    @media @min968{
+        width: 768px;
+    }
+    @media @min768{
+        width: 468px;
+    }
+    @media @min468{
+        width: 268px;
+    }
+    @media @min268{
+        width: 68px;
+    }
     height: 100%;
     display: flex;
     flex-direction: column;

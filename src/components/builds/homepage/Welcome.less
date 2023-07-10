@@ -20,17 +20,30 @@ body {
         }
 
         h2 {
+            font-size: 108px;
+            @media @min968{
+                font-size: 108px;
+            }
+            @media @min768{
+                font-size: 68px;
+            }
+            @media @min468{
+                font-size: 48px;
+            }
+            @media @min268{
+                font-size: 38px;
+            }
             line-height-step: 10px;
             line-height: 75px;
             color: @text;
-            font-size: 44px;
+            
             font-weight: bold;
             text-align: center;
             // mix-blend-mode: darken;
             // mix-blend-mode: exclusion;
             span {
                 // filter: grayscale();
-                font-size: 100px;
+                // font-size: 100px;
                 color: @text;
                 text-decoration: underline;
             }

@@ -14,7 +14,8 @@ body {
             display: grid;
             height: fit-content;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+          
+            // grid-template-rows: 1fr 1fr;
             gap: 20px;
             align-items: center;
             margin-bottom: 50px;
@@ -25,6 +26,9 @@ body {
                 z-index: auto;
                 // height: 340px;
                 transition: scale 250ms;
+                @media @min768{
+                    grid-column: span 3;
+                }
 
                 h4 {
                     margin: 10px 0px 5px 0px;
@@ -36,10 +40,16 @@ body {
 
                 &:nth-child(1) {
                     grid-column: span 2;
+                    @media @min768{
+                        grid-column: span 3;
+                    }
                 }
 
                 &:nth-child(4) {
                     grid-column: span 2;
+                    @media @min768{
+                        grid-column: span 3;
+                    }
                 }
 
                 .icon {

@@ -89,9 +89,15 @@ body {
                 padding: 10px;
                 margin-left: 0px;
                 margin-right: 20px;
+                @media @min768{
+                    display: none;
+                }
             }
-
+          
             #buttons {
+                @media @min768{
+                    display: none;
+                }
                 display: flex;
 
                 &.left {
@@ -139,7 +145,7 @@ body {
                 #highlight-bar-button {
                     margin-inline: 20px;
                     transition: opacity 250ms;
-
+                    
                     &:hover {
                         opacity: 0.75;
                     }

@@ -7,6 +7,7 @@ import { Anchor } from "milhas"
 import { MilhasAnchorElement } from "milhas/dist/types/src/components/Anchor/Anchor"
 import LightButton from "../LightButton/LightButton"
 import { AnchorAttributes } from "milhas/dist/types/components/Anchor/Anchor"
+import Mobile from "./Mobile"
 
 export default function Bar() {
 
@@ -39,6 +40,7 @@ export default function Bar() {
         </header>
         <header id="sub-bar">
             <div id="bar-content">
+                <Mobile></Mobile>
                 <img id="logo" src="https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg"></img>
                 <div className="left" id="buttons">
                     <BarButton href="/">Home</BarButton>
