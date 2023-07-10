@@ -4,6 +4,7 @@ import Content from "../../essential/Content/Content";
 import ProjectsSection1 from "./ProjectsSection1";
 
 export default function Projects() {
+    document.title = "Kruceo | Projects"
     return <>
         <Bar></Bar>
         <ProjectsSection1></ProjectsSection1>

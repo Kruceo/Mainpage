@@ -4,6 +4,7 @@ import InnerContent from "../../essential/Content/InnerContent";
 import Title from "../../essential/Title/Title";
 
 export default function Donate() {
+    document.title = "Kruceo | Donate"
     return <>
         <Bar></Bar>
         <Content className="first">

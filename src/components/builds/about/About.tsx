@@ -6,6 +6,7 @@ import InnerContent from "../../essential/Content/InnerContent";
 import Title from "../../essential/Title/Title";
 import "./About.less"
 export default function About() {
+    document.title = "Kruceo | About"
     return <>
         <Bar></Bar>
         <Content className="first about-content">

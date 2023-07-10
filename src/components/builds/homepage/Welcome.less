@@ -18,7 +18,10 @@ body {
         &.hidden {
             opacity: 0;
         }
-
+        @media @min468{
+            font-size: 48px;
+            display: none;
+        }
         h2 {
             font-size: 108px;
             @media @min968{
@@ -26,12 +29,6 @@ body {
             }
             @media @min768{
                 font-size: 68px;
-            }
-            @media @min468{
-                font-size: 48px;
-            }
-            @media @min268{
-                font-size: 38px;
             }
             line-height-step: 10px;
             line-height: 75px;
