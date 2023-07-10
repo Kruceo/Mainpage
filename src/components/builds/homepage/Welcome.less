@@ -1,0 +1,41 @@
+@import "../../../assets/pallete.less";
+
+body {
+    .dark-mode();
+
+    .welcome {
+
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: @fullcontent;
+        background:@color2;
+       
+        // background-image: url("https://cdn.kruceo.com/0000.png?resize=1920,1080");
+        &.hidden {
+            opacity: 0;
+        }
+
+        h2 {
+            line-height-step: 10px;
+            line-height: 75px;
+            color: @text;
+            font-size: 44px;
+            font-weight: bold;
+            text-align: center;
+            // mix-blend-mode: darken;
+            // mix-blend-mode: exclusion;
+            span {
+                // filter: grayscale();
+                font-size: 100px;
+                color: @text;
+                text-decoration: underline;
+            }
+        }
+
+       
+    }
+}

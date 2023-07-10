@@ -1,0 +1,78 @@
+@import "../../../assets/pallete.less";
+
+body {
+
+    .dark-mode();
+
+    .projects.table {
+
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        height: 100% !important;
+
+        #grid {
+            display: grid;
+            height: fit-content;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 50px;
+
+            #box {
+                text-align: center;
+                font-size: 20px;
+                z-index: auto;
+                // height: 340px;
+                transition: scale 250ms;
+                display: flex;
+                flex-direction: column;
+
+                &:hover {
+                    // scale: 1.05;
+                }
+
+                .icon {
+                    width: 120;
+                    height: 120;
+                    background: "";
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-size: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 88px;
+                        border-radius: @rounded;
+                    }
+                }
+
+                .projects-footer {
+                    margin-top: auto;
+                    margin-bottom: 20px;
+                    display: flex;
+                    width: 100%;
+                    ;
+
+                    .projects.link.left {
+                        margin-left: 20px;
+                        margin-right: auto;
+                    }
+
+                    .projects.link.right {
+                        color: @text;
+                        margin-right: 20px;
+                        margin-left: auto;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@import "../../../assets/pallete.less";
+
+body {
+    .dark-mode();
+
+    #bar-content {
+        width: calc(100% - 40px);
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+
+    --bar-bg: @color3;
+    --contact-color: @inverseText;
+    --sub-bar-bg: @color4;
+    --bar-button-color: @text;
+    --under-line-color: @color1;
+    --highlight-bar-button-text: @color3;
+    --highlight-bar-button-bg: @color1;
+
+    #header {
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        #bar {
+            width: 100vw;
+            height: 40px;
+            transition: height 250ms;
+            left: 0;
+            top: 0;
+            background: var(--bar-bg);
+
+            &.hidden {
+                height: 0px;
+                opacity: 0;
+                transition: height 250ms, opacity 300ms 250ms;
+            }
+
+            #offer {
+                margin-right: auto;
+            }
+
+            #contacts {
+                margin: 0 20px 0 0;
+                display: flex;
+                gap: 14px;
+                font-weight: bold;
+
+                #contact {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--contact-color);
+                    width: fit-content;
+
+                    img {
+                        opacity: .25;
+                        width: 24px;
+                        transition: opacity 250ms;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        #sub-bar {
+            width: 100vw;
+            height: 80px;
+            // position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--sub-bar-bg);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+
+            #logo {
+                height: 100%;
+                padding: 10px;
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+
+            #buttons {
+                display: flex;
+
+                &.left {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                &.right {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+
+                #bar-button {
+
+                    margin-inline: 20px;
+
+                    #sub-line {
+                        width: 0%;
+                        height: 3px;
+                        background-color: var(--under-line-color);
+                        transition: width 200ms;
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        #sub-line {
+                            width: 100%;
+                        }
+
+                    }
+
+                    a {
+                        color: var(--bar-button-color);
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none;
+                        padding: 4px 8px;
+                        border-radius: @rounded;
+                        font-size: 22px;
+                        height: fit-content;
+                        text-decoration: none;
+                    }
+                }
+
+                #highlight-bar-button {
+                    margin-inline: 20px;
+                    transition: opacity 250ms;
+
+                    &:hover {
+                        opacity: 0.75;
+                    }
+
+                    .button {
+                        color: var(--highlight-bar-button-text);
+                        cursor: pointer;
+                        background-color: var(--highlight-bar-button-bg);
+                        border: none;
+                        padding: 8px 12px;
+                        border-radius: @rounded;
+                        font-size: 22px;
+                        height: fit-content;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

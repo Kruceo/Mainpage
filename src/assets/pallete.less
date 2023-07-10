@@ -1,0 +1,56 @@
+// colors
+.light-mode() {
+    @color1: #00ff99;
+    @color2: #012980;
+    @color3: #323246;
+    @color4: white;
+    @background: #efefef;
+    @text: #444;
+    @inverseText: #eee;
+}
+
+.dark-mode() {
+    --color1: #00ff99;
+    --color2: #eef;
+    --color3: #323246;
+    --color4: white;
+    --background: #efefef;
+    --text: #444;
+    --inverseText: #eee;
+
+
+    &.dark-mode {
+        --color1: #00ff99;
+        --color2: #3c3c4c;
+        --color3: #334;
+        --color4: #445;
+        --background: #404050;
+        --text: #ccc;
+        --inverseText: #222;
+    }
+
+    @color1: var(--color1);
+    @color2: var(--color2);
+    @color3: var(--color3);
+    @color4: var(--color4);
+    @background: var(--background);
+    @text: var(--text);
+    @inverseText: var(--inverseText);
+
+
+
+
+
+
+
+}
+
+// sizes & presets
+
+
+
+
+@rounded: 7px;
+@border: #0002 2px solid;
+
+@fullcontent: calc(100vh - 120px);
