@@ -2,15 +2,16 @@
 
 body {
     .dark-mode();
-    --active:0;
+    --active: 0;
+
     #mobile-button {
         padding: 0px;
         cursor: pointer;
         position: absolute;
         background: none;
         border: none;
-        width: 50px;
-        height: 50px;
+        width: 28px;
+        height: 28px;
         mix-blend-mode: difference;
 
         img {
@@ -18,10 +19,18 @@ body {
             height: 100%;
         }
 
-        &:focus~#mobile-control {
-            display: flex;
+        transition: scale 500ms;
+
+        &:focus {
+            &~#mobile-control {
+                display: flex;
+               
+            }
+            scale: .8;
         }
+
         display: none;
+
         @media @min768 {
             display: flex;
         }
@@ -29,9 +38,10 @@ body {
     }
 
     #mobile-control {
-        &:hover{
+        &:hover {
             display: flex;
         }
+
         top: 100%;
         display: none;
         flex-direction: column;
@@ -41,6 +51,7 @@ body {
         padding: 10px;
         border-radius: 0px 0px 10px 10px;
         overflow: hidden;
+
         a {
             color: @text;
             text-decoration: none;

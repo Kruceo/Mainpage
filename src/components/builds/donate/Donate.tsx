@@ -16,7 +16,7 @@ export default function Donate() {
                     margin:"5px 20px 20px 20px",
                     border:"#0003 2px solid"
                 }}/>
-                <h2 style={{margin:"0px 20px 0px 20px"}}>BNB or ETH:</h2>
+                <h2 style={{margin:"0px 20px 0px 20px"}}>BNB or ETH chain:</h2>
                 <h3 style={{margin:"5px 20px 0px 20px",border:"#0003 2px solid",width:'fit-content',padding:10,borderRadius:10}}>0xA051560e7172fd8B8EE0060FFC970D40c4287209</h3>
             </InnerContent>
         </Content>
