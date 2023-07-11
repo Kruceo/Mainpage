@@ -15,7 +15,7 @@ export default function Welcome() {
     // </Content>
     return <Content className="first welcome">
 
-        <h2><br/><span>Welcome</span></h2>
+        <h2>Welcome</h2>
 
 
     </Content>
