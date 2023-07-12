@@ -2,7 +2,6 @@ import SwitchButton from "../SwitchButton/SwitchButton";
 import "./LightButton.less"
 export default function LightButton() {
     switchMode(loadValue())
-    console.log('loeaded',loadValue())
     return <SwitchButton id="light-button" defaultValue={loadValue()} width={40} height={20} onChange={(event: { activated: boolean }) => {
         switchMode(event.activated)
         window.localStorage.setItem('dark-mode', event.activated ? '1' : '0')

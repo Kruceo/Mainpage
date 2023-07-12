@@ -3,10 +3,8 @@ export interface BarElement {
 }
 import { PropsWithChildren, ReactNode } from "react"
 import "./Bar.less"
-import { Anchor } from "milhas"
-import { MilhasAnchorElement } from "milhas/dist/types/src/components/Anchor/Anchor"
+import { Anchor, AnchorAttributes } from "milhas"
 import LightButton from "../LightButton/LightButton"
-import { AnchorAttributes } from "milhas/dist/types/components/Anchor/Anchor"
 import Mobile from "./Mobile"
 
 export default function Bar() {
@@ -59,7 +57,7 @@ function Contact(props: {children: ReactNode,href:string}) {
     return <a href={props.href} target="_blank" id="contact">{props.children}</a>
 }
 
-function BarButton(props: MilhasAnchorElement) {
+function BarButton(props: AnchorAttributes) {
     return <div id="bar-button">
         <Anchor {...props}>{props.children}</Anchor>
         <div id="sub-line"></div>

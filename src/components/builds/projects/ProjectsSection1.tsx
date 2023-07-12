@@ -16,14 +16,14 @@ interface repository {
     html_url:string
 }
 export default function ProjectsSection1() {
-
+    const nameFilter = "contactron,kruceolauncher,mainpage,typein"
     const [content, setContent]: [repository[], Dispatch<SetStateAction<never[]>>] = useState([])
     let loading = content.length > 0 ? false : true
     if (content.length == 0)
         fetch('https://api.github.com/users/Kruceo/repos?sort=created', { mode: 'cors' }).then(res => {
             res.json().then(text => {
                 const filtered = text.filter((repo: repository) => {
-                    return (!repo.archived && repo.homepage != ('' || undefined || null) && repo.description != ('' || undefined || null) && !repo.description.includes('[notshow]'))
+                    return (!repo.archived && repo.homepage != ('' || undefined || null) && repo.description != ('' || undefined || null) && !repo.description.includes('[notshow]') && !nameFilter.includes(repo.name.toLowerCase()))
                 })
                 setContent(filtered)
 
@@ -31,7 +31,6 @@ export default function ProjectsSection1() {
         })
 
     if (loading) return <Content className="first"><InnerContent><Loading></Loading></InnerContent></Content>
-    console.log(content)
     return <Content className="projects first">
         <InnerContent className='projects table'>
             <Title>Projects</Title>
