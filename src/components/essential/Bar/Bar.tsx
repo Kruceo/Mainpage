@@ -1,7 +1,7 @@
 export interface BarElement {
 
 }
-import { PropsWithChildren, ReactNode } from "react"
+import { ReactNode } from "react"
 import "./Bar.less"
 import { Anchor, AnchorAttributes } from "milhas"
 import LightButton from "../LightButton/LightButton"
@@ -9,7 +9,7 @@ import Mobile from "./Mobile"
 
 export default function Bar() {
 
-    document.addEventListener('scroll',(evt)=>{
+    document.addEventListener('scroll',()=>{
         if(document.documentElement.scrollTop > 200)
         document.querySelector('#bar')?.classList.add('hidden')
         else document.querySelector('#bar')?.classList.remove('hidden')

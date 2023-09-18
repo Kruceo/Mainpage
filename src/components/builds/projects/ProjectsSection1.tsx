@@ -3,7 +3,7 @@ import { Box } from "../../essential/Box/Box";
 import Content from "../../essential/Content/Content";
 import InnerContent from "../../essential/Content/InnerContent";
 import "./ProjectsSection1.less"
-import { Anchor } from "milhas";
+// import { Anchor } from "milhas";
 import Loading from "../../essential/Loading/Loading";
 import Title from "../../essential/Title/Title";
 
@@ -26,7 +26,6 @@ export default function ProjectsSection1() {
                     return (!repo.archived && repo.homepage != ('' || undefined || null) && repo.description != ('' || undefined || null) && !repo.description.includes('[notshow]') && !nameFilter.includes(repo.name.toLowerCase()))
                 })
                 setContent(filtered)
-
             })
         })
 

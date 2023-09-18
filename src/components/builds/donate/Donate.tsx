@@ -1,7 +1,6 @@
 import Bar from "../../essential/Bar/Bar";
 import Content from "../../essential/Content/Content";
 import InnerContent from "../../essential/Content/InnerContent";
-import Title from "../../essential/Title/Title";
 
 export default function Donate() {
     document.title = "Kruceo | Donate"

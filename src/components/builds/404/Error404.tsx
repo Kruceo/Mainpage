@@ -1,4 +1,3 @@
-import { Anchor } from "milhas";
 import Bar from "../../essential/Bar/Bar";
 import { Box } from "../../essential/Box/Box";
 import Content from "../../essential/Content/Content";
