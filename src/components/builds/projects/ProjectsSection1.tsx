@@ -30,7 +30,7 @@ export default function ProjectsSection1() {
         })
 
     if (loading) return <Content className="first"><InnerContent><Loading></Loading></InnerContent></Content>
-    return <Content className="projects first">
+    return <Content className="projects">
         <InnerContent className='projects table'>
             <Title>Projects</Title>
             <div id='grid'>
