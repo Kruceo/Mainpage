@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset >
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://kruceo.com/info</loc>
-      <priority>0.7</priority>
+      <loc>https://ytdownloader.kruceo.com</loc>
    </url>
    <url>
-      <loc>https://kruceo.com/projects</loc>
-      <priority>0.6</priority>
+      <loc>https://typein.kruceo.com</loc>
    </url>
-   <url>
-      <loc>https://kruceo.com/</loc>
-      
-      <priority>1</priority>
-
-   </url>
+   <!-- Adicione outras URLs dos seus subdomínios aqui -->
 </urlset>
