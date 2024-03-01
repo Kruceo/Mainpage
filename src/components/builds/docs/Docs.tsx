@@ -1,0 +1,51 @@
+import { parse } from 'marceo'
+import { useEffect, useRef } from 'react'
+import "./Markdown.less"
+import "./Docs.less"
+import "./Markdown-hljs.css"
+import Content from '../../essential/Content/Content'
+import InnerContent from '../../essential/Content/InnerContent'
+import Bar from '../../essential/Bar/Bar'
+export default function Docs() {
+    const ref = useRef<HTMLDivElement>(null)
+    const url = new URL(window.location.href).searchParams.get('url')
+
+    useEffect(() => {
+        if (url)
+            (async () => {
+                const res = await fetch(url)
+                const data = await res.text()
+                let html = parse(data)
+
+                html.match(/<img .*?src=".*?".*>/g)?.forEach(each => {
+                    const src = each.match(/(?<=src=").+?(?=")/g)
+                    if (!src) return
+                    let toReplace = url.slice(url.lastIndexOf("/"))
+                    let newUrl = url.replace(toReplace, "/" + src[0])
+                    const newHtml = each.replace(/src=".*"/, `src="${newUrl}"`)
+                    console.log(newHtml)
+
+                    html = html.replace(each, newHtml)
+                })
+                if (ref.current)
+                    ref.current.innerHTML = html
+            })()
+    }, [])
+
+    useEffect(() => {
+
+    }, [])
+
+    return <>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/obsidian.min.css"></link>
+        <Bar></Bar>
+        <Content className='first'>
+            <InnerContent className='inner'>
+                <link rel="stylesheet" href="https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/androidstudio.css" />
+                <div className='markdown-viewer' ref={ref}>
+                    
+                </div>
+            </InnerContent>
+        </Content>
+    </>
+}

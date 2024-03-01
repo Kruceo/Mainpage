@@ -34,8 +34,8 @@ export default function ProjectsSection2() {
         <InnerContent className='projects table'>
             <Title>Portfolio</Title>
             <div id='grid'>
-                    <HiddenItem class="hidden-portfolio-item"
-                        label={<h3>🐦 Bird Company</h3>}>
+                    <HiddenItem className="hidden-portfolio-item" 
+                        buttonContent={<h3>🐦 Bird Company</h3>}>
                         <div className="inner">
                             <h4>Stack</h4>
                             <p>SolidJS</p>

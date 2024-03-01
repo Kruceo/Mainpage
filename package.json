@@ -1,5 +1,5 @@
 {
-  "name": "sonic_homepage",
+  "name": "mainpage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "marceo": "^0.7.4",
     "milhas": "^0.7.10",
+    "pnpm": "^8.15.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

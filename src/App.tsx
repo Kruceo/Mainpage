@@ -5,6 +5,7 @@ import Projects from "./components/builds/projects/Projects";
 import About from "./components/builds/about/About";
 import Donate from "./components/builds/donate/Donate";
 import Error404 from "./components/builds/404/Error404";
+import Docs from "./components/builds/docs/Docs";
 export default function App() {
   return <>
     <Router>
@@ -19,6 +20,9 @@ export default function App() {
       </Path>
       <Path as="/donate" absolute>
         <Donate />
+      </Path>
+      <Path as="/doc" absolute>
+        <Docs/>
       </Path>
       <E404>
         <Error404></Error404>

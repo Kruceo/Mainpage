@@ -1,13 +1,54 @@
-.hidden-item{
-    .label{
+.hide-item {
+    border-radius: 5px;
+    padding: 0px;
+    background-color: transparent;
+    overflow: hidden;
+    height: fit-content;
+    cursor: pointer;
+    .button {
         display: flex;
-        justify-content: center;
         align-items: center;
+        padding: 10px;
+
+        .expand-symbol {
+            transition: rotate 250ms ease, content 125ms ease;
+            height: 100%;
+            margin: auto 0;
+            margin-left: auto;
+            // background-color: red;
+            font-size: 24px;
+            opacity: .5;
+            font-weight: bold;
+            &::after{
+                font-family: monospace;
+                content: "−";
+            }
+        }
+    }
+
+    &.hidden {
+        .button {
+            .expand-symbol {
+                rotate: 180deg;
+                &::after{
+                    content: "+";
+                }
+            }
+        }
+    }
+
+    .hidden-content-frame {
+        height: 0px;
+        overflow: hidden;
+        background-color: transparent;
+        transition: height 250ms ease;
+        display: flex;
         position: relative;
-        cursor: pointer;
-        .button{
+
+        .hidden-content {
+            padding: 10px;
             position: absolute;
-            left: calc(100% - 2cap);
+            // padding: 10px;
         }
     }
 }
