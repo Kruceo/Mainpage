@@ -29,6 +29,15 @@ export default function Docs() {
                 })
                 if (ref.current)
                     ref.current.innerHTML = html
+                    document.querySelectorAll("a").forEach((each)=>{
+                        
+                        if(each.href.startsWith("https://github.com/") && each.href.endsWith(".md")){
+                            let href = each.href
+                            href = href.replace(/(?<=\/.+\/.+)\/tree/,'')
+                            href = href.replace(/github\.com/,'raw.githubusercontent.com')
+                            each.href = "/doc?url="+href
+                        }
+                    })
             })()
     }, [])
 
