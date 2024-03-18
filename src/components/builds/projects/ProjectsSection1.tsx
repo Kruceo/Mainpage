@@ -24,7 +24,7 @@ export default function ProjectsSection1() {
         fetch('https://api.github.com/users/Kruceo/repos?sort=created', { mode: 'cors' }).then(res => {
             res.json().then(text => {
                 const filtered = text.filter((repo: repository) => {
-                    return (!repo.archived && repo.homepage != ('' || undefined || null) && repo.description != ('' || undefined || null) && !repo.description.includes('[notshow]') && !nameFilter.includes(repo.name.toLowerCase()))
+                    return (!repo.archived && repo.description != ('' || undefined || null) && !repo.description.includes('[notshow]') && !nameFilter.includes(repo.name.toLowerCase()))
                 })
                 setContent(filtered)
             })
@@ -74,7 +74,7 @@ function TryIcon(props: { owner: string, repo: string }) {
 
     useEffect(() => {
         (async () => {
-            const possiblePaths = ['icon.png', 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg', 'frontend/public/icon.png', 'public/birdIcon.png']
+            const possiblePaths = ['icon.png',"icon.svg", 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg', 'frontend/public/icon.png', 'public/birdIcon.png']
             const localStorageKey = "icon" + props.repo + props.owner 
 
             if (localStorage.getItem(localStorageKey)) {
