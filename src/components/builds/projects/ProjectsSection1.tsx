@@ -74,36 +74,41 @@ function TryIcon(props: { owner: string, repo: string }) {
 
     useEffect(() => {
         (async () => {
-            const possiblePaths = ['icon.png', 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg','frontend/public/icon.png','public/birdIcon.png']
+            const possiblePaths = ['icon.png', 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg', 'frontend/public/icon.png', 'public/birdIcon.png']
+            const localStorageKey = "icon" + props.repo + props.owner 
+
+            if (localStorage.getItem(localStorageKey)) {
+                setImgUrl(localStorage.getItem(localStorageKey))
+                return;
+            }
 
             for (const path of possiblePaths) {
                 const p = `https://raw.githubusercontent.com/${props.owner}/${props.repo}/main/${path}`
-                console.log(path)
                 try {
                     const res = await fetch(p)
-                    if(res.ok){
+                    if (res.ok) {
                         setImgUrl(p)
+                        localStorage.setItem(localStorageKey, p)
                         break;
                     }
-                    
+
                 } catch (error) {
-                    console.log(error)
+                    return;
                 }
-               
             }
         })()
-    },[])
-    
-    function randomIcon(){
+    }, [])
+
+    function randomIcon() {
         const r = ["https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg",
-        "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_black.svg",
-        "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon.svg",
-        "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_filled.svg",
-        "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_shadow.svg",
-        "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_full_shadow.svg"
-    ]
-    return r[Math.round(Math.random() * (r.length-1))]
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_black.svg",
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon.svg",
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_filled.svg",
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_shadow.svg",
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_full_shadow.svg"
+        ]
+        return r[Math.round(Math.random() * (r.length - 1))]
     }
 
-    return <img src={imgUrl??randomIcon()} alt="icon" />
+    return <img src={imgUrl ?? randomIcon()} alt="icon" />
 }
