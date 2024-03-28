@@ -14,17 +14,20 @@ export default function Docs() {
         if (url)
             (async () => {
                 const res = await fetch(url)
-                const data = await res.text()
+                let  data = await res.text()
+                
+                // data = data.replace(/<sub>(.*?)<\/sub>/g,(r:string)=>r.slice(5,r.length-6))
+                
                 let html = parse(data)
 
-                html.match(/<img .*?src=".*?".*>/g)?.forEach(each => {
+                html.match(/<img .*?src=".*?".*>/g)?.forEach((each:string) => {
                     const src = each.match(/(?<=src=").+?(?=")/g)
-                    if (!src) return
-                    let toReplace = url.slice(url.lastIndexOf("/"))
-                    let newUrl = url.replace(toReplace, "/" + src[0])
+                  
+                    if (!src || src[0].startsWith("http")) return
+                    let toReplace = url.slice(url.lastIndexOf("/"))    
+                    let newUrl = url.replace(toReplace, "/" + src[0].replace(/\.\/|^\//,""))
                     const newHtml = each.replace(/src=".*"/, `src="${newUrl}"`)
-                    console.log(newHtml)
-
+                    alert(newHtml)
                     html = html.replace(each, newHtml)
                 })
                 if (ref.current)

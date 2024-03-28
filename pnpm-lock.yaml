@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   marceo:
-    specifier: ^0.7.4
-    version: 0.7.4
+    specifier: ^0.7.6
+    version: 0.7.6
   milhas:
     specifier: ^0.7.10
     version: 0.7.10
@@ -1667,8 +1667,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /marceo@0.7.4:
-    resolution: {integrity: sha512-a8a2MbAsE7EnJZNDdNpxP1T08BoVIbg1zthVPsqDErSaJKF5Bu3Wn1hfJtexPJXutLqP6xvQ5zPWjYbV4YX9PQ==}
+  /marceo@0.7.6:
+    resolution: {integrity: sha512-gn2Ukr58vQLW1Uh0GiQuceYZC7oqt3wPkKSqpWYHlyz3jRUuPQGR/fU1JBpPCc4WSFKgpDPk7dX03ib1TPmw3A==}
     dependencies:
       '@types/highlight.js': 10.1.0
       highlight.js: 11.9.0
