@@ -27,7 +27,7 @@ export default function Docs() {
                     let toReplace = url.slice(url.lastIndexOf("/"))    
                     let newUrl = url.replace(toReplace, "/" + src[0].replace(/\.\/|^\//,""))
                     const newHtml = each.replace(/src=".*"/, `src="${newUrl}"`)
-                    alert(newHtml)
+                    
                     html = html.replace(each, newHtml)
                 })
                 if (ref.current)
