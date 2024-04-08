@@ -41,8 +41,11 @@ export default function ProjectsSection2() {
                             <p>SolidJS</p>
                             <p>Vite</p>
                             <p>Typescript</p>
+                            <div>
+                            <a href="https://birdcompany-website-portfolio.pages.dev/">View</a>
+                            </div>
                         </div>
-                        <a href="https://birdcompany-website-portfolio.pages.dev/">View</a>
+                        
                     </HiddenItem>
             </div>
         </InnerContent>
