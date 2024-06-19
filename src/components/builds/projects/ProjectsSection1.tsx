@@ -14,7 +14,8 @@ interface repository {
     archived: boolean,
     clone_url: string,
     html_url: string,
-    owner: { login: string }
+    owner: { login: string },
+    default_branch: string
 }
 export default function ProjectsSection1() {
     const nameFilter = "contactron,kruceolauncher,mainpage,typein"
@@ -39,14 +40,14 @@ export default function ProjectsSection1() {
                     content.map((each, index) => {
                         return <Box key={"project" + index}>
                             <div className="icon">
-                                <TryIcon owner={each.owner.login} repo={each.name} />
-                                {/* <img src={each.html_url + '/blob/main/icon.png?raw=true'} alt="📂" /> */}
+                                <TryIcon owner={each.owner.login} repo={each.name} branch={each.default_branch} />
+                                    {/* <img src={each.html_url + '/blob/main/icon.png?raw=true'} alt="📂" /> */ }
                             </div>
                             <h4 style={{ textTransform: "capitalize" }}>{each.name}</h4>
                             <p style={{ padding: 20, textAlign: 'center' }}>{each.description}</p>
                             <div className="projects-footer">
                                 <Link className="left" src="/github.png" href={each.clone_url} />
-                                <a target="_blank" className="projects link right" href={`/doc/?url=https://raw.githubusercontent.com/${each.owner.login}/${each.name}/main/README.md`}>Docs</a>
+                                <a target="_blank" className="projects link right" href={`/doc/?url=https://raw.githubusercontent.com/${each.owner.login}/${each.name}/${each.default_branch}/README.md`}>Docs</a>
                             </div>
                         </Box>
                     })
@@ -68,14 +69,14 @@ function Link(props: {
     </a>
 }
 
-function TryIcon(props: { owner: string, repo: string }) {
+function TryIcon(props: { owner: string, repo: string, branch: string }) {
 
     const [imgUrl, setImgUrl] = useState<string | null>(null)
 
     useEffect(() => {
         (async () => {
-            const possiblePaths = ['icon.png',"icon.svg", 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg', 'frontend/public/icon.png', 'public/birdIcon.png']
-            const localStorageKey = "icon" + props.repo + props.owner 
+            const possiblePaths = ['icon.png', "icon.svg", 'public/favicon.ico', 'public/favicon.png', 'public/icon.png', 'public/icon.svg', 'frontend/public/icon.png', "frontend/src/assets/icon-blur.png", "frontend/src/assets/icon.png", 'public/birdIcon.png']
+            const localStorageKey = "icon" + props.repo + props.owner
 
             if (localStorage.getItem(localStorageKey)) {
                 setImgUrl(localStorage.getItem(localStorageKey))
@@ -83,7 +84,7 @@ function TryIcon(props: { owner: string, repo: string }) {
             }
 
             for (const path of possiblePaths) {
-                const p = `https://raw.githubusercontent.com/${props.owner}/${props.repo}/main/${path}`
+                const p = `https://raw.githubusercontent.com/${props.owner}/${props.repo}/${props.branch}/${path}`
                 try {
                     const res = await fetch(p)
                     if (res.ok) {
