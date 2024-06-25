@@ -47,6 +47,22 @@ export default function ProjectsSection2() {
                         </div>
                         
                     </HiddenItem>
+                    {/* <HiddenItem className="hidden-portfolio-item" 
+                        buttonContent={<h3>🐟 Easyfish</h3>}>
+                        <div className="inner">
+                            <h4>Stack</h4>
+                            <p>React</p>
+                            <p>Vite</p>
+                            <p>Typescript</p>
+                            <p>Express</p>
+                            <p>Sequelize</p>
+                            <p>PostgreSQL</p>
+                            <div>
+                            <a href="https://easyfish.kruceo.com">View</a>
+                            </div>
+                        </div>
+                        
+                    </HiddenItem> */}
             </div>
         </InnerContent>
     </Content>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./HiddenItem.less"
-export default function HideItem(props: {buttonContent:React.ReactNode,children:React.ReactNode,className?:string}) {
+export default function HideItem(props: { buttonContent: React.ReactNode, children: React.ReactNode, className?: string }) {
     const [hidden, setHidden] = useState(true)
     const id = "id-" + Math.floor(Math.random() * 10000)
     const handler = () => {
@@ -23,7 +23,9 @@ export default function HideItem(props: {buttonContent:React.ReactNode,children:
         <div onClick={() => {
             handler()
         }} className="button">
-            {props.buttonContent ?? "Press this"}
+            <div className="hidden-title">
+                {props.buttonContent ?? "Press this"}
+            </div>
             <div className="expand-symbol" />
         </div>
         <div className="hidden-content-frame">
