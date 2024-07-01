@@ -3,26 +3,31 @@
 body {
 
     .dark-mode();
-    .projects{
-        min-height: min-content!important;
-        #inner{
-            min-height: min-content!important;
+
+    .projects {
+
+        // min-height: min-content!important;
+        #inner {
+            // min-height: min-content!important;
         }
     }
+
     .projects.table {
 
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        // height: 100% !important;
-        
+        height: fit-content;
+        min-height: calc(100vh - 230px) !important;
+
         #grid {
             width: 100%;
             display: grid;
             height: fit-content;
             grid-template-columns: 1fr 1fr 1fr;
 
+            // min-height: 100vh;
             @media @min968 {
                 grid-template-columns: 1fr 1fr;
             }
@@ -51,6 +56,7 @@ body {
                 .hidden-content {
                     border-top: @border;
                     width: 100%;
+
                     .inner {
                         width: 100%;
                         padding: 10px;
@@ -61,13 +67,21 @@ body {
                             flex-direction: column;
                             width: 100%;
                             justify-content: left;
-                            
+
                         }
-                        div{
+
+                        .project-desc {
+                            // padding: 14px 0px;
+                            margin-bottom: 14px;
+                            // border-bottom: @border;
+                        }
+
+                        div {
                             display: flex;
                             justify-content: end;
+
                             a {
-                                margin-right: 0 ;
+                                margin-right: 0;
                                 width: fit-content;
                                 padding-top: 5px;
                                 color: @color1;
@@ -75,10 +89,10 @@ body {
                                 margin-left: auto;
                             }
                         }
-                        
-                       
+
+
                     }
-                    
+
                 }
             }
         }
