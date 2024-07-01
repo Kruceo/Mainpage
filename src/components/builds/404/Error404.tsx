@@ -1,3 +1,4 @@
+import { locale } from "../../../lib/lang";
 import Bar from "../../essential/Bar/Bar";
 import { Box } from "../../essential/Box/Box";
 import Content from "../../essential/Content/Content";
@@ -16,7 +17,7 @@ export default function Error404() {
                         flexDirection:'column',
                         fontSize:60
                     }}>
-                        <Title>This page doesn't seem to exist</Title>
+                        <Title>{locale[404].text}</Title>
                         <p>🛣️</p>
                     </Box>
                 </div>

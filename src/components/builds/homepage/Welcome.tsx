@@ -1,3 +1,4 @@
+import { locale } from "../../../lib/lang"
 import Content from "../../essential/Content/Content"
 import "./Welcome.less"
 
@@ -15,7 +16,7 @@ export default function Welcome() {
     // </Content>
     return <Content className="first welcome">
 
-        <h2>Welcome</h2>
+        <h2>{locale.welcome}</h2>
 
 
     </Content>

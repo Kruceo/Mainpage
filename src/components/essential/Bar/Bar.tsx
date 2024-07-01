@@ -6,14 +6,16 @@ import "./Bar.less"
 import { Anchor, AnchorAttributes } from "milhas"
 import LightButton from "../LightButton/LightButton"
 import Mobile from "./Mobile"
+import { locale } from "../../../lib/lang"
+import LangButton from "../LangButton/LangButton"
 
 export default function Bar() {
 
-    document.addEventListener('scroll',()=>{
-        if(document.documentElement.scrollTop > 200)
-        document.querySelector('#bar')?.classList.add('hidden')
+    document.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 200)
+            document.querySelector('#bar')?.classList.add('hidden')
         else document.querySelector('#bar')?.classList.remove('hidden')
-        
+
     })
 
     return <header id="header">
@@ -21,17 +23,18 @@ export default function Bar() {
         <header id="bar">
             <div id="bar-content">
                 <LightButton></LightButton>
+                <LangButton></LangButton>
                 <div id="offer">
                 </div>
                 <div id="contacts">
                     <Contact href="https://twitter.com/RGBrat">
-                        <img src="/twitter.png" alt="twitter" title="Twitter"/>
+                        <img src="/twitter.png" alt="twitter" title="Twitter" />
                     </Contact>
                     <Contact href="https://github.com/kruceo">
-                        <img src="/github.png"  alt="github"  title="Github"/>
+                        <img src="/github.png" alt="github" title="Github" />
                     </Contact>
                     <Contact href="https://www.npmjs.com/~kruceo">
-                        <img src="/npm.png"     alt="npm"     title="NPM"/>
+                        <img src="/npm.png" alt="npm" title="NPM" />
                     </Contact>
                 </div>
             </div>
@@ -41,19 +44,19 @@ export default function Bar() {
                 <Mobile></Mobile>
                 <img id="logo" src="https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg"></img>
                 <div className="left" id="buttons">
-                    <BarButton href="/">Home</BarButton>
-                    <BarButton href="/projects">Projects</BarButton>
-                    <BarButton href="/about">About</BarButton>
+                    <BarButton href="/">{locale.bar.home}</BarButton>
+                    <BarButton href="/projects">{locale.bar.projects}</BarButton>
+                    <BarButton href="/about">{locale.bar.about}</BarButton>
                 </div>
                 <div className="right" id="buttons">
-                   <HighlightBarButton href="/donate">🎁 Donate</HighlightBarButton>
+                    <HighlightBarButton href="/donate">{locale.bar.donate}</HighlightBarButton>
                 </div>
             </div>
         </header>
     </header>
 }
 
-function Contact(props: {children: ReactNode,href:string}) {
+function Contact(props: { children: ReactNode, href: string }) {
     return <a href={props.href} target="_blank" id="contact">{props.children}</a>
 }
 

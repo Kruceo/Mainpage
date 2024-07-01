@@ -6,7 +6,11 @@ import About from "./components/builds/about/About";
 import Donate from "./components/builds/donate/Donate";
 import Error404 from "./components/builds/404/Error404";
 import Docs from "./components/builds/docs/Docs";
+import { locale } from "./lib/lang";
 export default function App() {
+
+  locale
+
   return <>
     <Router>
       <Path as="/" absolute>

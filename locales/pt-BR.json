@@ -1,0 +1,42 @@
+{
+    "welcome": "Bem-vindo",
+    "pixTitle": "Pix:",
+    "cryptoTitle": "Rede BNB ou ETH",
+    "thisMayNotWork":"Isso pode não funcionar.",
+    "bar": {
+        "home": "Início",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "donate": "☕ Presentear"
+    },
+    "firstImpression": {
+        "title": "Modo Kruceo",
+        "box1Title": "Código Aberto",
+        "box1Text": "Sinta-se à vontade para explorar e colaborar nos projetos de código aberto. Suas contribuições e insights são valorizados à medida que os projetos continuam a evoluir. Junte-se ao esforço da comunidade para aprimorar e refinar essas soluções, promovendo um ambiente colaborativo para inovação e conhecimento compartilhado.",
+        "box2Title": "Modularidade",
+        "box2Text": "Veja o reconhecimento da Kruceo sobre o valor da modularidade na organização eficiente de seus projetos, demonstrando dedicação a soluções escaláveis que contribuem significativamente para o sucesso do projeto.",
+        "box3Title": "Eficiência",
+        "box3Text": "A Kruceo tem soluções eficientes e intuitivas no centro de seus projetos, enfatizando um compromisso com resultados simplificados e amigáveis ao usuário.",
+        "box4Title": "Aprendizado Contínuo",
+        "box4Text": "A Kruceo valoriza o aprendizado contínuo, reconhecendo-o como um alicerce para o crescimento pessoal e profissional. Este compromisso destaca uma dedicação contínua em se manter informado, adaptar-se às tendências em evolução e aprimorar habilidades."
+    },
+    "projects": {
+        "title":"Destaques",
+        "view": "Visualizar",
+        "stackTitle": "Tecnologias",
+        "item1Desc": "Apenas uma pequena página de empresa (fictícia).",
+        "item2Desc": "Um gerenciador de transações focado em produtos do mar com múltiplas funcionalidades."
+    },
+    "about": {
+        "title": "Sobre",
+        "item1Text": "Kruceo é um desenvolvedor full-stack com uma forte formação em desenvolvimento de software e web. Seu conhecimento em frontend e backend permite que ele contribua com soluções em todas as partes de um projeto.",
+        "item2Text": "Com expertise em tecnologias reativas e folhas de estilo, junto com sua própria stack, Kruceo entrega projetos modernos, eficientes e escaláveis.",
+        "item3Text": "Suas habilidades de desenvolvimento full-stack cobrem todas as etapas de um projeto, desde a concepção até a implementação, garantindo uma abordagem abrangente e integrada."
+    },
+    "404": {
+        "text": "Essa pagina não existe!"
+    },
+    "footer":{
+        "copyright":"Kruceo"
+    }
+}

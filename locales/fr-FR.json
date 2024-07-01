@@ -1,0 +1,42 @@
+{
+    "welcome": "Bienvenue",
+    "pixTitle": "Pix :",
+    "cryptoTitle": "Réseau BNB ou ETH",
+    "thisMayNotWork":"Cela peut ne pas fonctionner.",
+    "bar": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "donate": "☕ Payez-moi un café"
+    },
+    "firstImpression": {
+        "title": "Mode Kruceo",
+        "box1Title": "Open Source",
+        "box1Text": "N'hésitez pas à explorer et à collaborer sur des projets open-source. Vos contributions et idées sont appréciées au fur et à mesure que les projets évoluent. Rejoignez l'effort communautaire pour améliorer et affiner ces solutions, en promouvant un environnement collaboratif pour l'innovation et le partage des connaissances.",
+        "box2Title": "Modularité",
+        "box2Text": "Kruceo reconnaît la valeur de la modularité dans l'organisation efficace de ses projets, démontrant son engagement envers des solutions évolutives qui contribuent de manière significative au succès du projet.",
+        "box3Title": "Efficacité",
+        "box3Text": "Kruceo a des solutions efficaces et intuitives au cœur de ses projets, mettant en avant un engagement envers des résultats simplifiés et conviviaux.",
+        "box4Title": "Apprentissage Continu",
+        "box4Text": "Kruceo valorise l'apprentissage continu, le reconnaissant comme un fondement de la croissance personnelle et professionnelle. Cet engagement souligne une volonté constante de rester informé, de s'adapter aux tendances en évolution et d'améliorer ses compétences."
+    },
+    "projects": {
+        "title":"Points Forts",
+        "view": "Voir",
+        "stackTitle": "Technologies",
+        "item1Desc": "Juste une petite page de destination.",
+        "item2Desc": "Un gestionnaire de transactions axé sur les produits de la mer avec de nombreuses fonctionnalités."
+    },
+    "about": {
+        "title": "À propos",
+        "item1Text": "Kruceo est un développeur full-stack avec une solide formation en développement de logiciels et de sites web. Ses connaissances en frontend et backend lui permettent de contribuer avec des solutions à toutes les parties d'un projet.",
+        "item2Text": "Avec une expertise en technologies réactives et en feuilles de style, ainsi qu'avec sa propre stack, Kruceo livre des projets modernes, efficaces et évolutifs.",
+        "item3Text": "Ses compétences en développement full-stack couvrent toutes les étapes d'un projet, de la conception à la mise en œuvre, garantissant une approche globale et intégrée."
+    },
+    "404": {
+        "text": "Cette page n'existe pas !"
+    },
+    "footer":{
+        "copyright":"Kruceo"
+    }
+}

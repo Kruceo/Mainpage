@@ -2,21 +2,20 @@
 
 body {
     .dark-mode();
+
     #footer {
         margin-top: 40px;
         background-color: transparent;
         border-top: @border;
         height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &::before {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        p {
             color: @text;
             opacity: 0.2;
             font-weight: bold;
-            content: "By Kruceo";
         }
     }
 }

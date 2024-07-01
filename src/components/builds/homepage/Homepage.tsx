@@ -6,6 +6,7 @@ import Welcome from './Welcome'
 import HomeSection1 from './HomeSection1'
 
 function Homepage() {
+    document.title = `Kruceo`
     return (
         <>
             <Bar/>

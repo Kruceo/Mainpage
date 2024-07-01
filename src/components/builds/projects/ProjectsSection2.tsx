@@ -3,44 +3,37 @@ import InnerContent from "../../essential/Content/InnerContent";
 import "./ProjectsSection2.less"
 import Title from "../../essential/Title/Title";
 import HiddenItem from "./HiddenItem";
+import { locale } from "../../../lib/lang";
 
 export default function ProjectsSection2() {
     return <Content className="projects first">
         <InnerContent className='projects table'>
-            <Title>Highlights</Title>
+            <Title>{locale.projects.title}</Title>
             <div id='grid'>
-                    <HiddenItem className="hidden-portfolio-item" 
-                        buttonContent={<div><h3>🐦 Bird Company</h3> <p></p></div> }>
-                        <div className="inner">
-                            <p className="project-desc">Just a small landing page.</p>
-                            <h4>Stack</h4>
-                            <p>• SolidJS</p>
-                            <p>• Vite</p>
-                            <p>• Typescript</p>
-                            <div>
-                            <a href="https://birdcompany-website-portfolio.pages.dev/">View</a>
-                            </div>
-                        </div>
-                        
-                    </HiddenItem>
-                    <HiddenItem className="hidden-portfolio-item" 
-                        buttonContent={<h3>🐟 Easyfish</h3>}>
-                        <div className="inner">
-                            <p className="project-desc">A sea product focused transaction manager with multiple features.</p>
-                            <h4>Stack</h4>
-                            <p>• React</p>
-                            <p>• Vite</p>
-                            <p>• Typescript</p>
-                            <p>• Express</p>
-                            <p>• Sequelize</p>
-                            <p>• PostgreSQL</p>
-                            <div>
-                            <a title="This may not work" href="https://easyfish.kruceo.com">View ⚠️</a>
-                            </div>
-                        </div>
-                        
-                    </HiddenItem>
+                <Item name="🐦 Bird Company" desc={locale.projects.item1Desc}
+                    stack={["SolidJS", "Vite", "Typescript"]}
+                    viewUrl="https://birdcompany-website-portfolio.pages.dev" />
+
+                <Item name="🐟 Easyfish" desc={locale.projects.item2Desc}
+                    stack={["React", "Typescript", "Tailwind CSS", "Axios", "Express.js", "Sequelize", "PostgreSQL"]}
+                    viewUrl="https://easyfish.kruceo.com" mayNotWork/>
             </div>
-        </InnerContent>
-    </Content>
+        </InnerContent >
+    </Content >
+}
+
+
+export function Item(props: { name: string, desc: string, stack: string[], viewUrl: string, mayNotWork?: boolean }) {
+    return <HiddenItem className="hidden-portfolio-item"
+        buttonContent={<h3>{props.name}</h3>}>
+        <div className="inner">
+            <p className="project-desc">{props.desc}</p>
+            <h4>{locale.projects.stackTitle}</h4>
+            {props.stack.map(tech => <p>• {tech}</p>)}
+            <div>
+                <a title={props.mayNotWork ? locale.thisMayNotWork : undefined} href={props.viewUrl}>{locale.projects.view} {props.mayNotWork ? "⚠️" : ""}</a>
+            </div>
+        </div>
+
+    </HiddenItem>
 }

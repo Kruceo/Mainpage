@@ -1,0 +1,42 @@
+{
+    "welcome": "Welcome",
+    "pixTitle": "Pix:",
+    "cryptoTitle": "Network BNB or ETH",
+    "thisMayNotWork":"This may not work.",
+    "bar": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "donate": "☕ Buy me a coffee"
+    },
+    "firstImpression": {
+        "title": "Kruceo Mode",
+        "box1Title": "Open Source",
+        "box1Text": "Feel free to explore and collaborate on open-source projects. Your contributions and insights are valued as the projects continue to evolve. Join the community effort to enhance and refine these solutions, promoting a collaborative environment for innovation and shared knowledge.",
+        "box2Title": "Modularity",
+        "box2Text": "Kruceo recognizes the value of modularity in efficiently organizing its projects, demonstrating dedication to scalable solutions that significantly contribute to the project's success.",
+        "box3Title": "Efficiency",
+        "box3Text": "Kruceo has efficient and intuitive solutions at the core of its projects, emphasizing a commitment to simplified and user-friendly results.",
+        "box4Title": "Continuous Learning",
+        "box4Text": "Kruceo values continuous learning, recognizing it as a foundation for personal and professional growth. This commitment highlights an ongoing dedication to staying informed, adapting to evolving trends, and improving skills."
+    },
+    "projects": {
+        "title":"Highlights",
+        "view": "View",
+        "stackTitle": "Technologies",
+        "item1Desc": "Just a small landing page.",
+        "item2Desc": "A transaction manager focused on seafood products with multiple features."
+    },
+    "about": {
+        "title": "About",
+        "item1Text": "Kruceo is a full-stack developer with a strong background in software and web development. His knowledge in frontend and backend allows him to contribute solutions to all parts of a project.",
+        "item2Text": "With expertise in reactive technologies and style sheets, along with his own stack, Kruceo delivers modern, efficient, and scalable projects.",
+        "item3Text": "His full-stack development skills cover all stages of a project, from conception to implementation, ensuring a comprehensive and integrated approach."
+    },
+    "404": {
+        "text": "This page does not exist!"
+    },
+    "footer":{
+        "copyright":"Kruceo"
+    }
+}

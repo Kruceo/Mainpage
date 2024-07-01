@@ -1,3 +1,4 @@
+import { locale } from "../../../lib/lang";
 import { Box } from "../../essential/Box/Box";
 import Content from "../../essential/Content/Content";
 import InnerContent from "../../essential/Content/InnerContent";
@@ -6,36 +7,35 @@ import "./HomeSection1.less"
 export default function HomeSection1() {
     return <Content>
         <InnerContent className='techs-content'>
-            <Title>My Style</Title>
+            <Title>{locale.firstImpression.title}</Title>
             <div id='techs'>
                 <Box>
                     <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>📦</div>
-                    <h4>Open Source</h4>
-                    <p style={{ padding: 20, textAlign: 'center' }}>     
-                        Feel free to explore and collaborate on the open-source projects. Your contributions and insights are valued as the projects continue to evolve. Join the community effort to enhance and refine these solutions, fostering a collaborative environment for innovation and shared knowledge.
+                    <h4>{locale.firstImpression.box1Title}</h4>
+                    <p style={{ padding: 20, textAlign: 'center' }}>
+                        {locale.firstImpression.box1Text}
                     </p>
                 </Box>
                 <Box>
                     <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>🔩</div>
-                    <h4>Modularity</h4>
+                    <h4>{locale.firstImpression.box2Title}</h4>
                     <p style={{ padding: 20, textAlign: 'center' }}>
-                    See Kruceo's acknowledgment of modularity's value in efficiently organizing their projects, demonstrating dedication to scalable solutions that significantly contribute to project success.
+                        {locale.firstImpression.box2Text}
                     </p>
                 </Box>
                 <Box>
                     <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>🗿</div>
-                    <h4>Efficiency</h4>
+                    <h4>{locale.firstImpression.box3Title}</h4>
                     <p style={{ padding: 20, textAlign: 'center' }}>
-                        Kruceo has efficient and intuitive solutions at the core of their projects, emphasizing a commitment to streamlined and user-friendly outcomes. 
-                        </p>
+                        {locale.firstImpression.box3Text}
+                    </p>
                 </Box>
                 <Box>
                     <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>📚</div>
-                    <h4>Continuous Learning</h4>
+                    <h4>{locale.firstImpression.box4Title}</h4>
                     <p style={{ padding: 20, textAlign: 'center' }}>
-                    
-                        Kruceo values continuous learning, recognizing it as a cornerstone for personal and professional growth. This commitment underscores an ongoing dedication to staying informed, adapting to evolving trends, and refining skills. 
-                        </p>
+                        {locale.firstImpression.box4Text}
+                    </p>
                 </Box>
 
             </div>
