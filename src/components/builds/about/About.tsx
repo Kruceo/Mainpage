@@ -3,16 +3,15 @@ import Bar from "../../essential/Bar/Bar";
 import Footer from "../../essential/Bar/Footer";
 import { Box } from "../../essential/Box/Box";
 import Content from "../../essential/Content/Content";
-import InnerContent from "../../essential/Content/InnerContent";
 import Title from "../../essential/Title/Title";
 import "./About.less"
 export default function About() {
     document.title = `Kruceo - ${locale.about.title}`
     return <>
         <Bar></Bar>
-        <Content className="first about-content">
-            <InnerContent>
-                <div>
+        <Content>
+            <section className="about">
+                <div className="title-container">
                     <Title>{locale.about.title}</Title>
                 </div>
                 <div className="grid">
@@ -31,7 +30,7 @@ export default function About() {
                         <p> {locale.about.item3Text}</p>
                     </Box>
                 </div>
-            </InnerContent>
+            </section>
         </Content>
 
         <Footer></Footer>

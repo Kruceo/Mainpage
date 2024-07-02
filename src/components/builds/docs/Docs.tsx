@@ -4,7 +4,6 @@ import "./Markdown.less"
 import "./Docs.less"
 // import "./Markdown-hljs.css"
 import Content from '../../essential/Content/Content'
-import InnerContent from '../../essential/Content/InnerContent'
 import Bar from '../../essential/Bar/Bar'
 export default function Docs() {
     const ref = useRef<HTMLDivElement>(null)
@@ -49,12 +48,12 @@ export default function Docs() {
        <link rel="stylesheet" href="https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/magula.css" />
         <Bar></Bar>
         <Content className='first'>
-            <InnerContent className='inner'>
+            <section className='inner'>
                
                 <div className='markdown-viewer' style={{margin:0}} ref={ref}>
                     
                 </div>
-            </InnerContent>
+            </section>
         </Content>
     </>
 }

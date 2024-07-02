@@ -1,12 +1,9 @@
 import { locale } from "../../../lib/lang";
 import { Box } from "../../essential/Box/Box";
-import Content from "../../essential/Content/Content";
-import InnerContent from "../../essential/Content/InnerContent";
 import Title from "../../essential/Title/Title";
 import "./HomeSection1.less"
 export default function HomeSection1() {
-    return <Content>
-        <InnerContent className='techs-content'>
+    return <section className='techs-content'>
             <Title>{locale.firstImpression.title}</Title>
             <div id='techs'>
                 <Box>
@@ -39,6 +36,5 @@ export default function HomeSection1() {
                 </Box>
 
             </div>
-        </InnerContent>
-    </Content>
+       </section>
 }

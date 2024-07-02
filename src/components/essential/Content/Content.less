@@ -2,31 +2,8 @@
 @contentTop: 120px;
 @contentWidth: 1000px;
 
-#content.first {
-    margin-top: @contentTop;
-    min-height: calc(100vh - @contentTop);
-
-    #inner {
-        min-height: calc(100vh - calc(@contentTop * 2));
-        height: 0;
-    }
-}
-
-#content {
-    width: 100%;
-
-    height: fit-content;
-    // background-color: red;
-}
-
-#content:last-of-type {
-    width: 100%;
-    min-height: 0;
-    height: fit-content;
-    // background-color: red;
-}
-
-#inner {
+#content{
+    margin-top: 120px;
     width: @contentWidth;
     @media @min968{
         width: 768px;

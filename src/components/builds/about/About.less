@@ -1,40 +1,45 @@
 @import "../../../assets/pallete.less";
 
-.about-content {
-    #inner {
-        height: 100% !important;
+section.about {
+    height: 100% !important;
+    min-height: calc(@fullcontent - 110px);
+    .title-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-        .grid {
-            display: grid;
-            --length:10;
-            grid-template-columns: repeat(var(--length),1fr);
-            gap: 20px;
+    .grid {
+        display: grid;
+        --length: 10;
+        grid-template-columns: repeat(var(--length), 1fr);
+        gap: 20px;
 
-            .sub-box {
-                margin: 10px;
-                grid-column: span calc(var(--length) - 1);
+        .sub-box {
+            margin: 10px;
+            grid-column: span calc(var(--length) - 1);
 
-                p {
-                    box-sizing: border-box;
-                }
-
-                @media @min468 {
-                    grid-column: span calc(var(--length));
-                }
-
+            p {
                 box-sizing: border-box;
-                padding: 10px;
-                margin: 0;
             }
 
-            img {
-                @media @min468 {
-                    display: none;
-                }
-                
-                height: 80px;
-                width: 80px;
+            @media @min468 {
+                grid-column: span calc(var(--length));
             }
+
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 0;
+        }
+
+        img {
+            @media @min468 {
+                display: none;
+            }
+
+            height: 80px;
+            width: 80px;
         }
     }
+
 }

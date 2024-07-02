@@ -1,9 +1,6 @@
 import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 import { Box } from "../../essential/Box/Box";
-import Content from "../../essential/Content/Content";
-import InnerContent from "../../essential/Content/InnerContent";
 import "./ProjectsSection1.less"
-// import { Anchor } from "milhas";
 import Loading from "../../essential/Loading/Loading";
 import Title from "../../essential/Title/Title";
 
@@ -31,31 +28,29 @@ export default function ProjectsSection1() {
             })
         })
 
-    if (loading) return <Content className="first"><InnerContent><Loading></Loading></InnerContent></Content>
-    return <Content className="projects">
-        <InnerContent className='projects table'>
-            <Title>Projects</Title>
-            <div id='grid'>
-                {
-                    content.map((each, index) => {
-                        return <Box key={"project" + index}>
-                            <div className="icon">
-                                <TryIcon owner={each.owner.login} repo={each.name} branch={each.default_branch} />
-                                    {/* <img src={each.html_url + '/blob/main/icon.png?raw=true'} alt="📂" /> */ }
-                            </div>
-                            <h4 style={{ textTransform: "capitalize" }}>{each.name}</h4>
-                            <p style={{ padding: 20, textAlign: 'center' }}>{each.description}</p>
-                            <div className="projects-footer">
-                                <Link className="left" src="/github.png" href={each.clone_url} />
-                                <a target="_blank" className="projects link right" href={`/doc/?url=https://raw.githubusercontent.com/${each.owner.login}/${each.name}/${each.default_branch}/README.md`}>Docs</a>
-                            </div>
-                        </Box>
-                    })
-                }
+    if (loading) return <Loading></Loading>
+    return <section>
+        <Title>Projects</Title>
+        <div id='grid'>
+            {
+                content.map((each, index) => {
+                    return <Box key={"project" + index}>
+                        <div className="icon">
+                            <TryIcon owner={each.owner.login} repo={each.name} branch={each.default_branch} />
+                            {/* <img src={each.html_url + '/blob/main/icon.png?raw=true'} alt="📂" /> */}
+                        </div>
+                        <h4 style={{ textTransform: "capitalize" }}>{each.name}</h4>
+                        <p style={{ padding: 20, textAlign: 'center' }}>{each.description}</p>
+                        <div className="projects-footer">
+                            <Link className="left" src="/github.png" href={each.clone_url} />
+                            <a target="_blank" className="projects link right" href={`/doc/?url=https://raw.githubusercontent.com/${each.owner.login}/${each.name}/${each.default_branch}/README.md`}>Docs</a>
+                        </div>
+                    </Box>
+                })
+            }
 
-            </div>
-        </InnerContent>
-    </Content>
+        </div>
+    </section>
 }
 
 function Link(props: {

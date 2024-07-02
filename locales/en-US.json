@@ -1,42 +1,42 @@
 {
     "welcome": "Welcome",
     "pixTitle": "Pix:",
-    "cryptoTitle": "Network BNB or ETH",
-    "thisMayNotWork":"This may not work.",
+    "cryptoTitle": "BNB or ETH Network",
+    "thisMayNotWork": "This may not work.",
     "bar": {
         "home": "Home",
         "about": "About",
         "projects": "Projects",
-        "donate": "☕ Buy me a coffee"
+        "donate": "☕ Donate"
     },
     "firstImpression": {
-        "title": "Kruceo Mode",
+        "title": "A bit about me",
         "box1Title": "Open Source",
-        "box1Text": "Feel free to explore and collaborate on open-source projects. Your contributions and insights are valued as the projects continue to evolve. Join the community effort to enhance and refine these solutions, promoting a collaborative environment for innovation and shared knowledge.",
+        "box1Text": "Explore and collaborate on my open source projects. Your contributions are welcome!",
         "box2Title": "Modularity",
-        "box2Text": "Kruceo recognizes the value of modularity in efficiently organizing its projects, demonstrating dedication to scalable solutions that significantly contribute to the project's success.",
+        "box2Text": "I value modularity to create scalable and efficient solutions.",
         "box3Title": "Efficiency",
-        "box3Text": "Kruceo has efficient and intuitive solutions at the core of its projects, emphasizing a commitment to simplified and user-friendly results.",
+        "box3Text": "I focus on simple and intuitive solutions for the user.",
         "box4Title": "Continuous Learning",
-        "box4Text": "Kruceo values continuous learning, recognizing it as a foundation for personal and professional growth. This commitment highlights an ongoing dedication to staying informed, adapting to evolving trends, and improving skills."
+        "box4Text": "I'm always learning to improve my skills and adapt to new trends."
     },
     "projects": {
-        "title":"Highlights",
+        "title": "Highlights",
         "view": "View",
         "stackTitle": "Technologies",
-        "item1Desc": "Just a small landing page.",
-        "item2Desc": "A transaction manager focused on seafood products with multiple features."
+        "item1Desc": "A small company page (fictitious).",
+        "item2Desc": "A transaction manager for seafood products."
     },
     "about": {
-        "title": "About",
-        "item1Text": "Kruceo is a full-stack developer with a strong background in software and web development. His knowledge in frontend and backend allows him to contribute solutions to all parts of a project.",
-        "item2Text": "With expertise in reactive technologies and style sheets, along with his own stack, Kruceo delivers modern, efficient, and scalable projects.",
-        "item3Text": "His full-stack development skills cover all stages of a project, from conception to implementation, ensuring a comprehensive and integrated approach."
+        "title": "About Me",
+        "item1Text": "I am a passionate full-stack developer specializing in web and software development. With expertise in both frontend and backend technologies, I bring comprehensive solutions to every project.",
+        "item2Text": "I leverage reactive technologies and modern styling approaches to deliver scalable and user-friendly applications.",
+        "item3Text": "My development journey spans from initial concept to final implementation, ensuring a cohesive and high-quality outcome."
     },
     "404": {
         "text": "This page does not exist!"
     },
-    "footer":{
-        "copyright":"Kruceo"
+    "footer": {
+        "copyright": "Kruceo"
     }
 }

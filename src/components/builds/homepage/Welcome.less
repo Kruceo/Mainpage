@@ -4,38 +4,59 @@ body {
     .dark-mode();
 
     .welcome {
-
-        display: flex;
-        align-items: center;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
+        position: relative;
         width: 100%;
         height: @fullcontent;
-        background:@color2;
-       
-        // background-image: url("https://cdn.kruceo.com/0000.png?resize=1920,1080");
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: calc(100vw - @scrollbar-width);
+            height: 100%;
+            margin: 0;
+            background:@color2;
+            display: flex;
+            align-items: center;
+            // height: @fullcontent;
+            //  background-image: url("https://bing.com/th?id=OSGI.884C53A365199E9169274D0F3625F2B3&h=1000&w=1920&c=1&rs=1&o=3");
+        }
+
+        // background-repeat: no-repeat;
+        // background-position: top;
+        // background-size: cover;
+        // height: @fullcontent;
+        
+
+
         &.hidden {
             opacity: 0;
         }
-        @media @min468{
+
+        @media @min468 {
             font-size: 48px;
             display: none;
         }
+
         h2 {
             font-size: 108px;
-            @media @min968{
+
+            @media @min968 {
                 font-size: 108px;
             }
-            @media @min768{
+
+            @media @min768 {
                 font-size: 68px;
             }
+
             line-height-step: 10px;
             line-height: 75px;
             color: @text;
-            
+
             font-weight: bold;
             text-align: center;
+
             // mix-blend-mode: darken;
             // mix-blend-mode: exclusion;
             span {
@@ -46,6 +67,6 @@ body {
             }
         }
 
-       
+
     }
 }

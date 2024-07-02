@@ -1,11 +1,8 @@
 import { Box } from "../../essential/Box/Box";
-import Content from "../../essential/Content/Content";
-import InnerContent from "../../essential/Content/InnerContent";
 import "./HomeSection2.less"
 export default function HomeSection2() {
 
-    return <Content className='homesection2 content'>
-        <InnerContent className='homesection2 inner'>
+    return <section className='homesection2 content'>
             <h1>Constantes Variaveis</h1>
             <div className="card">
                 <img src="https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg" alt="kruceo" />
@@ -15,6 +12,5 @@ export default function HomeSection2() {
                     </div>
                 </Box>
             </div>
-        </InnerContent>
-    </Content>
+    </section>
 }
