@@ -95,14 +95,14 @@ export default function Welcome() {
 
 function randomImage() {
     const images = [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042",
+        "https://www.svgrepo.com/download/374118/tailwind.svg",
         // "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
-        "https://i1.wp.com/albertfattal.com/wp-content/uploads/2018/03/Tensorflow_logo.svg.png?resize=1200%2C1283&ssl=1",
-        "https://brandlogos.net/wp-content/uploads/2021/11/java-logo.png",
-        "https://logos-download.com/wp-content/uploads/2019/01/Golang_Logo.png",
-        "http://blog.espol.edu.ec/taws/files/2015/11/logo-small.png",
-        "https://logosdownload.com/logo/vue.js-logo-big.png",
-        "https://osawards.com/javascript/pic/2022/SolidJS.png",
+        "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
+        "https://upload.wikimedia.org/wikipedia/pt/3/30/Java_programming_language_logo.svg",
+        "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg",
+        "https://www.svgrepo.com/download/374071/sequelize.svg",
+        "https://raw.githubusercontent.com/vuejs/art/master/logo.svg",
+        "https://svglogos.net/wp-content/uploads/solidjs-icon.svg",
         "https://vitejs.dev/logo.svg",
         "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
         "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
