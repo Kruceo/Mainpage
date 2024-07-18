@@ -95,6 +95,11 @@ export default function Welcome() {
 
 function randomImage() {
     const images = [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042",
+        // "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+        "https://i1.wp.com/albertfattal.com/wp-content/uploads/2018/03/Tensorflow_logo.svg.png?resize=1200%2C1283&ssl=1",
+        "https://brandlogos.net/wp-content/uploads/2021/11/java-logo.png",
+        "https://logos-download.com/wp-content/uploads/2019/01/Golang_Logo.png",
         "http://blog.espol.edu.ec/taws/files/2015/11/logo-small.png",
         "https://logosdownload.com/logo/vue.js-logo-big.png",
         "https://osawards.com/javascript/pic/2022/SolidJS.png",
