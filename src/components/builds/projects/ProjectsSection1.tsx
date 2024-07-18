@@ -34,7 +34,7 @@ export default function ProjectsSection1() {
         <div id='grid'>
             {
                 content.map((each, index) => {
-                    return <Box key={"project" + index}>
+                    return <Box key={"githubrepo" + index}>
                         <div className="icon">
                             <TryIcon owner={each.owner.login} repo={each.name} branch={each.default_branch} />
                             {/* <img src={each.html_url + '/blob/main/icon.png?raw=true'} alt="📂" /> */}
@@ -96,7 +96,8 @@ function TryIcon(props: { owner: string, repo: string, branch: string }) {
     }, [])
 
     function randomIcon() {
-        const r = ["https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg",
+        const r = [
+            "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_colored.svg",
             "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_black.svg",
             "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon.svg",
             "https://raw.githubusercontent.com/Kruceo/cdn/main/icons/cat_icon_filled.svg",

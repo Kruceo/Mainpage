@@ -1,9 +1,12 @@
 import { Anchor } from "milhas";
 import "./Mobile.less";
 import { locale } from "../../../lib/lang";
+import OptionsButton from "./OptionsButton";
 export default function Mobile() {
     return <>
-        <button id="mobile-button"><img src="/options.png" alt="" /></button>
+        <button id="mobile-button" title="">
+            <OptionsButton/>
+        </button>
         <div tabIndex={1} id="mobile-control">
 
             <Anchor href="/">{locale.bar.home}</Anchor>

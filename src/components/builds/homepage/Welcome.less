@@ -8,7 +8,8 @@ body {
         width: 100%;
         height: @fullcontent;
 
-        div {
+        .dome {
+            overflow: hidden;
             position: absolute;
             top: 0;
             left: 50%;
@@ -21,6 +22,15 @@ body {
             align-items: center;
             // height: @fullcontent;
             //  background-image: url("https://bing.com/th?id=OSGI.884C53A365199E9169274D0F3625F2B3&h=1000&w=1920&c=1&rs=1&o=3");
+            // &::after{
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     top: 0;
+            //     background: linear-gradient(@color4, transparent, #445);
+            //     display: block;
+            //     position: absolute;
+            // }
         }
 
         // background-repeat: no-repeat;
@@ -40,7 +50,7 @@ body {
         }
 
         h2 {
-            font-size: 108px;
+            font-size: 128px;
 
             @media @min968 {
                 font-size: 108px;
@@ -56,9 +66,10 @@ body {
 
             font-weight: bold;
             text-align: center;
-
+            z-index: 2;
             // mix-blend-mode: darken;
             // mix-blend-mode: exclusion;
+            // filter: drop-shadow(2px 2px 0px @color2) drop-shadow(-2px -2px 0px @color2) drop-shadow(-2px 2px 0px @color2) drop-shadow(2px -2px 0px @color2);
             span {
                 // filter: grayscale();
                 // font-size: 100px;
@@ -69,4 +80,39 @@ body {
 
 
     }
+    .dome{
+        position: relative;
+    }
+    .chunk{
+        animation-name: chunk;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        opacity: .1;
+        position: absolute;
+        transform: translate(0px, -50%);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: scale 100ms ease-in;
+        .logo{
+            // display: none;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+@keyframes chunk {
+    0% {
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 0.1;
+    }
+
 }

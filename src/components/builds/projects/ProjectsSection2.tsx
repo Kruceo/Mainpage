@@ -32,6 +32,5 @@ export function Item(props: { name: string, desc: string, stack: string[], viewU
                 <a title={props.mayNotWork ? locale.thisMayNotWork : undefined} target="_blank" href={props.viewUrl}>{locale.projects.view} {props.mayNotWork ? "⚠️" : ""}</a>
             </div>
         </div>
-
     </HiddenItem>
 }
