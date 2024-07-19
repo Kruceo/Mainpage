@@ -68,8 +68,18 @@ export default function Welcome() {
 
     useEffect(() => {
         genChunks()
-        window.addEventListener("resize", genChunks)
-    }, [null])
+        const handler = () => {
+            const t = setTimeout(() => {
+                genChunks()
+            }, 2500)
+            
+            const currentWInterval = window.localStorage.getItem("resize-welcome-interval")
+            clearTimeout(currentWInterval ? parseInt(currentWInterval) : undefined)
+            window.localStorage.setItem("resize-welcome-interval", t.toString())
+        }
+        window.addEventListener("resize", handler)
+        return () => window.removeEventListener('resize', handler)
+    }, [])
 
     useEffect
 

@@ -5,7 +5,6 @@ export default function LightButton() {
     return <SwitchButton id="light-button" defaultValue={loadValue()} width={40} height={20} onChange={(event: { activated: boolean }) => {
         switchMode(event.activated)
         window.localStorage.setItem('dark-mode', event.activated ? '1' : '0')
-
     }} />
 }
 

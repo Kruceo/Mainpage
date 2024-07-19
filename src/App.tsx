@@ -6,11 +6,10 @@ import About from "./components/builds/about/About";
 import Donate from "./components/builds/donate/Donate";
 import Error404 from "./components/builds/404/Error404";
 import Docs from "./components/builds/docs/Docs";
-import { locale } from "./lib/lang";
 import Blog from "./components/builds/blog/Blog";
 export default function App() {
 
-  locale
+  window.localStorage.getItem('dark-mode')??window.localStorage.setItem("dark-mode","1")
 
   return <>
     <Router>
