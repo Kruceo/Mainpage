@@ -1,11 +1,11 @@
 import { locale } from "../../../lib/lang";
 import { Box } from "../../essential/Box/Box";
 import Title from "../../essential/Title/Title";
-import "./HomeSection1.less"
+import "./AboutSection.less"
 export default function HomeSection1() {
-    return <section className='techs-content'>
+    return <section className='about-sec'>
             <Title>{locale.firstImpression.title}</Title>
-            <div id='techs'>
+            <div id='itens'>
                 <Box>
                     <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>📦</div>
                     <h4>{locale.firstImpression.box1Title}</h4>
@@ -34,7 +34,6 @@ export default function HomeSection1() {
                         {locale.firstImpression.box4Text}
                     </p>
                 </Box>
-
             </div>
        </section>
 }

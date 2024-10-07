@@ -21,7 +21,6 @@ export default function Docs() {
 
                 html.match(/<img .*?src=".*?".*>/g)?.forEach((each:string) => {
                     const src = each.match(/(?<=src=").+?(?=")/g)
-                  
                     if (!src || src[0].startsWith("http")) return
                     let toReplace = url.slice(url.lastIndexOf("/"))    
                     let newUrl = url.replace(toReplace, "/" + src[0].replace(/\.\/|^\//,""))

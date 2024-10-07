@@ -6,16 +6,19 @@ import { locale } from "../../../lib/lang";
 export default function ProjectsSection2() {
     return <section className="projects">
         <div className="title-container">
-        <Title>{locale.projects.title}</Title>
+            <Title>{locale.projects.title}</Title>
         </div>
+        <p>{locale.projects.text}</p>
         <div id='grid'>
+            <Item name="🥅 Torneio App" desc={locale.projects.item3Desc}
+                stack={["Android","Android Jetpack","Kotlin"]}
+                viewUrl="/torneio-app"/>
             <Item name="🐦 Bird Company" desc={locale.projects.item1Desc}
                 stack={["SolidJS", "Vite", "Typescript"]}
                 viewUrl="https://birdcompany-website-portfolio.pages.dev" />
-
-            <Item name="🐟 Easyfish" desc={locale.projects.item2Desc}
+            {/* <Item name="🐟 Easyfish" desc={locale.projects.item2Desc}
                 stack={["React", "Typescript", "Tailwind CSS", "Axios", "Express.js", "Sequelize", "PostgreSQL"]}
-                viewUrl="https://easyfish.kruceo.com" mayNotWork />
+                viewUrl="https://easyfish.kruceo.com" mayNotWork /> */}
         </div>
     </section>
 }

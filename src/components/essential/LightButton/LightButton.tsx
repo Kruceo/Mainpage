@@ -8,7 +8,7 @@ export default function LightButton() {
     }} />
 }
 
-function switchMode(value:boolean) {
+function switchMode(value: boolean) {
     if (value == false) {
         const body = document.querySelector('body')
         body?.classList.add("light-mode")
@@ -25,7 +25,11 @@ function switchMode(value:boolean) {
 function loadValue() {
 
     let raw = window.localStorage.getItem('dark-mode')
-    if (!raw) return false
+    if (raw == null) {
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        console.log(prefersDarkScheme)
+        return false
+    }
     if (raw == '1') return true
     return false
 

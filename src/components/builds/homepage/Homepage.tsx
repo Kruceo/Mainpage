@@ -2,9 +2,10 @@ import './Homepage.less'
 import Bar from '../../essential/Bar/Bar'
 import Footer from '../../essential/Bar/Footer'
 import Welcome from './Welcome'
-// import HomeSection2 from './HomeSection2'
-import HomeSection1 from './HomeSection1'
+import AboutSection from './AboutSection'
 import Content from '../../essential/Content/Content'
+import PresentPortfolioSection from './PresentPortfolioSection'
+import HomeSection3 from './HomeSection3'
 
 function Homepage() {
     document.title = `Kruceo`
@@ -13,13 +14,11 @@ function Homepage() {
             <Bar />
             <Content>
                 <Welcome />
-
-                <HomeSection1 />
-
-                {/* <HomeSection2 /> */}
+                <AboutSection />
+                <HomeSection3 />
+                <PresentPortfolioSection />
             </Content>
             <Footer />
-
         </>
     )
 }

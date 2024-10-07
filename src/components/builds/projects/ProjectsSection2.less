@@ -10,6 +10,11 @@ body {
             display: flex;
             justify-content: center;
         }
+        &>p{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
         #grid {
             width: 100%;
             display: grid;
@@ -76,6 +81,10 @@ body {
                                 color: @color1;
                                 text-decoration: none;
                                 margin-left: auto;
+                                transition: filter 250ms;
+                                &:hover{
+                                    filter: brightness(150%);
+                                }
                             }
                         }
 

@@ -35,7 +35,5 @@ export default function App() {
         <Error404></Error404>
       </E404>
     </Router>
-
-    {/* <Projects></Projects> */}
   </>
 }

@@ -49,7 +49,7 @@ export default function Bar() {
                     <BarButton href="/about">{locale.bar.about}</BarButton>
                 </div>
                 <div className="right" id="buttons">
-                    <HighlightBarButton href="/donate">{locale.bar.donate}</HighlightBarButton>
+                    <HighlightBarButton>{locale.bar.blog}</HighlightBarButton>
                 </div>
             </div>
         </header>

@@ -7,34 +7,49 @@
         "home": "Início",
         "about": "Sobre",
         "projects": "Projetos",
-        "donate": "☕ Presentear"
+        "donate": "☕ Presentear",
+        "blog":"🔒 Threads"
     },
     "firstImpression": {
-        "title": "Um pouco sobre mim",
+        "title": "Um pouco sobre nós",
         "box1Title": "Código Aberto",
-        "box1Text": "Explore e colabore nos meus projetos de código aberto. Suas contribuições são bem-vindas!",
+        "box1Text": "Explore e colabore nos nossos projetos de código aberto. Suas contribuições são bem-vindas!",
         "box2Title": "Modularidade",
-        "box2Text": "Valorizo a modularidade para criar soluções escaláveis e eficientes.",
+        "box2Text": "Valorizamos a modularidade para criar soluções escaláveis e eficientes.",
         "box3Title": "Eficiência",
         "box3Text": "Foco em soluções simples e intuitivas para o usuário.",
         "box4Title": "Aprendizado Contínuo",
-        "box4Text": "Estou sempre aprendendo para melhorar minhas habilidades e me adaptar às novas tendências."
+        "box4Text": "Estamos sempre aprendendo para melhorar nossas habilidades e se adaptando às novas tendências."
+    },
+    "iceBrakeSection": {
+        "title": "Constantes Variáveis",
+        "text": "O café pode ser com leite, açúcar, quente ou gelado, mas no fim, ainda é café. \nIgual à Kruceo, que adapta o estilo, mas mantém sua essência."
+    },
+    "presentPortfolioSection": {
+        "text": "Dê uma olhada em nosso portfólio e descubra mais sobre os nossos projetos incríveis.\nEstamos sempre prontos para surpreender você com soluções criativas e inovadoras!"
     },
     "projects": {
         "title": "Destaques",
+        "text":"Temos vários projetos em constante desenvolvimento. Esses são só alguns de nossos projetos.",
         "view": "Visualizar",
         "stackTitle": "Tecnologias",
         "item1Desc": "Uma pequena página de empresa (fictícia).",
-        "item2Desc": "Gerenciador de transações para produtos do mar."
+        "item2Desc": "Gerenciador de transações para produtos do mar.",
+        "item3Desc": "Um aplicativo para gerenciar uma tabela de pontos corridos."
     },
     "about": {
         "title": "Sobre",
+        "presentationText":"A Kruceo é uma organização em construção. Acreditamos que o crescimento é um processo contínuo, e cada dia traz novas oportunidades para aprender e inovar. Estamos construindo uma base sólida de criatividade e colaboração, onde cada ideia conta. Estamos moldando o futuro da Kruceo, buscando sempre soluções que surpreendam e encantem. \nE, claro, sempre com um olho no sucesso.",
+        "platformsTitle":"Aonde estamos?",
+        "contactTitle":"Contatos",
+        "contactText":"Sinta se a vontade para entrar em contato por qualquer um de nossos canais.",
         "item1Text": "Sou um desenvolvedor full-stack apaixonado especializado em desenvolvimento web e de software. Com expertise em tecnologias frontend e backend, trago soluções abrangentes para cada projeto.",
         "item2Text": "Utilizo tecnologias reativas e abordagens de estilo modernas para oferecer aplicativos escaláveis e fáceis de usar.",
         "item3Text": "Minha jornada de desenvolvimento abrange desde o conceito inicial até a implementação final, garantindo um resultado coeso e de alta qualidade."
     },
     "404": {
-        "text": "Essa página não existe!"
+        "title":"404",
+        "text": "Estamos tendo algum problema para servir essa pagina. Se o problema persistir entre em contato conosco."
     },
     "footer": {
         "copyright": "Kruceo"

@@ -34,8 +34,8 @@ export default function Welcome() {
         const totalWidth = Math.max(sec.current.clientWidth, sec.current.clientHeight)
         // const totalHeight = sec.current.clientHeight
 
-        let wChunks = 4
-        let yChunks = 4
+        let wChunks = 2
+        let yChunks = 2
         if (totalWidth > 500) {
             yChunks = 4
             wChunks = 4
@@ -59,7 +59,13 @@ export default function Welcome() {
         let preChunks: Chunk[] = []
         for (let x = 0; x < wChunks; x++) {
             for (let y = 0; y < yChunks; y++) {
-                preChunks.push({ h: chunkWidth, w: chunkWidth, x: chunkWidth * x, y: chunkHeight * y, src: randomImage() })
+                preChunks.push({ 
+                    h: chunkWidth, 
+                    w: chunkWidth, 
+                    x: chunkWidth * x, 
+                    y: chunkHeight * y, 
+                    src: randomImage() 
+                })
             }
         }
 
@@ -81,20 +87,17 @@ export default function Welcome() {
         return () => window.removeEventListener('resize', handler)
     }, [])
 
-    useEffect
-
     return <section className="welcome" >
         <div className="dome" ref={sec}>
-
             {
                 chunks.map((chunk) => <div className="chunk" style={{
-                    animationDelay: Math.random() * 2000 + 'ms',
-                    animationDuration: 2 + Math.random() * 3 + "s",
-                    left: `${chunk.x}px`,
-                    top: `${chunk.y}px`,
-                    width: chunk.w + 'px',
-                    height: chunk.h + 'px'
-                }} key={chunk.x + "x" + chunk.y}>
+                    animationDelay: `${Math.random() * 2000}ms`,
+                    animationDuration: `${2 + Math.random() * 3}s`,
+                    left:   `${chunk.x}px`,
+                    top:    `${chunk.y}px`,
+                    width:  `${chunk.w}px`,
+                    height: `${chunk.h}px`
+                }} key={`${chunk.x}x${chunk.y}`}>
                     <div className="logo" style={{ backgroundImage: `url(${chunk.src})` }}></div>
                 </div>)
             }

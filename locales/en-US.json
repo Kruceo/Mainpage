@@ -7,7 +7,7 @@
         "home": "Home",
         "about": "About",
         "projects": "Projects",
-        "donate": "☕ Donate"
+        "blog":"🔒 Threads"
     },
     "firstImpression": {
         "title": "A bit about me",
@@ -20,21 +20,37 @@
         "box4Title": "Continuous Learning",
         "box4Text": "I'm always learning to improve my skills and adapt to new trends."
     },
+    "iceBrakeSection": {
+        "title": "Variable Constants",
+        "text": "The coffee can be mixed with milk, sugar, can be hot or iced, but in the end, it's still just coffee.\nLike Kruceo, which adapts to different styles, but always keeps it's core essence."
+    },
+    "presentPortfolioSection": {
+        "text": "Take a look at our portfolio and learn more about our projects. \nWe’re always ready to surprise you with creative solutions."
+    },
     "projects": {
         "title": "Highlights",
+        "text":"We have several projects under constant development. These are just a few of them.",
         "view": "View",
         "stackTitle": "Technologies",
         "item1Desc": "A small company page (fictitious).",
-        "item2Desc": "A transaction manager for seafood products."
+        "item2Desc": "A transaction manager for seafood products.",
+        "item3Desc": "A soccer points table style manager."
     },
     "about": {
-        "title": "About Me",
+        "title": "A Bit About Us",
+        "presentationText":"The Kruceo is an organization under construction. We believe in a continuous growth process, and every day brings new opportunities to learn and innovate.",
+        
+        "platformsTitle":"Where is Us?",
+        "contactTitle":"Contacts",
+        "contactText":"Feel free to reach out through any of our contact options.",
+        
         "item1Text": "I am a passionate full-stack developer specializing in web and software development. With expertise in both frontend and backend technologies, I bring comprehensive solutions to every project.",
         "item2Text": "I leverage reactive technologies and modern styling approaches to deliver scalable and user-friendly applications.",
         "item3Text": "My development journey spans from initial concept to final implementation, ensuring a cohesive and high-quality outcome."
     },
     "404": {
-        "text": "This page does not exist!"
+        "title":"404",
+        "text": "We have some problems with this page. If the problem persist, try contact with us."
     },
     "footer": {
         "copyright": "Kruceo"

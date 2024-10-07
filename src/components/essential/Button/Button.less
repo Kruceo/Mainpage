@@ -1,0 +1,50 @@
+@import "../../../assets/pallete.less";
+
+body {
+    .dark-mode();
+
+    .btn-s-1 {
+        border: none;
+        padding: 10px 20px;
+        border-radius: @rounded;
+        position: relative;
+        background-color: @text;
+        text-decoration: none;
+        color: @inverseText;
+        * {
+            position: relative;
+            color: @inverseText;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        overflow: hidden;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 111%;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            background-color: @color1;
+            position: absolute;
+            left: 50%;
+            z-index: 0;
+            top: 50%;
+            transform: translate(-50%, 50%);
+            transition: transform 500ms;
+        }
+
+        transition: transform 250ms ease;
+
+        &:hover {
+            color: @text;
+            &::before {
+                transform: translate(-50%, -50%);
+            }
+
+            transform: translate(0px, -5px);
+            // box-shadow: 0px 5px 10px #0003;
+        }
+    }
+}
