@@ -3,7 +3,7 @@ import Bar from "../../essential/Bar/Bar";
 import Content from "../../essential/Content/Content";
 
 export default function Donate() {
-    document.title = `Kruceo - ${locale.bar.donate}`
+    document.title = `Kruceo - ${locale.about.title}`
     return <>
         <Bar></Bar>
         <Content className="first">

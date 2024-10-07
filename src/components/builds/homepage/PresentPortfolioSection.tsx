@@ -1,7 +1,5 @@
-import { Anchor } from "milhas"
 import { Box } from "../../essential/Box/Box"
 import "./PresentPortfolioSection.less"
-import Button from "../../essential/Button/Button"
 import { locale } from "../../../lib/lang"
 import AButton from "../../essential/Button/AButton"
 export default function HomeSection2() {
