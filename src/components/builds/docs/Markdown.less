@@ -32,8 +32,8 @@ body {
     .markdown .header2 {
         font-weight: bold;
         font-size: 1.5em;
-        margin-bottom: 25px;
-        margin-top: 15px;
+        margin-bottom: 18px;
+        margin-top: 55px;
     }
 
     .markdown .header3 {
@@ -186,11 +186,12 @@ body {
         margin: 20px 0 20px 0;
         border-radius: 7px;
         overflow: hidden;
+        border:@border;
     }
 
     .markdown.code-block .language {
         padding: 7px;
-
+        display: none;
         font-size: 10px;
         background: #343541;
         text-transform: lowercase;
@@ -201,7 +202,8 @@ body {
         display: block;
         width: 100%;
         padding: 15px;
-        background-color: #001;
+        background-color: transparent;
+        color: @text;
         line-height: 1.5em;
         border-radius: 0px 0px 7px 7px;
         margin-bottom: 15px;
@@ -234,8 +236,9 @@ body {
     }
 
     .markdown.anchor {
-        color: @color1;
+        color: #f90;
         font-weight: bold;
+        filter: drop-shadow(0px 0px 3px #f908)
     }
 
     .markdown a {
@@ -247,7 +250,7 @@ body {
         margin: 0;
         width: fit-content;
         border-radius: 6px;
-        border: white 1px solid;
+        border: @border;
         overflow: hidden;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -255,16 +258,17 @@ body {
     }
 
     .markdown.table .row.header {
-        background-color: #fff3;
-        color: white;
+        background-color: transparent;
+        color: @text;
+        padding: 14px;
         font-weight: bold;
     }
 
     .markdown.table .cel {
-        color: white;
-        border-bottom: 1px solid white;
-        border-right: 1px solid white;
-        padding: 5px;
+        color: @text;
+        border-bottom: @border;
+        border-right: @border;
+        padding: 14px;
     }
 
     .markdown.table .cel.bottom {

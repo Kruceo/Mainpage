@@ -1,15 +1,30 @@
-# Normal, Super ou TI? Veja a Diferença entre os chips da NVIDIA
+Ultimamente o Flux vem comquistando um grande publico, tendo como caracteristica nas imagens geradas muito realismo e também consegue seguir muito bem oque é pedido, além do principal, que é um suporte surreal a textos.
 
-<br/>
+## ComfyUI
 
-Começando do começo, as placas normais ou "sem sufixo", são as primeiras lançadas, são as versões "base" do chip, já as outras versões como "SUPER" , "TI" ou até mesmo "TI SUPER", são versões posteriores, melhoradas e as vezes trazem tecnologias novas e diferentes da versão base, como foi o caso das ainda `GTX 1660` e `GTX 1660 SUPER`, onde o modelo SUPER trazia os novos Tensor Cores e a possibilidade de usar o DLSS que o modelo padrão não conseguia usar, fazia total diferença escolher entre uma e outra mesmo a tecnologia sendo muito nova e pouco lapidada no momento.
+Primeiramente voce vai baixar o ComfyUI, que é um gerenciador de modulos mais "manual" se comparado a um Automatic1111, porém não se preocupe pois não é nenhum bicho de 7 cabeças. 
+Dê uma olhada em [ComfyUI Releases](https://github.com/comfyanonymous/ComfyUI/releases/tag/v0.2.2) e é recomendado que baixe a versão portavel, assim não vai precisar se preocupar com dependencias. A partir dai você pode iniciar usando os arquivos run***.bat, preferencialmente usando a GPU.
+## Suporte para modelos GGUF
 
-<iframe src="https://versus.com/share/summary/br/nvidia-geforce-gtx-1070-vs-nvidia-geforce-gtx-1070-ti" height="620" width="100%"></iframe>
+Essa parte teoricamente é opcional porque você consegue rodar o modelo oficial do Flux sem quaisquer alteração, mas você tem que ter uma GPU consideravelmente boa. Assim por meio do processo de quantização, os modelos no formato GGUF se tornam mais leves para computadores honestos. Dê uma olhada em [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF).
 
-## Afinal qual é melhor ?
+Você vai precisar acionar esse comando dentro da pasta raiz do ComfyUI (aonde se encontram os arquivos run***.bat) para instalar esse modulos GGUF personalizados. 
 
-Placas `SUPER` e `TI` sempre vão ser melhores do que as versões base, pode até ser apenas em eficiencia energetica, mas na teoria, sempre vão ser melhores, afinal é um requinte, uma versão nova e melhor do original seja em qual aspecto for, desconsiderando totalemente o preço, a escolha é clara entre a versão padrão e a versão 'nova'.
+```cmd
+git clone https://github.com/city96/ComfyUI-GGUF ComfyUI/custom_nodes/ComfyUI-GGUF 
+.\python_embeded\python.exe -s -m pip install -r .\ComfyUI\custom_nodes\ComfyUI-GGUF\requirements.txt
+```
 
-## Qual a melhor entre a versão SUPER e a TI?
+## Baixando Modelos
 
-Os chips SUPER, seguindo o padrão dos ultimos anos, são mais fracos que a versão TI, mesmo sendo lançados antes ou depois um do outro, TI geralemente tende a ser a versão "maxima" daquele tal modelo. Novamente, desconsiderando totalemente preço, entre a SUPER e a TI, a TI geralmente oferece o desempenho superior.
+Voce vai precisar colocar os arquivos dentro das suas respectivas pastas
+
+|Link |Caminho           |Adicional|
+|-----|------|------|
+|[**flux1-dev GGUF**](https://huggingface.co/city96/FLUX.1-dev-gguf)                         |  ./ComfyUI/models/unet | - |
+|[**Clip Models**](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)       |  ./ComfyUI/models/clip | São necessários `clip_l` e `t5xxl fp8`|
+|[**VAE**](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors) |  ./ComfyUI/models/vae  | - |
+
+## Montando o Fluxo
+
+Baixe [Flux.json](./flux.json) e carregue no ComfyUI clicando em `load`, e a partir desse exemplo você pode ajustar tudo a sua preferência.
