@@ -4,7 +4,7 @@ import Footer from "../../essential/Bar/Footer";
 import Content from "../../essential/Content/Content";
 import Title from "../../essential/Title/Title";
 import "./About.less"
-import catImg from '../../../assets/04.png'
+import catImg from '../../../assets/04.webp'
 export default function About() {
     document.title = `Kruceo - ${locale.about.title}`
     return <>

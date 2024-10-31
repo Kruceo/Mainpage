@@ -1,0 +1,42 @@
+@import "../../../assets/pallete.less";
+
+.grid {
+    .dark-mode();
+    width: 100%;
+    min-height: @fullcontent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media @min768 {
+        grid-template-columns: none;
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: fit-content;
+    }
+
+    .content {
+        padding: 44px 0px;
+
+        >h1 {
+            font-size: 34px;
+            margin-bottom: 22px;
+        }
+
+        >p {
+            margin-bottom: 22px;
+        }
+
+        >ul {
+            margin-bottom: 44px;
+        }
+
+        >.torneio-google-play-button {
+            width: 280px;
+            cursor: not-allowed;
+        }
+    }
+
+    .smartphone {
+        width: 290px;
+    }
+}

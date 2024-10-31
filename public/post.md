@@ -1,4 +1,4 @@
-Ultimamente o Flux vem comquistando um grande publico, tendo como caracteristica nas imagens geradas muito realismo e também consegue seguir muito bem oque é pedido, além do principal, que é um suporte surreal a textos.
+> Ultimamente o Flux vem comquistando um grande publico, tendo como caracteristica nas imagens geradas muito realismo e também consegue seguir muito bem oque é pedido, além do principal, que é um suporte surreal a textos.
 
 ## ComfyUI
 

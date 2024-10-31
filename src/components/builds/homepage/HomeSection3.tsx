@@ -1,5 +1,5 @@
-import img from '../../../assets/Com5.png';
-import img2 from '../../../assets/2.png';
+import img from '../../../assets/Com5.webp';
+import img2 from '../../../assets/2.webp';
 import { locale } from '../../../lib/lang';
 import "./HomeSection3.less"
 export default function HomeSection3() {

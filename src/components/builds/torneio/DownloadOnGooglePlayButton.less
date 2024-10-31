@@ -1,0 +1,44 @@
+.google-play-button {
+    padding-block: 0px;
+    padding-inline: 0px;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 3px 4px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    aspect-ratio: 200/57;
+    width: 250px;
+    transition: background-color 200ms ease-in-out;
+    overflow: hidden;
+    text-decoration: none;
+    
+    &::before{
+        content: "";
+        z-index: 2;
+        display: block;
+        aspect-ratio: 1/1;
+        height: 75%;
+        margin-right: 4%;
+        background-image: url(https://cdn-icons-png.flaticon.com/512/732/732208.png);
+        background-size: cover;
+    }
+    div {
+        z-index: 2;
+        margin: 0;
+        p {
+            margin: 0;
+            color: white;
+            text-align: left;
+            &:first-of-type {
+                font-size: 90%;
+            }
+
+            &:last-of-type {
+                font-size: 26px;
+                font-weight: bold;
+            }
+        }
+    }
+}
