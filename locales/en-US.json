@@ -11,14 +11,14 @@
     },
     "firstImpression": {
         "title": "A bit about me",
-        "box1Title": "Open Source",
-        "box1Text": "Explore and collaborate on my open source projects. Your contributions are welcome!",
+        "box1Title": "Challenges",
+        "box1Text": "I see challenges as opportunities to learn and improve my skills.",
         "box2Title": "Modularity",
-        "box2Text": "I value modularity to create scalable and efficient solutions.",
+        "box2Text": "Scalable and efficient solutions.",
         "box3Title": "Efficiency",
-        "box3Text": "I focus on simple and intuitive solutions for the user.",
+        "box3Text": "Focus on simple and intuitive solutions.",
         "box4Title": "Continuous Learning",
-        "box4Text": "I'm always learning to improve my skills and adapt to new trends."
+        "box4Text": "Always learning to improve my skills and adapt to new trends."
     },
     "iceBrakeSection": {
         "title": "Variable Constants",

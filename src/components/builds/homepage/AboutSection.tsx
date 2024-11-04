@@ -7,7 +7,7 @@ export default function HomeSection1() {
             <Title>{locale.firstImpression.title}</Title>
             <div id='itens'>
                 <Box>
-                    <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>📦</div>
+                    <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>🏆</div>
                     <h4>{locale.firstImpression.box1Title}</h4>
                     <p style={{ padding: 20, textAlign: 'center' }}>
                         {locale.firstImpression.box1Text}
@@ -28,7 +28,7 @@ export default function HomeSection1() {
                     </p>
                 </Box>
                 <Box>
-                    <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>📚</div>
+                    <div className="icon" style={{ width: 120, height: 120, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>⚗️</div>
                     <h4>{locale.firstImpression.box4Title}</h4>
                     <p style={{ padding: 20, textAlign: 'center' }}>
                         {locale.firstImpression.box4Text}
