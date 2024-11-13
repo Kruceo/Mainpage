@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./WelcomeMainText.less";
-import Button from "../../essential/Button/Button";
 import AButton from "../../essential/Button/AButton";
 
 export default function () {

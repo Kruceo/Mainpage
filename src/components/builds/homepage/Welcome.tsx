@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { locale } from "../../../lib/lang"
+// import { locale } from "../../../lib/lang"
 import "./Welcome.less"
 import WelcomeMainText from "./WelcomeMainText"
 interface Chunk { w: number, h: number, x: number, y: number, src: string }
