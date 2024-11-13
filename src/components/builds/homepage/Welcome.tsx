@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { locale } from "../../../lib/lang"
 import "./Welcome.less"
+import WelcomeMainText from "./WelcomeMainText"
 interface Chunk { w: number, h: number, x: number, y: number, src: string }
 export default function Welcome() {
     // return <Content className=" first"><iframe className="welcome" src="https://kruceo.com/wallpaper" frameBorder={0} style={{ width: "100%" }}>
@@ -101,7 +102,10 @@ export default function Welcome() {
                     <div className="logo" style={{ backgroundImage: `url(${chunk.src})` }}></div>
                 </div>)
             }
-            <h2>{locale.welcome}</h2>
+            {/* <h2>Art Powered by Code.</h2> */}
+            {/* <h2>Fusion of Function and Form</h2> */}
+            <WelcomeMainText/>
+            
         </div>
     </section>
 }
