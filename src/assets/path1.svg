@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256.85617mm"
+   height="101.07219mm"
+   viewBox="0 0 256.85617 101.07219"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.31055459"
+     inkscape:cx="866.19231"
+     inkscape:cy="771.20096"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7">
+      <rect
+         style="fill:#333333;fill-opacity:0.312936;fill-rule:evenodd;stroke-width:1.29932"
+         id="rect7"
+         width="297"
+         height="210"
+         x="-8.8817842e-16"
+         y="-210"
+         ry="0"
+         transform="scale(1,-1)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8">
+      <path
+         style="fill:#000000;fill-opacity:0.149578;fill-rule:evenodd;stroke-width:0.264583"
+         d="m 142.66782,-252.0082 c 0,0 -26.30471,51.42129 3.22931,49.7729 29.53401,-1.64837 11.19566,25.47606 38.2375,18.43115 27.04186,-7.04491 51.12414,-32.51099 54.81667,-15.55308 3.69255,16.95792 -0.60845,35.38749 21.19381,26.95079 21.80227,-8.43671 37.77773,-17.95386 53.80595,3.2797 16.0282,21.23356 8.54808,46.32943 37.0866,22.70712 28.53854,-23.62232 -3.48679,-94.46318 -3.48679,-94.46318 l -58.46069,-111.31254 -104.6745,34.18324"
+         id="path8"
+         clip-path="none" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.143832,-108.92781)">
+    <path
+       style="fill:#01ff6f;fill-opacity:1;fill-rule:evenodd;stroke-width:0.276368"
+       d="m 51.24031,211.64247 c 0,0 46.516656,12.17818 79.88025,-40.27368 16.68178,-26.22592 57.5929,2.8678 84.40736,-11.94123 26.81447,-14.80901 53.23053,-49.47431 88.37766,-50.48618 70.29422,-2.02376 -44.66114,223.09581 -44.66114,223.09581 l -219.100609,-61.2183 0.567832,-37.55088"
+       id="path1"
+       sodipodi:nodetypes="csssccc"
+       inkscape:export-filename="path1.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       clip-path="url(#clipPath7)" />
+    <rect
+       style="fill:#333333;fill-opacity:0.166837;fill-rule:evenodd;stroke-width:1.29932"
+       id="rect5"
+       width="297"
+       height="210"
+       x="-8.8817842e-16"
+       y="-210"
+       ry="0"
+       transform="scale(1,-1)"
+       clip-path="url(#clipPath8)" />
+  </g>
+</svg>

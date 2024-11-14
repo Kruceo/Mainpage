@@ -9,6 +9,23 @@ body {
         height: @fullcontent;
 
         .dome {
+            &::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 40px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                transform: translateY(-100%);
+                background:linear-gradient(transparent,#0001)
+            }
+            transition: opacity 100ms;
+            background-color: @color2;
+            background-image: url("../../../assets/path1.svg");
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 80%;
             overflow: hidden;
             position: absolute;
             top: 0;
@@ -17,14 +34,16 @@ body {
             width: calc(100vw - @scrollbar-width);
             height: 100%;
             margin: 0;
-            background:@color2;
+            // background:@color2;
             // display: flex;
             align-items: center;
         }
-        .wee{
-            margin:90px;
+
+        .wee {
+            margin: 60px;
             // font-size: 20px;
         }
+
         &.hidden {
             opacity: 0;
         }
@@ -53,7 +72,7 @@ body {
         //     text-align: center;
         //     z-index: 2;
         //     text-shadow: 0 2px 2px @inverseText;
-            
+
         //     span {
         //         // filter: grayscale();
         //         // font-size: 100px;
@@ -62,10 +81,12 @@ body {
         //     }
         // }
     }
-    .dome{
+
+    .dome {
         position: relative;
     }
-    .chunk{
+
+    .chunk {
         // animation-name: chunk;
         // animation-duration: 3s;
         // animation-iteration-count: infinite;
@@ -74,7 +95,8 @@ body {
         transform: translate(0px, -50%);
         padding: 20px;
         box-sizing: border-box;
-        .logo{
+
+        .logo {
             // display: none;
             width: 100%;
             height: 100%;
@@ -89,10 +111,12 @@ body {
     0% {
         opacity: 0.1;
     }
-    50%{
+
+    50% {
         opacity: 0.3;
     }
-    100%{
+
+    100% {
         opacity: 0.1;
     }
 

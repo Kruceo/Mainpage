@@ -44,12 +44,12 @@ export default function Welcome() {
         let preChunks: Chunk[] = []
         for (let x = 0; x < wChunks; x++) {
             for (let y = 0; y < yChunks; y++) {
-                preChunks.push({ 
-                    h: chunkWidth, 
-                    w: chunkWidth, 
-                    x: chunkWidth * x, 
-                    y: chunkHeight * y, 
-                    src: randomImage() 
+                preChunks.push({
+                    h: chunkWidth,
+                    w: chunkWidth,
+                    x: chunkWidth * x,
+                    y: chunkHeight * y,
+                    src: randomImage()
                 })
             }
         }
@@ -57,19 +57,31 @@ export default function Welcome() {
         setChunks(preChunks)
     }
 
+    // useEffect(() => {
+    // genChunks()
+    // const handler = () => {
+    //     const t = setTimeout(() => {
+    //         genChunks()
+    //     }, 2500)
+
+    //     const currentWInterval = window.localStorage.getItem("resize-welcome-interval")
+    //     clearTimeout(currentWInterval ? parseInt(currentWInterval) : undefined)
+    //     window.localStorage.setItem("resize-welcome-interval", t.toString())
+    // }
+    // window.addEventListener("resize", handler)
+    // return () => window.removeEventListener('resize', handler)
+    // }, [])
+
     useEffect(() => {
-        genChunks()
         const handler = () => {
-            const t = setTimeout(() => {
-                genChunks()
-            }, 2500)
-            
-            const currentWInterval = window.localStorage.getItem("resize-welcome-interval")
-            clearTimeout(currentWInterval ? parseInt(currentWInterval) : undefined)
-            window.localStorage.setItem("resize-welcome-interval", t.toString())
+            const el: HTMLDivElement = document.querySelector(".welcome>.dome") as any
+            const sensivity = 3
+            let opacity = 1-window.scrollY/window.screen.height*sensivity
+            if(opacity>=-0.1)
+            el.style.opacity = opacity.toString()
         }
-        window.addEventListener("resize", handler)
-        return () => window.removeEventListener('resize', handler)
+        window.addEventListener("scroll", handler)
+        return () => window.removeEventListener('scroll', handler)
     }, [])
 
     return <section className="welcome" >
@@ -78,9 +90,9 @@ export default function Welcome() {
                 chunks.map((chunk) => <div className="chunk" style={{
                     animationDelay: `${Math.random() * 2000}ms`,
                     animationDuration: `${2 + Math.random() * 3}s`,
-                    left:   `${chunk.x}px`,
-                    top:    `${chunk.y}px`,
-                    width:  `${chunk.w}px`,
+                    left: `${chunk.x}px`,
+                    top: `${chunk.y}px`,
+                    width: `${chunk.w}px`,
                     height: `${chunk.h}px`
                 }} key={`${chunk.x}x${chunk.y}`}>
                     <div className="logo" style={{ backgroundImage: `url(${chunk.src})` }}></div>
@@ -88,8 +100,8 @@ export default function Welcome() {
             }
             {/* <h2>Art Powered by Code.</h2> */}
             {/* <h2>Fusion of Function and Form</h2> */}
-            <WelcomeMainText/>
-            
+            <WelcomeMainText />
+
         </div>
     </section>
 }
