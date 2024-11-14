@@ -1,61 +1,61 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 // import { locale } from "../../../lib/lang"
 import "./Welcome.less"
 import WelcomeMainText from "./WelcomeMainText"
-interface Chunk { w: number, h: number, x: number, y: number, src: string }
+// interface Chunk { w: number, h: number, x: number, y: number, src: string }
 export default function Welcome() {
     const sec = useRef<HTMLDivElement>(null)
-    const [chunks, setChunks] = useState<Chunk[]>([])
-    function genChunks() {
-        if (!sec.current) return
+    // const [chunks, setChunks] = useState<Chunk[]>([])
+    // function genChunks() {
+    //     if (!sec.current) return
 
-        let f = document.createElement("div")
-        let i = document.createElement("div")
-        i.className = "logo"
-        f.className = "chunk"
+    //     let f = document.createElement("div")
+    //     let i = document.createElement("div")
+    //     i.className = "logo"
+    //     f.className = "chunk"
 
-        f.appendChild(i)
+    //     f.appendChild(i)
 
-        const totalWidth = Math.max(sec.current.clientWidth, sec.current.clientHeight)
-        // const totalHeight = sec.current.clientHeight
+    //     const totalWidth = Math.max(sec.current.clientWidth, sec.current.clientHeight)
+    //     // const totalHeight = sec.current.clientHeight
 
-        let wChunks = 2
-        let yChunks = 2
-        if (totalWidth > 500) {
-            yChunks = 4
-            wChunks = 4
-        }
-        if (totalWidth > 800) {
-            yChunks = 6
-            wChunks = 6
-        }
-        if (totalWidth > 1200) {
-            yChunks = 10
-            wChunks = 10
-        }
-        if (totalWidth > 1600) {
-            yChunks = 12
-            wChunks = 12
-        }
+    //     let wChunks = 2
+    //     let yChunks = 2
+    //     if (totalWidth > 500) {
+    //         yChunks = 4
+    //         wChunks = 4
+    //     }
+    //     if (totalWidth > 800) {
+    //         yChunks = 6
+    //         wChunks = 6
+    //     }
+    //     if (totalWidth > 1200) {
+    //         yChunks = 10
+    //         wChunks = 10
+    //     }
+    //     if (totalWidth > 1600) {
+    //         yChunks = 12
+    //         wChunks = 12
+    //     }
 
-        const chunkWidth = totalWidth / wChunks
-        const chunkHeight = totalWidth / yChunks
+    //     const chunkWidth = totalWidth / wChunks
+    //     const chunkHeight = totalWidth / yChunks
 
-        let preChunks: Chunk[] = []
-        for (let x = 0; x < wChunks; x++) {
-            for (let y = 0; y < yChunks; y++) {
-                preChunks.push({
-                    h: chunkWidth,
-                    w: chunkWidth,
-                    x: chunkWidth * x,
-                    y: chunkHeight * y,
-                    src: randomImage()
-                })
-            }
-        }
+    //     let preChunks: Chunk[] = []
+    //     for (let x = 0; x < wChunks; x++) {
+    //         for (let y = 0; y < yChunks; y++) {
+    //             preChunks.push({
+    //                 h: chunkWidth,
+    //                 w: chunkWidth,
+    //                 x: chunkWidth * x,
+    //                 y: chunkHeight * y,
+    //                 src: randomImage()
+    //             })
+    //         }
+    //     }
 
-        setChunks(preChunks)
-    }
+    //     setChunks(preChunks)
+    // }
 
     // useEffect(() => {
     // genChunks()
@@ -74,8 +74,8 @@ export default function Welcome() {
 
     useEffect(() => {
         const handler = () => {
-            const el: HTMLDivElement = document.querySelector(".welcome>.dome") as any
-            const sensivity = 3
+            const el: HTMLDivElement = document.querySelector(".welcome>.dome>.dome-bg") as any
+            const sensivity = 5
             let opacity = 1-window.scrollY/window.screen.height*sensivity
             if(opacity>=-0.1)
             el.style.opacity = opacity.toString()
@@ -86,17 +86,18 @@ export default function Welcome() {
 
     return <section className="welcome" >
         <div className="dome" ref={sec}>
+            <div className="dome-bg"></div>
             {
-                chunks.map((chunk) => <div className="chunk" style={{
-                    animationDelay: `${Math.random() * 2000}ms`,
-                    animationDuration: `${2 + Math.random() * 3}s`,
-                    left: `${chunk.x}px`,
-                    top: `${chunk.y}px`,
-                    width: `${chunk.w}px`,
-                    height: `${chunk.h}px`
-                }} key={`${chunk.x}x${chunk.y}`}>
-                    <div className="logo" style={{ backgroundImage: `url(${chunk.src})` }}></div>
-                </div>)
+                // chunks.map((chunk) => <div className="chunk" style={{
+                //     animationDelay: `${Math.random() * 2000}ms`,
+                //     animationDuration: `${2 + Math.random() * 3}s`,
+                //     left: `${chunk.x}px`,
+                //     top: `${chunk.y}px`,
+                //     width: `${chunk.w}px`,
+                //     height: `${chunk.h}px`
+                // }} key={`${chunk.x}x${chunk.y}`}>
+                //     <div className="logo" style={{ backgroundImage: `url(${chunk.src})` }}></div>
+                // </div>)
             }
             {/* <h2>Art Powered by Code.</h2> */}
             {/* <h2>Fusion of Function and Form</h2> */}

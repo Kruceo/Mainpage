@@ -5,6 +5,11 @@ import AButton from "../../essential/Button/AButton";
 export default function () {
     const [index, setIndex] = useState(0)
     const texts = ["creation", "Kruceo"]
+    useEffect(() => {
+        const handler = () => setIndex(index == (texts.length - 1) ? 0 : index + 1)
+        const interval = setInterval(handler, 3500)
+        return () => clearInterval(interval)
+    })
     return <div className="wee" onClick={() => setIndex(index == (texts.length - 1) ? 0 : index + 1)}>
         <h1>Kruceo</h1>
         <h2>
