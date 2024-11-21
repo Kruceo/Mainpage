@@ -74,7 +74,8 @@ export default function () {
         const directionChangeInterval = setInterval(() => {
             if (Math.random() > 0.5) {
                 yChange = (1 - Math.random() * 2) * 0.02
-                onSky = Math.random() > 0.8
+                onSky = Math.random() > 0.2
+                emitter.enabled = !onSky
             }
         }, 2000)
 
@@ -120,6 +121,7 @@ class ParticleEmitter {
     lifetime: number;
     frameIndex: number;
     scene: THREE.Scene;
+    enabled:boolean;
     spawn: () => void;
     clear: () => void;
     constructor(scene: THREE.Scene, color?: THREE.ColorRepresentation) {
@@ -128,8 +130,11 @@ class ParticleEmitter {
         const fps = 30
         this.frameIndex = 0
         this.scene = scene
+        this.enabled = true
 
         this.spawn = () => {
+            if(!this.enabled)return;
+
             const sphereGeo = new THREE.SphereGeometry(0.1, 5, 5)
             const sphereMat = new THREE.MeshPhongMaterial({ color: color ?? 0xffffff, transparent: true })
             const sphereMesh = new THREE.Mesh(sphereGeo, sphereMat)
