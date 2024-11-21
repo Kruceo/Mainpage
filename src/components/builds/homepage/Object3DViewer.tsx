@@ -7,6 +7,7 @@ export default function () {
     useEffect(() => {
 
         if (window.innerWidth < 600) return
+        
 
         let [mouseX, mouseY] = [0, 0]
         const onMouseMove = (e: MouseEvent) => {
@@ -36,7 +37,7 @@ export default function () {
 
         let loadedObj: THREE.Group<THREE.Object3DEventMap> | null = null
         let loadedPlanetObj: THREE.Group<THREE.Object3DEventMap> | null = null
-        loader.load('/untitled.glb', function (gltf) {
+        loader.load('/starship.glb', function (gltf) {
             loadedObj = gltf.scene
             loadedObj.add(new THREE.SpotLight(0x00ff99, 2, 0, 0.3))
             loadedObj.position.set(0, 2.4, 0)
@@ -78,7 +79,7 @@ export default function () {
         }, 2000)
 
         function animate() {
-
+            if(window.scrollY > window.innerHeight)return;
             if (!loadedObj || !loadedPlanetObj) return
 
             if (onSky) {
@@ -90,8 +91,8 @@ export default function () {
             }
 
             clouds.mesh.rotateY(0.01)
-            cameraGizmos.rotation.y = degToRad(-45 + 90 * (mouseX / window.innerWidth))
-            cameraGizmos.rotation.x = degToRad(-45 + 90 * (mouseY / window.innerHeight))
+            cameraGizmos.rotation.y = degToRad(-22.5 + 45 * (mouseX / window.innerWidth))
+            cameraGizmos.rotation.x = degToRad(-22.5 + 45 * (mouseY / window.innerHeight))
             starshipGizmos.rotateZ(0.02)
             starshipGizmos.rotateY(yChange)
             loadedPlanetObj.rotateY(0.003)

@@ -12,7 +12,7 @@ export default function Welcome() {
             const el: HTMLDivElement = document.querySelector(".welcome>.dome>.dome-bg") as any
             const sensivity = 5
             let opacity = 1 - window.scrollY / window.screen.height * sensivity
-            if (opacity > 0.3) opacity = 0.3
+            if (opacity > 1) opacity = 1
             if (opacity >= -0.1)
                 el.style.opacity = opacity.toString()
         }
