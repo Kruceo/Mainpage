@@ -9,6 +9,7 @@ import Docs from "./components/builds/docs/Docs";
 import Blog from "./components/builds/blog/Blog";
 import Torneio from "./components/builds/torneio/Torneio";
 import WelcomeMainText from "./components/builds/homepage/WelcomeMainText";
+import Testing from "./components/builds/Testing";
 export default function App() {
 
   window.localStorage.getItem('dark-mode')??window.localStorage.setItem("dark-mode","1")
@@ -37,7 +38,7 @@ export default function App() {
         <Torneio/>
       </Path>
       <Path as="/teste" absolute>
-        <WelcomeMainText/>
+        <Testing/>
       </Path>
       <E404>
         <Error404></Error404>
