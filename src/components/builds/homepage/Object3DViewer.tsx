@@ -5,6 +5,9 @@ import { degToRad } from "three/src/math/MathUtils.js";
 
 export default function () {
     useEffect(() => {
+
+        if (window.innerWidth < 600) return
+
         let [mouseX, mouseY] = [0, 0]
         const onMouseMove = (e: MouseEvent) => {
             mouseX = e.x
@@ -22,15 +25,10 @@ export default function () {
 
         document.querySelector(".three-object")?.appendChild(renderer.domElement);
 
-        // scene.add()
-
-        var light = new THREE.DirectionalLight(0xffffff, 2.5)
-        light.position.set(5, 5, 0)
+        var light = new THREE.DirectionalLight(0xffcc99, 14.5)
+        light.position.set(-4, 6, 4)// scene.add()
         scene.add(light);
 
-        var light2 = new THREE.SpotLight(0xff2222, 50);
-        light2.position.set(5, 5, 5)
-        scene.add(light2);
 
         const starshipGizmos = new THREE.Mesh()
         const cameraGizmos = new THREE.Mesh()
@@ -40,6 +38,7 @@ export default function () {
         let loadedPlanetObj: THREE.Group<THREE.Object3DEventMap> | null = null
         loader.load('/untitled.glb', function (gltf) {
             loadedObj = gltf.scene
+            loadedObj.add(new THREE.SpotLight(0x00ff99, 2, 0, 0.3))
             loadedObj.position.set(0, 2.4, 0)
             loadedObj.scale.setScalar(0.5)
             starshipGizmos.add(loadedObj)
@@ -51,7 +50,7 @@ export default function () {
             loadedPlanetObj = gltf.scene
             const scale = 2.4
             loadedPlanetObj.scale.set(scale, scale, scale)
-            loadedPlanetObj.rotateX(0.11)
+            loadedPlanetObj.rotateZ(degToRad(-25))
             scene.add(loadedPlanetObj)
         }, undefined, function (error) {
             console.error(error);
@@ -63,27 +62,38 @@ export default function () {
         camera.position.set(0, 0, 10)
         let frameIndex = 0
 
-        const emitter = new ParticleEmitter(scene)
-        emitter.mesh.position.y = 2.4
-        emitter.mesh.position.x = 0.5
+        const emitter = new ParticleEmitter(scene, 0xff9988)
+        emitter.mesh.position.y = 2
+        emitter.mesh.position.x = 0
         starshipGizmos.add(emitter.mesh)
 
-        const clouds = new CloudEmitter(scene,6,3.4)
-
+        const clouds = new CloudEmitter(scene, 9, 3.4)
+        clouds.mesh.rotateZ(degToRad(-25))
         let yChange = 0
-
+        let onSky = false
         const directionChangeInterval = setInterval(() => {
-            if (Math.random() > 0.5)
+            if (Math.random() > 0.5) {
                 yChange = (1 - Math.random() * 2) * 0.02
+                onSky = Math.random() > 0.8
+            }
         }, 2000)
 
         function animate() {
 
             if (!loadedObj || !loadedPlanetObj) return
+
+            if (onSky) {
+                if (loadedObj.position.y < 3.4)
+                    loadedObj.position.y += 0.01
+            }
+            else if (loadedObj.position.y >= 2.4) {
+                loadedObj.position.y -= 0.01
+            }
+
             clouds.mesh.rotateY(0.01)
             cameraGizmos.rotation.y = degToRad(-45 + 90 * (mouseX / window.innerWidth))
             cameraGizmos.rotation.x = degToRad(-45 + 90 * (mouseY / window.innerHeight))
-            starshipGizmos.rotateZ(0.018)
+            starshipGizmos.rotateZ(0.02)
             starshipGizmos.rotateY(yChange)
             loadedPlanetObj.rotateY(0.003)
             frameIndex++
@@ -113,7 +123,7 @@ class ParticleEmitter {
     scene: THREE.Scene;
     spawn: () => void;
     clear: () => void;
-    constructor(scene: THREE.Scene) {
+    constructor(scene: THREE.Scene, color?: THREE.ColorRepresentation) {
         this.mesh = new THREE.Mesh()
         this.lifetime = 2000
         const fps = 30
@@ -122,7 +132,7 @@ class ParticleEmitter {
 
         this.spawn = () => {
             const sphereGeo = new THREE.SphereGeometry(0.1, 5, 5)
-            const sphereMat = new THREE.MeshPhongMaterial({ color: 0x662211, transparent: true })
+            const sphereMat = new THREE.MeshPhongMaterial({ color: color ?? 0xffffff, transparent: true })
             const sphereMesh = new THREE.Mesh(sphereGeo, sphereMat)
 
             const emitterRealPosition = new THREE.Vector3()
@@ -150,7 +160,7 @@ class ParticleEmitter {
             }, this.lifetime)
         }
 
-        const spawnerInterval = setInterval(this.spawn, 200)
+        const spawnerInterval = setInterval(this.spawn, 120)
 
         this.clear = () => { clearInterval(spawnerInterval) }
     }
@@ -159,24 +169,24 @@ class ParticleEmitter {
 class CloudEmitter {
     mesh: THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.Material | THREE.Material[], THREE.Object3DEventMap>;
     scene: THREE.Scene;
-    constructor(scene: THREE.Scene,cloudNumber:number, cloudY:number) {
+    constructor(scene: THREE.Scene, cloudNumber: number, cloudY: number) {
         this.scene = scene
         this.mesh = new THREE.Mesh()
         scene.add(this.mesh)
 
         for (let i = 0; i < cloudNumber; i++) {
-            const cloud = this.genCloud(3 + Math.random() * 3)
-            cloud.scale.setScalar(0.3)
+            const cloud = this.genCloud(2 + Math.random() * 5)
+            cloud.scale.setScalar(0.25)
             cloud.position.y = cloudY
             const cloudZGizmos = new THREE.Mesh()
             cloudZGizmos.add(cloud)
-            cloudZGizmos.rotation.z = Math.random() * 180
+            cloudZGizmos.rotation.x = degToRad(Math.random() * 360)
 
             const cloudXGizmos = new THREE.Mesh()
-            cloudZGizmos.add(cloudZGizmos)
-            cloudZGizmos.rotation.x = Math.random() * 45
+            cloudXGizmos.add(cloudZGizmos)
+            cloudXGizmos.rotation.y = degToRad(Math.random() * 360)
             // cloudGizmos.rotation.x = Math.random() * 90
-            this.mesh.add(cloudZGizmos)
+            this.mesh.add(cloudXGizmos)
         }
     }
 
@@ -184,8 +194,8 @@ class CloudEmitter {
         let nodes: THREE.Mesh[] = []
         let signal = -1
         for (let index = 0; index < nodeNumber; index++) {
-            const sphereGeo = new THREE.SphereGeometry(1, 5, 5)
-            const sphereMat = new THREE.MeshPhongMaterial({ color: 0xffffff, transparent: true })
+            const sphereGeo = new THREE.SphereGeometry(1, 6, 6)
+            const sphereMat = new THREE.MeshPhongMaterial({ color: 0xffffff, opacity: 0.85, transparent: true })
             const sphereMesh = new THREE.Mesh(sphereGeo, sphereMat)
 
             const last = nodes.sort((a, b) => a.position.x - b.position.x).at(signal > 0 ? (nodes.length - 1) : 0)
@@ -193,8 +203,8 @@ class CloudEmitter {
             if (last) {
                 sphereMesh.position.x = last.position.x + last.scale.x * signal
                 sphereMesh.position.y = last.position.y - last.scale.x / 3.5
-                sphereMesh.position.z = 0.4 - Math.random() * 0.8
-                sphereMesh.scale.setScalar(last.scale.x / 1.4)
+                sphereMesh.position.z = 0.6 - Math.random() * 1.2
+                sphereMesh.scale.setScalar(last.scale.x / 1.2)
             }
             nodes.push(sphereMesh)
             signal *= -1

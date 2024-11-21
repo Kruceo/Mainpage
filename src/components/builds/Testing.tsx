@@ -2,16 +2,15 @@ import { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { degToRad } from 'three/src/math/MathUtils.js';
+import Object3DViewer from './homepage/Object3DViewer';
 
 export default function () {
 
     return <>
         <div style={{ border: "1px solid red" }}>
-            {/* <Object3DViewer /> */}
-
-
             <ObjectViewer url='/untitled.glb'></ObjectViewer>
-
+            <ObjectViewer url='/planet.glb'></ObjectViewer>
+            <Object3DViewer />
         </div>
     </>
 }
@@ -38,7 +37,7 @@ function ObjectViewer(props: { url: string }) {
         el.addEventListener('mousedown', onButtonDown)
         el.addEventListener('mouseup', onButtonUp)
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(45, 1 / 1)
+        const camera = new THREE.PerspectiveCamera(25, 1 / 1)
 
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(600, 600);
@@ -49,8 +48,24 @@ function ObjectViewer(props: { url: string }) {
 
         // scene.add()
 
-        var light = new THREE.DirectionalLight(0xffffff, 2.5)
-        light.position.set(10, 2, 0)
+        var light = new THREE.PointLight(0xffffff, 24.5)
+        light.position.set(-2, 2, 2)
+        scene.add(light);
+
+        var light = new THREE.PointLight(0xffffff, 24.5)
+        light.position.set(2, 2, 2)
+        scene.add(light);
+
+        var light = new THREE.PointLight(0xffffff, 44.5)
+        light.position.set(-2, 2, -2)
+        scene.add(light);
+
+        var light = new THREE.PointLight(0xffffff, 44.5)
+        light.position.set(2, 2, -2)
+        scene.add(light);
+
+        var light = new THREE.PointLight(0xffffff, 1.5)
+        light.position.set(0, -2,0)
         scene.add(light);
 
         // var light2 = new THREE.SpotLight(0xff2222, 50);
