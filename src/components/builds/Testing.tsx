@@ -26,10 +26,10 @@ function ObjectViewer(props: { url: string }) {
             mouseX = e.x
             mouseY = e.y
         }
-        const onButtonDown = (e: MouseEvent) => {
+        const onButtonDown = () => {
           buttonClicked = true
         }
-        const onButtonUp = (e: MouseEvent) => {
+        const onButtonUp = () => {
             buttonClicked = false
         }
         const el = document.querySelector("#" + id) as HTMLDivElement
@@ -87,14 +87,6 @@ function ObjectViewer(props: { url: string }) {
         scene.add(cameraGizmos)
         cameraGizmos.add(camera)
         camera.position.set(0, 0, 10)
-        let frameIndex = 0
-
-        let yChange = 0
-
-        const directionChangeInterval = setInterval(() => {
-            if (Math.random() > 0.5)
-                yChange = (1 - Math.random() * 2) * 0.02
-        }, 2000)
 
         function animate() {
 
@@ -103,14 +95,12 @@ function ObjectViewer(props: { url: string }) {
             cameraGizmos.rotation.y = -degToRad(-180 + 360 * (mouseX / el.clientWidth))
             cameraGizmos.rotation.x = -degToRad(-180 + 360 * (mouseY / el.clientHeight))
             }
-            frameIndex++
             renderer.render(scene, camera);
 
         }
 
         return () => {
             scene.clear()
-            clearInterval(directionChangeInterval)
             renderer.clear()
             renderer.setAnimationLoop(null)
             renderer.domElement.remove()

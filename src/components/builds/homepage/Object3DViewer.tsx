@@ -60,7 +60,6 @@ export default function () {
         scene.add(cameraGizmos)
         cameraGizmos.add(camera)
         camera.position.set(0, 0, 10)
-        let frameIndex = 0
 
         const emitter = new ParticleEmitter(scene, 0xff9988)
         emitter.mesh.position.y = 2
@@ -96,7 +95,6 @@ export default function () {
             starshipGizmos.rotateZ(0.02)
             starshipGizmos.rotateY(yChange)
             loadedPlanetObj.rotateY(0.003)
-            frameIndex++
             renderer.render(scene, camera);
 
         }
