@@ -9,6 +9,61 @@ body {
         height: @fullcontent;
 
         .dome {
+            background-color: @color2;
+
+            .dome-bg {
+                transition: opacity 100ms;
+                // background: linear-gradient(135deg, transparent 60%,rgba(0, 217, 255,1));
+                background-position: 100% 100%;
+                background-repeat: no-repeat;
+                background-size: 80%;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transform: translateY(-100%);
+                    background: linear-gradient(transparent, #0004)
+                }
+            }
+
+            .three-object {
+                position: absolute;
+                left: 60%;
+                top: 90%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                canvas {
+                    scale: 2.5;
+                    // border: 1px solid red;
+                    width: auto !important;
+                    height: 70% !important;
+                    aspect-ratio: 1/1;
+                    margin-left: auto;
+                    margin-right: 10%;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    background: radial-gradient(rgba(0, 217, 255,0.7) 40% ,transparent 67%);
+
+                    @media @min968{
+                        display: none!important;
+                    }
+                    
+                }
+               
+            }
+
             overflow: hidden;
             position: absolute;
             top: 0;
@@ -17,28 +72,13 @@ body {
             width: calc(100vw - @scrollbar-width);
             height: 100%;
             margin: 0;
-            background:@color2;
-            display: flex;
             align-items: center;
-            // height: @fullcontent;
-            //  background-image: url("https://bing.com/th?id=OSGI.884C53A365199E9169274D0F3625F2B3&h=1000&w=1920&c=1&rs=1&o=3");
-            // &::after{
-            //     content: "";
-            //     width: 100%;
-            //     height: 100%;
-            //     top: 0;
-            //     background: linear-gradient(@color4, transparent, #445);
-            //     display: block;
-            //     position: absolute;
-            // }
         }
 
-        // background-repeat: no-repeat;
-        // background-position: top;
-        // background-size: cover;
-        // height: @fullcontent;
-        
-
+        .wee {
+            margin: 60px;
+            // font-size: 20px;
+        }
 
         &.hidden {
             opacity: 0;
@@ -49,40 +89,40 @@ body {
             display: none;
         }
 
-        h2 {
-            font-size: 128px;
+        // h2 {
+        //     font-size: 128px;
 
-            @media @min968 {
-                font-size: 108px;
-            }
+        //     @media @min968 {
+        //         font-size: 108px;
+        //     }
 
-            @media @min768 {
-                font-size: 68px;
-            }
+        //     @media @min768 {
+        //         font-size: 68px;
+        //     }
 
-            line-height-step: 10px;
-            line-height: 75px;
-            color: @text;
+        //     line-height-step: 10px;
+        //     line-height: 75px;
+        //     color: @text;
 
-            font-weight: bold;
-            text-align: center;
-            z-index: 2;
-            text-shadow: 0 2px 2px @inverseText;
-            
-            span {
-                // filter: grayscale();
-                // font-size: 100px;
-                color: @text;
-                text-decoration: underline;
-            }
-        }
+        //     font-weight: bold;
+        //     text-align: center;
+        //     z-index: 2;
+        //     text-shadow: 0 2px 2px @inverseText;
 
-
+        //     span {
+        //         // filter: grayscale();
+        //         // font-size: 100px;
+        //         color: @text;
+        //         text-decoration: underline;
+        //     }
+        // }
     }
-    .dome{
+
+    .dome {
         position: relative;
     }
-    .chunk{
+
+    .chunk {
         // animation-name: chunk;
         // animation-duration: 3s;
         // animation-iteration-count: infinite;
@@ -91,7 +131,8 @@ body {
         transform: translate(0px, -50%);
         padding: 20px;
         box-sizing: border-box;
-        .logo{
+
+        .logo {
             // display: none;
             width: 100%;
             height: 100%;
@@ -106,10 +147,12 @@ body {
     0% {
         opacity: 0.1;
     }
-    50%{
+
+    50% {
         opacity: 0.3;
     }
-    100%{
+
+    100% {
         opacity: 0.1;
     }
 
