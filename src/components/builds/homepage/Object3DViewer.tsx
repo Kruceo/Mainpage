@@ -74,7 +74,7 @@ export default function () {
         const directionChangeInterval = setInterval(() => {
             if (Math.random() > 0.5) {
                 yChange = (1 - Math.random() * 2) * 0.02
-                onSky = Math.random() > 0.2
+                onSky = Math.random() > 0.8
                 emitter.enabled = !onSky
             }
         }, 2000)
