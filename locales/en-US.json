@@ -1,5 +1,8 @@
 {
-    "welcome": "Welcome",
+    "welcome": {
+        "subtitle":"Developing code and art \nWhile drinking a lot of coffee.",
+        "text":"Complete solutions in Web, Software, \nDevOps, Design, and beyond."
+    },
     "pixTitle": "Pix",
     "cryptoTitle": "BNB or ETH Network",
     "thisMayNotWork": "This may not work.",
