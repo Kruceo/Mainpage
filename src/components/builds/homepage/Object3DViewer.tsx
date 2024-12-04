@@ -7,7 +7,7 @@ export default function () {
     useEffect(() => {
 
         if (window.innerWidth < 600) return
-        
+
 
         let [mouseX, mouseY] = [0, 0]
         const onMouseMove = (e: MouseEvent) => {
@@ -19,8 +19,9 @@ export default function () {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, 1 / 1)
 
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(800, 800);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        const size = screen.width + screen.height / 2 - 180
+        renderer.setSize(size, size);
         renderer.setAnimationLoop(animate);
         renderer.setClearColor(new THREE.Color(0x000000), 0);
 
@@ -80,7 +81,7 @@ export default function () {
         }, 2000)
 
         function animate() {
-            if(window.scrollY > window.innerHeight)return;
+            if (window.scrollY > window.innerHeight) return;
             if (!loadedObj || !loadedPlanetObj) return
 
             if (onSky) {
@@ -121,7 +122,7 @@ class ParticleEmitter {
     lifetime: number;
     frameIndex: number;
     scene: THREE.Scene;
-    enabled:boolean;
+    enabled: boolean;
     spawn: () => void;
     clear: () => void;
     constructor(scene: THREE.Scene, color?: THREE.ColorRepresentation) {
@@ -133,7 +134,7 @@ class ParticleEmitter {
         this.enabled = true
 
         this.spawn = () => {
-            if(!this.enabled)return;
+            if (!this.enabled) return;
 
             const sphereGeo = new THREE.SphereGeometry(0.1, 5, 5)
             const sphereMat = new THREE.MeshPhongMaterial({ color: color ?? 0xffffff, transparent: true })
