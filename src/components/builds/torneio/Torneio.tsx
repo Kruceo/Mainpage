@@ -1,13 +1,15 @@
 import Bar from "../../essential/Bar/Bar";
 import Footer from "../../essential/Bar/Footer";
 import Content from "../../essential/Content/Content";
-import torneioSSImg from '../../../assets/torneio_ss.jpeg'
 import "./Torneio.less"
-import Smartphone from "./Smartphone";
-
-import DownloadOnGooglePlayButton from "./DownloadOnGooglePlayButton";
+import torneioSSImg from '../../../assets/torneio_ss.jpeg'
 import Title from "../../essential/Title/Title";
+import Button from "../../essential/Button/Button";
+import { useState } from "react";
+import Smartphone from "./Smartphone";
+import DownloadOnGooglePlayButton from "./DownloadOnGooglePlayButton";
 export default function () {
+    const [sended, setSended] = useState(false)
     return <>
         <Bar></Bar>
         <Content>
@@ -30,7 +32,33 @@ export default function () {
                 </div>
                 <Smartphone screenImage={torneioSSImg} />
             </div>
-            {/* <ProjectsSection1></ProjectsSection1> */}
+            <Title>Participar do Teste</Title>
+            <div className="testing-content">
+                <p>Ter pessoas reais participando dos testes do App é essencial para sua evolução.<br />Além de ser um requisito obrigatório para o mesmo estar presente no Google Play Store. <br/>Solicite acesso antecipado agora mesmo!</p>
+                <form className={sended ? "sended" : ""} onSubmit={(e) => {
+                    e.preventDefault()
+                    const data = new FormData(e.target as HTMLFormElement)
+                    fetch("https://torneio-testing-email.kruceo.com", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            email: data.get("email-input")?.toString().slice(0,256),
+                            phone: data.get("phone-input")?.toString().slice(0,32)
+                        })
+                    })
+                    setSended(true)
+                }}>
+                    <label htmlFor="email-input">Email*:</label>
+                    <input placeholder="example@mail.com" required name="email-input" id="email-input" type="email" />
+                    <label htmlFor="phone-input">Telefone:</label>
+                    <input placeholder="98 7654 3210" name="phone-input" id="email-input" type="tel" />
+                    <Button>Enviar</Button>
+                </form>
+                {sended ?
+                    <p className="thanks">Obrigado pela Colaboração!</p>
+                    : null
+                }
+            </div>
         </Content>
         <Footer></Footer>
     </>
