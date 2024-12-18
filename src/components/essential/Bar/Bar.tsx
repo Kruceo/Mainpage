@@ -27,8 +27,8 @@ export default function Bar() {
                 <div id="offer">
                 </div>
                 <div id="contacts">
-                    <Contact href="https://twitter.com/RGBrat">
-                        <i className="icon-youtube" title="twitter"></i>
+                    <Contact href="https://www.youtube.com/@kruceo1969">
+                        <i className="icon-youtube" title="youtube"></i>
                     </Contact>
                     <Contact href="https://github.com/kruceo">
                         <i className="icon-github" title="github"></i>
