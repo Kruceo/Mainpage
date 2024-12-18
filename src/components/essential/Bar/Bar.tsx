@@ -28,13 +28,13 @@ export default function Bar() {
                 </div>
                 <div id="contacts">
                     <Contact href="https://twitter.com/RGBrat">
-                        <img src="/twitter.png" alt="twitter" title="Twitter" />
+                        <i className="icon-youtube" title="twitter"></i>
                     </Contact>
                     <Contact href="https://github.com/kruceo">
-                        <img src="/github.png" alt="github" title="Github" />
+                        <i className="icon-github" title="github"></i>
                     </Contact>
                     <Contact href="https://www.npmjs.com/~kruceo">
-                        <img src="/npm.png" alt="npm" title="NPM" />
+                        <i className="icon-npm" title="npm"></i>
                     </Contact>
                 </div>
             </div>

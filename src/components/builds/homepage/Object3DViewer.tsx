@@ -2,7 +2,8 @@ import { useEffect } from "react"
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { degToRad } from "three/src/math/MathUtils.js";
-
+import starship3D from '../../../assets/starship.glb'
+import planet3D from '../../../assets/planet.glb'
 export default function () {
     useEffect(() => {
 
@@ -38,7 +39,7 @@ export default function () {
 
         let loadedObj: THREE.Group<THREE.Object3DEventMap> | null = null
         let loadedPlanetObj: THREE.Group<THREE.Object3DEventMap> | null = null
-        loader.load('/starship.glb', function (gltf) {
+        loader.load(starship3D, function (gltf) {
             loadedObj = gltf.scene
             loadedObj.add(new THREE.SpotLight(0x00ff99, 2, 0, 0.3))
             loadedObj.position.set(0, 2.4, 0)
@@ -48,7 +49,7 @@ export default function () {
         }, undefined, function (error) {
             console.error(error);
         });
-        loader.load('/planet.glb', function (gltf) {
+        loader.load(planet3D, function (gltf) {
             loadedPlanetObj = gltf.scene
             const scale = 2.4
             loadedPlanetObj.scale.set(scale, scale, scale)
