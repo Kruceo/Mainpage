@@ -32,7 +32,7 @@
 
         >.torneio-google-play-button {
             width: 280px;
-            cursor: not-allowed;
+            // cursor: not-allowed;
         }
     }
 
@@ -40,50 +40,4 @@
         width: 290px;
     }
     margin-bottom: 40px;
-}
-
-.testing-content{
-    margin-top: 0px;
-    p{
-        text-align: center;
-    }
-    form{
-        transition: opacity 250ms ease-in;
-        &.sended{
-            input,label,button{
-                opacity: 0.2;
-                cursor: not-allowed;
-            }
-        }
-        margin-top: 30px;
-        >label{
-            display: block;
-            margin-top: 10px;
-            margin-left: 5px;
-        }
-        input{
-            display: block;
-            width: 100%;
-            border-radius: @rounded;
-            border: @border;
-            padding: 10px;
-            &:focus{
-                outline: none;
-            }
-        }
-        button{
-            margin-top: 20px;
-            display: flex;
-            &:disabled{
-                cursor: not-allowed;
-            }
-        }
-        position: relative;
-        .thanks{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
-    }
 }
