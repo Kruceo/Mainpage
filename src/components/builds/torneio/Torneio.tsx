@@ -4,12 +4,9 @@ import Content from "../../essential/Content/Content";
 import "./Torneio.less"
 import torneioSSImg from '../../../assets/torneio_ss.jpeg'
 import Title from "../../essential/Title/Title";
-import Button from "../../essential/Button/Button";
-import { useState } from "react";
 import Smartphone from "./Smartphone";
 import DownloadOnGooglePlayButton from "./DownloadOnGooglePlayButton";
 export default function () {
-    const [sended, setSended] = useState(false)
     return <>
         <Bar></Bar>
         <Content>
