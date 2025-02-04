@@ -29,7 +29,7 @@ export default function (props: { children: React.ReactNode[], id?: string, rule
     }
 
     let f = 0
-    props.children.forEach((it, index) => {
+    props.children.forEach((it) => {
         va[f].push(it)
         f++
         if (f == va.length) f = 0
