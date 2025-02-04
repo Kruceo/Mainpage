@@ -6,7 +6,9 @@ import torneioSSImg from '../../../assets/torneio_ss.jpeg'
 import Title from "../../essential/Title/Title";
 import Smartphone from "./Smartphone";
 import DownloadOnGooglePlayButton from "./DownloadOnGooglePlayButton";
+import autoScroll from "../homepage/AutoScroll";
 export default function () {
+    autoScroll()
     return <>
         <Bar></Bar>
         <Content>

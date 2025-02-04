@@ -6,9 +6,11 @@ import AboutSection from './AboutSection'
 import Content from '../../essential/Content/Content'
 import PresentPortfolioSection from './PresentPortfolioSection'
 import HomeSection3 from './HomeSection3'
+import autoScroll from './AutoScroll'
 
 function Homepage() {
     document.title = `Kruceo`
+    autoScroll()
     return (
         <>
             <Bar />

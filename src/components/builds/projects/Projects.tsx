@@ -4,9 +4,11 @@ import Footer from "../../essential/Bar/Footer";
 import ProjectsSection2 from "./ProjectsSection2";
 import { locale } from "../../../lib/lang";
 import Content from "../../essential/Content/Content";
+import autoScroll from "../homepage/AutoScroll";
 
 export default function Projects() {
     document.title = `Kruceo - ${locale.projects.title}`
+    autoScroll()
     return <>
         <Bar></Bar>
         <Content>
