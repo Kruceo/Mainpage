@@ -7,7 +7,7 @@ import planet3D from '../../../assets/planet.glb'
 export default function () {
     useEffect(() => {
 
-        if (window.innerWidth < 600) return
+        if (window.innerWidth < 120) return
 
 
         let [mouseX, mouseY] = [0, 0]
