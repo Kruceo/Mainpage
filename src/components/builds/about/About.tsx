@@ -34,7 +34,7 @@ export default function About() {
                     </li>
                     <li className="">
                         <a href="https://huggingface.com/rafola" target="_blank">
-                            <i className="icon-hf"></i> HuggingFace
+                            <i className="icon-hf3"></i> HuggingFace
                         </a>
                     </li>
                     <li className="comming">
