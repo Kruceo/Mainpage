@@ -1,7 +1,7 @@
 {
     "welcome": {
-        "subtitle":"Desenvolvendo codigo e arte \nEnquanto consumo muito café.",
-        "text":"Soluções completas em Web, Software, \nDevOps, Design e muito mais"
+        "subtitle": "Desenvolvendo codigo e arte \nEnquanto consumo muito café.",
+        "text": "Soluções completas em Web, Software, \nDevOps, Design e muito mais"
     },
     "pixTitle": "Pix:",
     "cryptoTitle": "Rede BNB ou ETH",
@@ -37,7 +37,8 @@
         "stackTitle": "Tecnologias",
         "item1Desc": "Uma pequena página de empresa (fictícia).",
         "item2Desc": "Gerenciador de transações para produtos do mar.",
-        "item3Desc": "Um aplicativo para gerenciar uma tabela de pontos corridos."
+        "item3Desc": "Um aplicativo para gerenciar uma tabela de pontos corridos.",
+        "item4Desc": "Modelo de IA para identificação de pessoas em texto."
     },
     "about": {
         "title": "Sobre",

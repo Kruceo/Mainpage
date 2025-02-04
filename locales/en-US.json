@@ -37,7 +37,8 @@
         "stackTitle": "Technologies",
         "item1Desc": "A small company page (fictitious).",
         "item2Desc": "A transaction manager for seafood products.",
-        "item3Desc": "A soccer points table style manager."
+        "item3Desc": "A soccer points table style manager.",
+        "item4Desc": "A person identifier AI Model, trained to ignore places and street names."
     },
     "about": {
         "title": "A Bit About Us",
