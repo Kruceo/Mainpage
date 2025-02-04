@@ -1,13 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./HiddenItem.less"
-export default function HideItem(props: { buttonContent: React.ReactNode, children: React.ReactNode, className?: string }) {
+export default function HideItem(props: { defaultOpened?: boolean, buttonContent: React.ReactNode, children: React.ReactNode, className?: string }) {
     const [hidden, setHidden] = useState(true)
-    const id = "id-" + Math.floor(Math.random() * 10000)
+    const [id,] = useState("hc-" + Math.floor(Math.random() * 10000))
     const handler = () => {
         const hiddenContentFrameEl: HTMLDivElement | null = document.querySelector("#" + id + '>.hidden-content-frame')
-        if (!hiddenContentFrameEl) return;
+        if (!hiddenContentFrameEl) return console.warn("No hidden content frame! " + id);
         const hiddenContentEl: HTMLDivElement | null = hiddenContentFrameEl.querySelector('.hidden-content')
-        if (!hiddenContentEl) return;
+        if (!hiddenContentEl) throw new Error("No hidden content! " + id);;
         // hiddenContentEl.style.background = 'red'
         const height = hiddenContentEl.clientHeight
         // hiddenContentEl.innerHTML = height +' ' + hidden() + ' ' + Math.random()
@@ -19,6 +19,8 @@ export default function HideItem(props: { buttonContent: React.ReactNode, childr
         }
         setHidden(!hidden)
     }
+    if (props.defaultOpened)
+        useEffect(() => { setTimeout(handler, 250) }, [])
     return <div id={id} className={`hide-item ${hidden ? "hidden" : ""} ${props.className ?? ""}`}>
         <div onClick={() => {
             handler()

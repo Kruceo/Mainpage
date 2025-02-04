@@ -2,95 +2,93 @@
 
 body {
     .dark-mode();
+
     section.projects {
         width: 100%;
         min-height: calc(@fullcontent - 110px);
-        .title-container{
+
+        .title-container {
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        &>p{
+
+        &>p {
             text-align: center;
             width: 100%;
             margin-bottom: 40px;
         }
+
         #grid {
             width: 100%;
-            display: grid;
+            // display: grid;
             height: 100%;
-            grid-template-columns: 1fr 1fr 1fr;
-
-            // min-height: 100vh;
-            @media @min968 {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @media @min768 {
-                grid-template-columns: 1fr;
-            }
-
             gap: 20px;
             // align-items: center;
             margin-bottom: 50px;
 
-            .hidden-portfolio-item {
+            .column {
                 width: 100%;
-                margin: 0;
-                margin-bottom: auto;
-                box-sizing: border-box;
-                border: @border;
-                border-radius: @rounded;
-
-                .label {
+                
+                .hidden-portfolio-item {
                     width: 100%;
-                    padding: 10px;
-                }
+                    margin: 0;
+                    // margin-bottom: auto;
+                    box-sizing: border-box;
+                    border: @border;
+                    border-radius: @rounded;
 
-                .hidden-content {
-                    border-top: @border;
-                    width: 100%;
-
-                    .inner {
+                    .label {
                         width: 100%;
                         padding: 10px;
-
-                        * {
-                            text-align: start;
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            justify-content: left;
-
-                        }
-
-                        .project-desc {
-                            // padding: 14px 0px;
-                            margin-bottom: 14px;
-                            // border-bottom: @border;
-                        }
-
-                        div {
-                            display: flex;
-                            justify-content: end;
-
-                            a {
-                                margin-right: 0;
-                                width: fit-content;
-                                padding-top: 5px;
-                                color: @color1;
-                                text-decoration: none;
-                                margin-left: auto;
-                                transition: filter 250ms;
-                                &:hover{
-                                    filter: brightness(150%);
-                                }
-                            }
-                        }
-
-
                     }
 
+                    .hidden-content {
+                        border-top: @border;
+                        width: 100%;
+
+                        .inner {
+                            width: 100%;
+                            padding: 10px;
+
+                            * {
+                                text-align: start;
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                justify-content: left;
+
+                            }
+
+                            .project-desc {
+                                // padding: 14px 0px;
+                                margin-bottom: 14px;
+                                // border-bottom: @border;
+                            }
+
+                            div {
+                                display: flex;
+                                justify-content: end;
+
+                                a {
+                                    margin-right: 0;
+                                    width: fit-content;
+                                    padding-top: 5px;
+                                    color: @color1;
+                                    text-decoration: none;
+                                    margin-left: auto;
+                                    transition: filter 250ms;
+
+                                    &:hover {
+                                        filter: brightness(150%);
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
                 }
             }
         }
