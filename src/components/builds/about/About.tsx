@@ -23,39 +23,25 @@ export default function About() {
                 </div>
                 <ul className="platforms-list">
                     <li>
-                        <a href="NPM">
+                        <a href="https://github.com/kruceo" target="_blank">
                             <i className="icon-github"></i> Github
                         </a>
                     </li>
                     <li>
-                        <a href="NPM">
+                        <a href="https://www.npmjs.com/~kruceo" target="_blank">
                             <i className="icon-npm"></i> NPM
+                        </a>
+                    </li>
+                    <li className="">
+                        <a href="https://huggingface.com/rafola" target="_blank">
+                            <i className="icon-hf"></i> HuggingFace
                         </a>
                     </li>
                     <li className="comming">
                         <i className="icon-discord"></i> Discord
                     </li>
-                    <li className="comming">
-                        <i className="icon-hf"></i> HuggingFace
-                    </li>
                 </ul>
-                <div className="center-image">
-
-                </div>
-               
-                {/* <Box className="donate-grid">
-                    <Title>Some Ways to Donate</Title>
-                    <HideItem className="way"
-                        buttonContent={<strong><i className="icon-coin-dollar" /> PIX (BRASIL)</strong>}>
-                        <img src="/QRCODE.svg" alt="qrcode" style={{
-                            width: "100%"
-                        }} />
-                    </HideItem>
-                    <HideItem className="way"
-                        buttonContent={<strong><i className="icon-coin-dollar" /> ETH & BNB</strong>}>
-                        <p>0xA051560e7172fd8B8EE<br />0060FFC970D40c4287209</p>
-                    </HideItem>
-                </Box> */}
+                <div className="center-image"></div>
                 <div className="contact-container">
                     <img src={catImg} alt="cat" />
                     <div className="inner">
