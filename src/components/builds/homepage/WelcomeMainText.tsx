@@ -18,7 +18,7 @@ export default function () {
         <p>{locale.welcome.text}</p>
         <div className="buttons-container">
             <AButton href="https://github.com/kruceo" ><i className="icon-github"></i> Github</AButton>
-            <AButton href="/projects"><i className="icon-cat_icon"></i> {locale.about.title}</AButton>
+            <AButton href="/about"><i className="icon-cat_icon"></i> {locale.about.title}</AButton>
         </div>
     </div>
 }
