@@ -3,13 +3,17 @@
 body {
     .dark-mode();
     section#err404 {
+        // background-color: purple;
+        height: @fullcontent;
         margin: 0;
         .grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            height: @fullcontent;
-           
+            // height: @fullcontent;
+            // outline: 1px solid red;
+
             img {
+                // outline: 1px solid blue;
                 height: @fullcontent;
                 @media @min768 {
                     display: none;
