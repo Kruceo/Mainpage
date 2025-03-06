@@ -28,9 +28,17 @@ export default function () {
 
         document.querySelector(".three-object")?.appendChild(renderer.domElement);
 
-        var light = new THREE.DirectionalLight(0xffcc99, 14.5)
+        var light = new THREE.DirectionalLight(0xffcc59, 4.5)
         light.position.set(-4, 6, 4)// scene.add()
         scene.add(light);
+
+        var light2 = new THREE.HemisphereLight(0xffaf9f,0x74532f ,10.4)
+        scene.add(light2);
+
+
+        renderer.shadowMap.enabled = true
+        // renderer.toneMapping = THREE.CineonToneMapping
+        // renderer.toneMappingExposure = 0.9
 
 
         const starshipGizmos = new THREE.Mesh()
@@ -44,6 +52,9 @@ export default function () {
             loadedObj.add(new THREE.SpotLight(0x00ff99, 2, 0, 0.3))
             loadedObj.position.set(0, 2.4, 0)
             loadedObj.scale.setScalar(0.5)
+
+            loadedObj.traverse(n=>{n.castShadow = true;n.receiveShadow = true})
+
             starshipGizmos.add(loadedObj)
             scene.add(starshipGizmos)
         }, undefined, function (error) {
@@ -51,6 +62,7 @@ export default function () {
         });
         loader.load(planet3D, function (gltf) {
             loadedPlanetObj = gltf.scene
+            loadedPlanetObj.traverse(n=>{n.castShadow = true;n.receiveShadow = true})
             const scale = 2.4
             loadedPlanetObj.scale.set(scale, scale, scale)
             loadedPlanetObj.rotateZ(degToRad(-25))
